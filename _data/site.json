@@ -1,0 +1,19 @@
+{
+  "languages": {
+    "en": {
+      "home": "Home",
+      "about": "About",
+      "welcomeMessage": "Welcome to MathJSLab"
+    },
+    "pt": {
+      "home": "Início",
+      "about": "Sobre",
+      "welcomeMessage": "Bem-vindo ao MathJSLab"
+    },
+    "es": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "welcomeMessage": "Bienvenido a MathJSLab"
+    }
+  }
+}

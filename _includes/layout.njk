@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>{{ site.languages[lang].welcomeMessage }}</h1>
+      <nav>
+        <a href="/{{ lang }}/">{{ site.languages[lang].home }}</a> |
+        <a href="/{{ lang }}/about/">{{ site.languages[lang].about }}</a>
+      </nav>
+      <ul class="language-switcher">
+        <li><a href="/en/">English</a></li>
+        <li><a href="/pt/">Português</a></li>
+        <li><a href="/es/">Español</a></li>
+      </ul>
+    </header>
+    <main>
+      {{ content | safe }}
+    </main>
+    <footer>
+      <p>© 2024 MathJSLab. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
