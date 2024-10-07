@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("./_site/css");
+  eleventyConfig.addPassthroughCopy("./_site/img");
     return {
       dir: {
         input: "./_site",

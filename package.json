@@ -6,6 +6,9 @@
     "type": "git",
     "url": "git+https://github.com/MathJSLab/mathjslab-www.git"
   },
+  "homepage": "https://mathjslab.com/",
+  "author": "MathJSLab <mathjslab@gmail.com>",
+  "license": "UNLICENSED",
   "scripts": {
     "clean:package-lock": "node script/clean-package-lock.cjs",
     "clean": "rimraf _www",
@@ -21,8 +24,11 @@
     "build:all": "npm run clean && npm run update && npm run build",
     "do:all": "npm run build:all && npm run git:add:commit:push"
   },
-  "author": "MathJSLab <mathjslab@gmail.com>",
-  "license": "Unlicensed",
+  "browser": {
+    "fs": false,
+    "os": false,
+    "path": false
+  },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@types/node": "^22.7.4",
