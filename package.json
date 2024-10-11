@@ -13,17 +13,18 @@
     "clean:package-lock": "node script/clean-package-lock.cjs",
     "clean": "rimraf www",
     "clean:all": "npm run clean && npm run clean:package-lock",
-    "update": "npx ncu -u && npm install",
+    "update": "npx npm-check-updates -u && npm install",
     "git:add": "git add .",
     "git:commit": "git commit -m \"Initial Commit\"",
     "git:push": "git push",
-    "git:all": "npm run git:add && npm run git:commit && npm run git:push",
+    "git:add:commit:push": "npm run git:add && npm run git:commit && npm run git:push",
+    "git:all": "npm run git:add:commit:push",
     "build": "eleventy",
     "serve": "eleventy --serve",
     "watch": "eleventy --watch",
     "build:all": "npm run clean && npm run update && npm run build",
-    "build:git": "npm run build && npm run git:all",
-    "do:all": "npm run build:all && npm run git:all"
+    "build:git": "npm run build && npm run git:add:commit:push",
+    "do:all": "npm run build:all && npm run git:add:commit:push"
   },
   "browser": {
     "fs": false,
@@ -32,10 +33,10 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@types/node": "^22.7.4",
+    "@types/node": "^22.7.5",
     "rimraf": "^6.0.1",
     "tsconfig-paths": "^4.2.0",
     "tsx": "^4.19.1",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   }
 }
