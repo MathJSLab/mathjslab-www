@@ -10,33 +10,17 @@
   "author": "MathJSLab <mathjslab@gmail.com>",
   "license": "UNLICENSED",
   "scripts": {
-    "clean:package-lock": "node script/clean-package-lock.cjs",
-    "clean": "rimraf www",
-    "clean:all": "npm run clean && npm run clean:package-lock",
-    "update": "npx npm-check-updates -u && npm install",
+    "clean": "npx rimraf www",
+    "clean:all": "npm run clean",
+    "update": "echo \"Warning: no update script specified\"",
     "git:add": "git add .",
     "git:commit": "git commit -m \"Initial Commit\"",
     "git:push": "git push",
     "git:add:commit:push": "npm run git:add && npm run git:commit && npm run git:push",
     "git:all": "npm run git:add:commit:push",
-    "build": "eleventy",
-    "serve": "eleventy --serve",
-    "watch": "eleventy --watch",
-    "build:all": "npm run clean && npm run update && npm run build",
-    "build:git": "npm run build && npm run git:add:commit:push",
-    "do:all": "npm run build:all && npm run git:add:commit:push"
-  },
-  "browser": {
-    "fs": false,
-    "os": false,
-    "path": false
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@types/node": "^22.7.5",
-    "rimraf": "^6.0.1",
-    "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.19.1",
-    "typescript": "^5.6.3"
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "watch": "npx @11ty/eleventy --watch",
+    "do:all": "npm run clean && npm run update && npm run build && npm run git:add:commit:push"
   }
 }
