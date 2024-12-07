@@ -33,7 +33,7 @@ const stepData = [
             eleventyConfig.addPassthroughCopy('./site/css');
             eleventyConfig.addPassthroughCopy('./site/img');
             EleventyUtil.configAddTemplateFormat(eleventyConfig, ['njk', 'scss'], '\\./site/');
-            EleventyUtil.configAddRenderTemplateTools(eleventyConfig, true);
+            // EleventyUtil.configAddRenderTemplateTools(eleventyConfig, true);
             EleventyUtil.configAddDateTimeTools(eleventyConfig);
             return getStepOption(0);
         },
