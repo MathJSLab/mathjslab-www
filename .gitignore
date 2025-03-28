@@ -1,10 +1,13 @@
-# Build generated files
-www/
-
 # Logs
 logs
 *.log
 npm-debug.log*
+
+# Build generated files
+www/
+
+# Commit configuration
+git-commit.config.json
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
@@ -39,14 +42,3 @@ package-lock.json
 
 # Output of 'npm pack'
 *.tgz
-
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
-# Stores VSCode versions used for testing VSCode extensions and VSCode configuration
-.vscode-test
-.vscode

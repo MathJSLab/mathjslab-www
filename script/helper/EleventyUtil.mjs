@@ -25,7 +25,7 @@
  * npm install --save-dev uuid chalk @11ty/eleventy @11ty/eleventy-img yaml json5 smol-toml sass coffeescript cson png-to-ico
  * ```
  *
- * MIT License, Copyright (c) 2016-2024 Sergio Lindau, mathjslab.com
+ * MIT License, Copyright (c) 2016-2025 Sergio Lindau, mathjslab.com
  */
 
 /**
@@ -40,12 +40,13 @@ import { v4 as uuid } from 'uuid';
 import chalk from 'chalk';
 import Eleventy, { EleventyRenderPlugin } from '@11ty/eleventy';
 import Image from '@11ty/eleventy-img';
+// import markdownIt from 'markdown-it';
 import JSON5 from 'json5';
 import YAML from 'yaml';
 import TOML from 'smol-toml';
 import CSON from 'cson';
 import CoffeeScript from 'coffeescript';
-import * as SASS from 'sass';
+import * as sass from 'sass';
 import { DateTime } from 'luxon';
 
 /**
@@ -73,32 +74,32 @@ Object.defineProperty(os, 'EOL', {
  * The `JSON.stringify` function is not overridden because its equivalent from
  * the `json5` package does not produce double-quoted keys.
  */
-global.JSON.backup = {
-    parse: global.JSON.parse.bind(global.JSON),
-    stringify: global.JSON.stringify.bind(global.JSON),
+globalThis.JSON.backup = {
+    parse: globalThis.JSON.parse.bind(globalThis.JSON),
+    stringify: globalThis.JSON.stringify.bind(globalThis.JSON),
 };
 /* Extending JSON object. */
-global.JSON.parseJSON5 = JSON5.parse.bind(JSON5);
-global.JSON.parseJSON = global.JSON.parse.bind(global.JSON);
-global.JSON.stringifyJSON5 = JSON5.stringify.bind(JSON5);
-global.JSON.stringifyJSON = global.JSON.stringify.bind(global.JSON);
-global.JSON.stringify = function (value, replacer, space) {
-    return global.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n');
-}.bind(global.JSON);
+globalThis.JSON.parseJSON5 = JSON5.parse.bind(JSON5);
+globalThis.JSON.parseJSON = globalThis.JSON.parse.bind(globalThis.JSON);
+globalThis.JSON.stringifyJSON5 = JSON5.stringify.bind(JSON5);
+globalThis.JSON.stringifyJSON = globalThis.JSON.stringify.bind(globalThis.JSON);
+globalThis.JSON.stringify = function (value, replacer, space) {
+    return globalThis.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n');
+}.bind(globalThis.JSON);
 /* Override JSON.parse function. */
-global.JSON.parse = JSON5.parse.bind(JSON5);
+globalThis.JSON.parse = JSON5.parse.bind(JSON5);
 /* Extending global JSON object to parse and save files. */
-global.JSON.parseFileSync = function (filePath, reviver = null) {
+globalThis.JSON.parseFileSync = function (filePath, reviver = null) {
     return JSON5.parse(readFileBomSync(filePath, 'utf-8'), reviver);
 };
-global.JSON.parseFile = async function (filePath, reviver = null, callback) {
+globalThis.JSON.parseFile = async function (filePath, reviver = null, callback) {
     return JSON5.parse(readFileBom(filePath, 'utf-8'), reviver, callback);
 };
-global.JSON.saveFileSync = function (value, filePath, replacer, space, options) {
-    fs.writeFileSync(filePath, global.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n'), options);
+globalThis.JSON.saveFileSync = function (value, filePath, replacer, space, options) {
+    fs.writeFileSync(filePath, globalThis.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n'), options);
 };
-global.JSON.saveFile = async function (value, filePath, replacer, space, options) {
-    fs.writeFile(filePath, global.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n'), options);
+globalThis.JSON.saveFile = async function (value, filePath, replacer, space, options) {
+    fs.writeFile(filePath, globalThis.JSON.backup.stringify(value, replacer, space).replace(/\n/g, '\r\n'), options);
 };
 
 /**
@@ -261,14 +262,14 @@ function logFactory(options = { type: 'log', prefix: consolePrefix.colored, colo
             const t = type,
                 p = prefix,
                 c = color;
-            global.console[t](
+            globalThis.console[t](
                 p,
                 ...args.map(function (arg) {
                     return chalk[c](arg);
                 }),
             );
             return;
-        }.bind(global.console);
+        }.bind(globalThis.console);
     } else {
         throw new Error('logFactory: invalid options:\n' + util.inspect(options, { compact: false, colors: true }));
     }
@@ -283,7 +284,7 @@ const console = {
     warn: logFactory({ type: 'warn', logPrefix: 'Warning:', color: 'yellow' }),
     error: logFactory({ type: 'error', logPrefix: 'Error:', color: 'red' }),
     debug: logFactory({ type: 'debug', color: 'white' }),
-    table: global.console.table.bind(global.console),
+    table: globalThis.console.table.bind(globalThis.console),
 };
 
 /**
@@ -512,6 +513,73 @@ function configGetPlugin(eleventyConfig, name) {
     });
 }
 /**
+ * Util filters.
+ */
+const utilFilters = {
+    split: function (value, delimiter) {
+        return value.split(delimiter);
+    },
+    search: function (value, searchString) {
+        return value.indexOf(searchString);
+    },
+    searchRegExp: function (value, searchRegExp) {
+        const match = value.match(new RegExp(searchRegExp));
+        return !!match ? match.index : -1;
+    },
+    prefix: function (value, prefix, postfix) {
+        return `${typeof prefix === 'string' ? prefix : ''}${value}${typeof postfix === 'string' ? postfix : ''}`;
+    },
+    postfix: function (value, postfix, prefix) {
+        return `${typeof prefix === 'string' ? prefix : ''}${value}${typeof postfix === 'string' ? postfix : ''}`;
+    },
+    field: function (value, field) {
+        return value[field];
+    },
+    mapField: function (value, field) {
+        return value.map((value) => value[field]);
+    },
+    readFile: function (filePath, _encoding) {
+        return readFileBomSync(path.resolve(filePath));
+    },
+    removeFrontMatter: function (value) {
+        return value.match(/^(?:---\r?\n(?:[\s\S]*)?---\r?\n)?([\s\S]+)$/)[1];
+    },
+    printIfTruthy: function (test, message) {
+        return test ? message : '';
+    },
+    compileSCSS: function (scssPath) {
+        return sass
+            .compile(path.resolve(this.eleventy.directories.input, scssPath), {
+                loadPaths: ['.', this.eleventy.directories.includes],
+            })
+            .css.toString();
+    },
+    processEnv: function (key, defaultValue = undefined) {
+        if (typeof key === 'string') {
+            return process.env[key] ?? defaultValue;
+        } else if (typeof key === 'undefined') {
+            return process.env;
+        } else {
+            throw new Error(`processEnv filter: invalid environment variable name: ${key}`);
+        }
+    },
+};
+/**
+ * Util shortcodes.
+ */
+const utilShortcodes = {
+    currentDate: function (format) {
+        /* About formatting specification: https://moment.github.io/luxon/#/formatting */
+        if (format === 'HTTP') {
+            return DateTime.now().toHTTP();
+        } else if (format === 'RFC2822') {
+            return DateTime.now().toRFC2822();
+        } else {
+            return DateTime.now().toFormat(format || 'yyyy-MM-dd');
+        }
+    },
+};
+/**
  * Add entries from obj to configuration.
  * @param {*} eleventyConfig
  * @param {*} obj
@@ -618,6 +686,7 @@ const templateEngine = {
                 compile: function (inputContent, inputPath) {
                     let parsed = path.parse(inputPath);
                     let result = SASS.compileString(inputContent, {
+                        silenceDeprecations: ['global-builtin'],
                         loadPaths: [parsed.dir || '.', this.config.dir.includes],
                     });
                     /* Registering dependencies. */
@@ -839,7 +908,7 @@ function renderTemplateFunctionFactory(eleventyConfig, accessGlobalData = true, 
  * value. You can even use "liquid,md" to preprocess markdown with liquid. You can use
  * [custom template types](https://www.11ty.dev/docs/languages/custom/) here too.
  *
- * **INFO:** The one exception here is that `{% renderTemplate "11ty.js" %}` JavaScript string templates are not yet supported—use `renderFile` below instead.
+ * **INFO:** The one exception here is that `{% renderTemplate "11ty.js" %}` JavaScript string templates are not yet supported - use `renderFile` below instead.
  *
  * ### Pass in data
  *
@@ -1157,15 +1226,6 @@ async function transformImage(transform, options) {
     );
 }
 /**
- * Adds useful shortcodes and filters to the configuration for dealing with dates and times.
- * @param {*} eleventyConfig
- */
-function configAddDateTimeTools(eleventyConfig) {
-    eleventyConfig.addShortcode('currentDate', function (format) {
-        return DateTime.now().toFormat(format || 'yyyy-MM-dd');
-    });
-}
-/**
  * Exports
  */
 export {
@@ -1177,6 +1237,8 @@ export {
     defaultEleventyOptions,
     console,
     parseEngine,
+    utilFilters,
+    utilShortcodes,
     configGetPlugin,
     configAddEntries,
     configAddFileContentAsGlobalData,
@@ -1186,7 +1248,6 @@ export {
     configAddRenderTemplateTools,
     run,
     transformImage,
-    configAddDateTimeTools,
 };
 /**
  * Default exports
@@ -1200,6 +1261,8 @@ export default {
     defaultEleventyOptions,
     console,
     parseEngine,
+    utilFilters,
+    utilShortcodes,
     configGetPlugin,
     configAddEntries,
     configAddFileContentAsGlobalData,
@@ -1209,5 +1272,4 @@ export default {
     configAddRenderTemplateTools,
     run,
     transformImage,
-    configAddDateTimeTools,
 };

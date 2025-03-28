@@ -33,8 +33,15 @@ const stepData = [
             eleventyConfig.addPassthroughCopy('./site/css');
             eleventyConfig.addPassthroughCopy('./site/img');
             EleventyUtil.configAddTemplateFormat(eleventyConfig, ['njk', 'scss'], '\\./site/');
-            // EleventyUtil.configAddRenderTemplateTools(eleventyConfig, true);
-            EleventyUtil.configAddDateTimeTools(eleventyConfig);
+            const filters = {
+                ...EleventyUtil.utilFilters,
+            };
+            const shortcodes = {
+                ...EleventyUtil.utilShortcodes,
+            };
+            EleventyUtil.configAddEntries(eleventyConfig, filters, 'addFilter');
+            EleventyUtil.configAddEntries(eleventyConfig, shortcodes, 'addShortcode');
+            EleventyUtil.configAddRenderTemplateTools(eleventyConfig, true);
             return getStepOption(0);
         },
     }
