@@ -5,7 +5,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.0.4
 - The system of downloading raw files from the repository on GitHub has been
   replaced by cloning the repository and copying selected files.
-- The MathJSLab logo has been updated.
+- The MathJSLab logo has been updated and the logo in the .md files has been
+  modified to use logo image in the website (this repository).
 
 ## 0.0.3
 - Some TypeScript development dependencies has been installed (`tsx`,
