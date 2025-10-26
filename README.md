@@ -12,4 +12,4 @@
 
 This is the [MathJSLab npm package](https://www.npmjs.com/package/mathjslab) project page at [mathjslab.com](https://mathjslab.com/).
 
-Copyright &copy; 2016-2024 [Sergio Lindau](mailto:sergiolindau@gmail.com), [mathjslab.com](https://mathjslab.com/), [mathjslab@gmail.com](mailto:mathjslab@gmail.com), **[ISBN 978-65-00-82338-7, 978-65-00-84828-1](https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7)**.
+Copyright &copy; 2016-2025 [Sergio Lindau](mailto:sergiolindau@gmail.com), [mathjslab.com](https://mathjslab.com/), [mathjslab@gmail.com](mailto:mathjslab@gmail.com), **[ISBN 978-65-00-82338-7, 978-65-00-84828-1](https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7)**.

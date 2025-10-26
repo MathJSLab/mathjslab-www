@@ -2,8 +2,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.4
+- The system of downloading raw files from the repository on GitHub has been
+  replaced by cloning the repository and copying selected files.
+- The MathJSLab logo has been updated.
+
 ## 0.0.3
-- Some TypeScript development dependencies has been installed (`tsx`, `ts-config-paths` and `ts-node`).
+- Some TypeScript development dependencies has been installed (`tsx`,
+  `ts-config-paths` and `ts-node`).
 - The ESLint and Prettier dependencies has been installed.
 - The `dotenv` and `dotenv-expand` dependencies has been removed.
 - All Webpack related dependencies has been removed.

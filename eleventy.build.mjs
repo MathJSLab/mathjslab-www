@@ -9,6 +9,11 @@ import EleventyUtil from './script/helper/EleventyUtil.mjs';
 const scriptName = path.basename(fileURLToPath(import.meta.url));
 
 /**
+ * The `eleventy.build.json` data parsed.
+ */
+const eleventyBuild = JSON.parseFileSync(path.resolve('.', 'eleventy.build.json'));
+
+/**
  * The `data/site.json` data parsed.
  */
 const site = JSON.parseFileSync(path.resolve('.', 'data', 'site.json'));
@@ -19,8 +24,8 @@ const site = JSON.parseFileSync(path.resolve('.', 'data', 'site.json'));
  * @returns
  */
 const getStepOption = (s) => ({
-    ...site.build.eleventy.steps[s].options,
-    ...site.build.eleventy.commonOptions,
+    ...eleventyBuild.build.eleventy.steps[s].options,
+    ...eleventyBuild.build.eleventy.commonOptions,
 });
 
 /**

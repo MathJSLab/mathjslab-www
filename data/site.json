@@ -17,30 +17,5 @@
       "about": "Acerca de",
       "welcomeMessage": "Bienvenido a MathJSLab"
     }
-  },
-  "build": {
-    /* Site project construction parameters. */
-    "eleventy": {
-      "commonOptions": {
-        "htmlTemplateEngine": "njk",
-        "markdownTemplateEngine": "njk",
-        "dataTemplateEngine": "njk",
-        "templateFormats": ["njk"]
-      },
-      "steps": [
-        {
-          "options": {
-            "dir": {
-              "input": "./site",
-              "data": "../data",
-              "includes": "../includes",
-              "layouts": "./layouts",
-              "output": "./www"
-            },
-            "pathPrefix": "/"
-          }
-        }
-      ]
-    }
   }
 }
