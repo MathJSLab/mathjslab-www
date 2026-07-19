@@ -1,6 +1,6 @@
+export default _default;
 /**
  * Recursively creates the directories.
  * @param dirPath
  */
-declare const _default: (...dirPath: string[]) => void;
-export default _default;
+declare function _default(...dirPath: string[]): void;

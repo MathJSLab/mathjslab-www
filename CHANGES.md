@@ -2,6 +2,22 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.5
+- The temporary redirect to `app.mathjslab.com` has been replaced by an
+  initial MathJSLab project homepage with navigation, project highlights,
+  repository links, resources and educational/trademark notices.
+- Multilingual pages have been added for English, Portuguese and Spanish using
+  `intl-messageformat` and shared Nunjucks templates.
+- The root page now redirects visitors to the appropriate localized page based
+  on the browser language, while still providing manual language links.
+- The Eleventy development environment has been fixed with a shared
+  `eleventy.config.mjs` configuration, corrected layout directory settings and
+  working `serve` and `watch` scripts.
+- The homepage visual style has been updated, including responsive layout,
+  smaller hero title text without intra-word wrapping, and enlarged MathJSLab
+  logo/brand text in the header.
+- The sitemap has been updated to include the localized pages.
+
 ## 0.0.4
 - The system of downloading raw files from the repository on GitHub has been
   replaced by cloning the repository and copying selected files.

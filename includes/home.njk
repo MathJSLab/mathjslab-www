@@ -1,0 +1,77 @@
+{% set pageData = i18n.pages[lang] %}
+<section id="overview" class="hero section-shell">
+  <div class="hero-copy">
+    <p class="eyebrow">{{ pageData.hero.kicker }}</p>
+    <h1>{{ pageData.hero.heading }}</h1>
+    <p class="hero-lead">{{ pageData.hero.lead }}</p>
+    <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
+      <a class="button button-primary" href="https://app.mathjslab.com/">{{ pageData.hero.primaryCta }}</a>
+      <a class="button button-secondary" href="https://github.com/MathJSLab">{{ pageData.hero.secondaryCta }}</a>
+    </div>
+    <div class="install-command" aria-label="{{ pageData.hero.installLabel }}">
+      <span>{{ pageData.hero.installLabel }}</span>
+      <code>npm install mathjslab</code>
+    </div>
+  </div>
+  <div class="hero-panel" aria-label="{{ pageData.hero.terminalTitle }}">
+    <div class="terminal-bar">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <pre><code>&gt;&gt; {{ pageData.hero.promptOne }}
+{{ pageData.hero.outputOne }}
+&gt;&gt; {{ pageData.hero.promptTwo }}
+{{ pageData.hero.outputTwo }}</code></pre>
+  </div>
+</section>
+
+<section id="features" class="section-shell">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.features }}</p>
+    <h2>{{ pageData.description }}</h2>
+  </div>
+  <div class="feature-grid">
+    {% for item in pageData.highlights %}
+      <article class="feature-card">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="ecosystem" class="section-shell split-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.ecosystem }}</p>
+    <h2>{{ pageData.ecosystemTitle }}</h2>
+    <p>{{ pageData.ecosystemLead }}</p>
+  </div>
+  <div class="repo-list">
+    {% for repo in pageData.repositories %}
+      <a class="repo-card" href="{{ repo.href }}">
+        <span>{{ repo.role }}</span>
+        <strong>{{ repo.name }}</strong>
+        <p>{{ repo.text }}</p>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="resources" class="section-shell resources-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.resources }}</p>
+    <h2>{{ pageData.resourcesTitle }}</h2>
+    <p>{{ pageData.resourcesLead }}</p>
+  </div>
+  <div class="resource-links">
+    {% for resource in pageData.resources %}
+      <a href="{{ resource.href }}">{{ resource.label }}</a>
+    {% endfor %}
+  </div>
+  <div class="notice-grid">
+    <p>{{ pageData.notices.contact }}</p>
+    <p>{{ pageData.notices.education }}</p>
+    <p>{{ pageData.notices.trademark }}</p>
+  </div>
+</section>

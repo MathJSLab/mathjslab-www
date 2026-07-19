@@ -1,29 +1,48 @@
+{% set pageData = i18n.pages[lang] %}
 <!DOCTYPE html>
-<html lang="{{ lang }}">
+<html lang="{{ pageData.htmlLang }}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
+    <title>{{ pageData.title }}</title>
+    <meta name="description" content="{{ pageData.description }}">
+    <link rel="canonical" href="{{ site.url }}/{{ lang }}/">
+    {% for locale in i18n.locales %}
+      <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url }}/{{ locale }}/">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
+    <link rel="icon" href="/img/favicon.ico">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-    <header>
-      <h1>{{ site.languages[lang].welcomeMessage }}</h1>
-      <nav>
-        <a href="/{{ lang }}/">{{ site.languages[lang].home }}</a> |
-        <a href="/{{ lang }}/about/">{{ site.languages[lang].about }}</a>
+    <header class="site-header">
+      <a class="brand" href="/{{ lang }}/" aria-label="MathJSLab">
+        <img src="/img/mathjslab-logo.svg" alt="" width="101" height="101">
+        <span>MathJSLab</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#overview">{{ pageData.nav.overview }}</a>
+        <a href="#features">{{ pageData.nav.features }}</a>
+        <a href="#ecosystem">{{ pageData.nav.ecosystem }}</a>
+        <a href="#resources">{{ pageData.nav.resources }}</a>
       </nav>
-      <ul class="language-switcher">
-        <li><a href="/en/">English</a></li>
-        <li><a href="/pt/">Português</a></li>
-        <li><a href="/es/">Español</a></li>
-      </ul>
+      <div class="header-actions">
+        <ul class="language-switcher" aria-label="Language">
+          {% for locale in i18n.locales %}
+            <li>
+              <a {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/">{{ i18n.languageNames[locale] }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+        <a class="button button-small" href="https://app.mathjslab.com/">{{ pageData.nav.launch }}</a>
+      </div>
     </header>
     <main>
       {{ content | safe }}
     </main>
-    <footer>
-      <p>© 2025 MathJSLab. Todos os direitos reservados.</p>
+    <footer class="site-footer">
+      <p>{{ pageData.footer.copyright }}</p>
+      <p>{{ pageData.footer.builtWith }}</p>
     </footer>
   </body>
 </html>

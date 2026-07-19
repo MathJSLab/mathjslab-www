@@ -1,15 +1,30 @@
+---
+permalink: /
+---
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MathJSLab</title>
-    <meta http-equiv="refresh" content="0; url=https://app.mathjslab.com">
-</head>
-
-<body>
-    <p>Redirecting to <a href="https://app.mathjslab.com">app.mathjslab.com</a>...</p>
-</body>
-
+    <meta name="description" content="Choose a language for the MathJSLab project page.">
+    <link rel="stylesheet" href="/css/main.css">
+    <script>
+      const language = (navigator.language || 'en').toLowerCase();
+      const locale = language.startsWith('pt') ? 'pt' : language.startsWith('es') ? 'es' : 'en';
+      window.location.replace(`/${locale}/`);
+    </script>
+  </head>
+  <body class="language-gateway">
+    <main class="gateway-panel">
+      <img src="/img/mathjslab-logo.svg" alt="" width="94" height="94">
+      <h1>MathJSLab</h1>
+      <p>Choose your language.</p>
+      <nav class="gateway-links" aria-label="Language">
+        <a href="/en/">English</a>
+        <a href="/pt/">Português</a>
+        <a href="/es/">Español</a>
+      </nav>
+    </main>
+  </body>
 </html>
