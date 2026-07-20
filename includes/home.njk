@@ -58,6 +58,33 @@
   </div>
 </section>
 
+<section id="publication" class="section-shell publication-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.publication }}</p>
+    <h2>{{ pageData.publicationTitle }}</h2>
+    <p>{{ pageData.publicationLead }}</p>
+  </div>
+  <p class="publication-intro">{{ pageData.publicationText }}</p>
+  <div class="publication-grid">
+    {% for item in pageData.publications %}
+      <article class="publication-card">
+        <div>
+          <span>{{ item.role }}</span>
+          <h3><a href="{{ item.href }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
+          <p>{{ item.text }}</p>
+        </div>
+        <div class="badge-list" aria-label="{{ item.name }} badges">
+          {% for badge in item.badges %}
+            <a href="{{ badge.href }}" target="_blank" rel="noopener noreferrer">
+              <img src="{{ badge.src }}" alt="{{ badge.alt }}">
+            </a>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="resources" class="section-shell resources-section">
   <div class="section-heading">
     <p class="eyebrow">{{ pageData.nav.resources }}</p>
@@ -70,11 +97,18 @@
     {% endfor %}
   </div>
   <div class="notice-grid">
-    <p>
-      {{ pageData.notices.contactLabel }}
-      <a href="mailto:{{ pageData.notices.contactEmail }}">{{ pageData.notices.contactEmail }}</a>.
-    </p>
     <p>{{ pageData.notices.education }}</p>
     <p>{{ pageData.notices.trademark }}</p>
   </div>
+</section>
+
+<section id="contact" class="section-shell contact-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.contact }}</p>
+    <h2>{{ pageData.contactTitle }}</h2>
+    <p>{{ pageData.contactLead }}</p>
+  </div>
+  <a class="contact-card" href="mailto:{{ pageData.notices.contactEmail }}">
+    {{ pageData.notices.contactEmail }}
+  </a>
 </section>

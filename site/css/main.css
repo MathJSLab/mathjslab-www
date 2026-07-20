@@ -349,6 +349,67 @@ pre {
     font-size: 1.35rem;
 }
 
+.publication-section {
+    padding-top: 3.5rem;
+}
+
+.publication-intro {
+    max-width: 880px;
+    margin: 1.25rem 0 0;
+    color: #47574d;
+    font-size: 1.08rem;
+}
+
+.publication-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.publication-card {
+    display: grid;
+    align-content: space-between;
+    gap: 1.3rem;
+    border: 1px solid rgba(23, 111, 59, 0.16);
+    border-radius: 8px;
+    padding: 1.35rem;
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.publication-card span {
+    display: block;
+    color: #a73f29;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.publication-card h3 {
+    margin-top: 0.25rem;
+}
+
+.publication-card p {
+    margin: 0.8rem 0 0;
+    color: #47574d;
+}
+
+.badge-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+    align-items: center;
+}
+
+.badge-list a,
+.badge-list img {
+    display: inline-block;
+}
+
+.badge-list img {
+    height: 20px;
+    max-width: 100%;
+}
+
 .resources-section {
     padding-bottom: 3rem;
 }
@@ -370,7 +431,7 @@ pre {
 
 .notice-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 2rem;
 }
@@ -379,6 +440,22 @@ pre {
     margin: 0;
     border-left: 4px solid #2c7a7b;
     padding: 0.1rem 0 0.1rem 1rem;
+}
+
+.contact-section {
+    padding-top: 3.5rem;
+}
+
+.contact-card {
+    display: inline-flex;
+    margin-top: 1.5rem;
+    border: 1px solid rgba(23, 111, 59, 0.18);
+    border-radius: 8px;
+    padding: 1rem 1.15rem;
+    color: #172019;
+    background: white;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    font-weight: 800;
 }
 
 .site-footer {
@@ -473,6 +550,10 @@ pre {
 
     .feature-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .publication-grid {
+        grid-template-columns: 1fr;
     }
 }
 

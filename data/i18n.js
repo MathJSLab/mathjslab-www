@@ -12,7 +12,9 @@ const source = {
             overview: 'Overview',
             features: 'Features',
             ecosystem: 'Ecosystem',
+            publication: 'Publication',
             resources: 'Resources',
+            contact: 'Contact',
             launch: 'Open app',
         },
         hero: {
@@ -77,6 +79,91 @@ const source = {
                 href: 'https://github.com/MathJSLab',
             },
         ],
+        publicationTitle: 'Publication and identifiers',
+        publicationLead:
+            'MathJSLab is published as open software with package distribution, source organization and academic identifiers.',
+        publicationText:
+            'The interpreter package is published in the npm registry as mathjslab. The source code is maintained under the MathJSLab organization on GitHub, and both the package and the companion web application have DOI and ISBN identifiers so they can be cited in academic and institutional contexts.',
+        publications: [
+            {
+                name: 'mathjslab',
+                role: 'npm package',
+                text:
+                    'The TypeScript interpreter package is distributed through npm, mirrored through jsDelivr and licensed under MIT.',
+                href: 'https://www.npmjs.com/package/mathjslab',
+                badges: [
+                    {
+                        alt: 'NPM Version',
+                        src: 'https://img.shields.io/npm/v/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'MIT License',
+                        src: 'https://img.shields.io/npm/l/mathjslab',
+                        href: 'https://github.com/MathJSLab/mathjslab/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396265',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396265-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396265',
+                        href: 'https://doi.org/10.5281/zenodo.8396265',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-82338-7',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--82338--7-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
+                    },
+                    {
+                        alt: 'NPM Downloads',
+                        src: 'https://img.shields.io/npm/d18m/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                ],
+            },
+            {
+                name: 'mathjslab-app',
+                role: 'web application',
+                text:
+                    'The browser application demonstrates the interpreter, is maintained on GitHub and has its own DOI and ISBN records.',
+                href: 'https://github.com/MathJSLab/mathjslab-app',
+                badges: [
+                    {
+                        alt: 'MIT License',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396263',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396263-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396263',
+                        href: 'https://doi.org/10.5281/zenodo.8396263',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-84828-1',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--84828--1-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits',
+                        src: 'https://img.shields.io/jsdelivr/gh/hy/MathJSLab/mathjslab-app',
+                        href: 'https://cdn.jsdelivr.net/gh/MathJSLab/mathjslab-app/',
+                    },
+                ],
+            },
+        ],
         resourcesTitle: 'Resources',
         resourcesLead:
             'Start with the app, install the package, or browse the implementation and help files.',
@@ -85,8 +172,10 @@ const source = {
             { label: 'npm package', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'GitHub organization', href: 'https://github.com/MathJSLab' },
             { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help' },
-            { label: 'Contact', href: 'mailto:mathjslab@gmail.com' },
         ],
+        contactTitle: 'Contact',
+        contactLead:
+            'For general project administration and institutional contact, write to the official MathJSLab email address.',
         notices: {
             contactLabel: 'For general project administration and institutional contact, write to',
             contactEmail: 'mathjslab@gmail.com',
@@ -110,7 +199,9 @@ const source = {
             overview: 'Visão geral',
             features: 'Recursos',
             ecosystem: 'Ecossistema',
+            publication: 'Publicação',
             resources: 'Links',
+            contact: 'Contato',
             launch: 'Abrir app',
         },
         hero: {
@@ -175,6 +266,91 @@ const source = {
                 href: 'https://github.com/MathJSLab',
             },
         ],
+        publicationTitle: 'Publicação e identificadores',
+        publicationLead:
+            'O MathJSLab é publicado como software aberto, com distribuição de pacote, organização do código-fonte e identificadores acadêmicos.',
+        publicationText:
+            'O pacote interpretador é publicado no registro npm como mathjslab. O código-fonte é mantido na organização MathJSLab no GitHub, e tanto o pacote quanto a aplicação Web complementar possuem DOI e ISBN para citação em contextos acadêmicos e institucionais.',
+        publications: [
+            {
+                name: 'mathjslab',
+                role: 'Pacote npm',
+                text:
+                    'O pacote interpretador em TypeScript é distribuído pelo npm, espelhado pelo jsDelivr e licenciado sob MIT.',
+                href: 'https://www.npmjs.com/package/mathjslab',
+                badges: [
+                    {
+                        alt: 'Versão npm',
+                        src: 'https://img.shields.io/npm/v/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'Licença MIT',
+                        src: 'https://img.shields.io/npm/l/mathjslab',
+                        href: 'https://github.com/MathJSLab/mathjslab/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396265',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396265-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396265',
+                        href: 'https://doi.org/10.5281/zenodo.8396265',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-82338-7',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--82338--7-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
+                    },
+                    {
+                        alt: 'Downloads npm',
+                        src: 'https://img.shields.io/npm/d18m/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                ],
+            },
+            {
+                name: 'mathjslab-app',
+                role: 'Aplicação Web',
+                text:
+                    'A aplicação de navegador demonstra o interpretador, é mantida no GitHub e possui registros próprios de DOI e ISBN.',
+                href: 'https://github.com/MathJSLab/mathjslab-app',
+                badges: [
+                    {
+                        alt: 'Licença MIT',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396263',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396263-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396263',
+                        href: 'https://doi.org/10.5281/zenodo.8396263',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-84828-1',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--84828--1-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits',
+                        src: 'https://img.shields.io/jsdelivr/gh/hy/MathJSLab/mathjslab-app',
+                        href: 'https://cdn.jsdelivr.net/gh/MathJSLab/mathjslab-app/',
+                    },
+                ],
+            },
+        ],
         resourcesTitle: 'Links úteis',
         resourcesLead:
             'Comece pelo aplicativo, instale o pacote ou navegue pela implementação e pelos arquivos de ajuda.',
@@ -183,8 +359,10 @@ const source = {
             { label: 'Pacote npm', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'Organização no GitHub', href: 'https://github.com/MathJSLab' },
             { label: 'Ajuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help' },
-            { label: 'Contato', href: 'mailto:mathjslab@gmail.com' },
         ],
+        contactTitle: 'Contato',
+        contactLead:
+            'Para administração geral do projeto e contato institucional, escreva para o endereço oficial do MathJSLab.',
         notices: {
             contactLabel: 'Para administração geral do projeto e contato institucional, escreva para',
             contactEmail: 'mathjslab@gmail.com',
@@ -208,7 +386,9 @@ const source = {
             overview: 'Resumen',
             features: 'Funciones',
             ecosystem: 'Ecosistema',
+            publication: 'Publicación',
             resources: 'Recursos',
+            contact: 'Contacto',
             launch: 'Abrir app',
         },
         hero: {
@@ -273,6 +453,91 @@ const source = {
                 href: 'https://github.com/MathJSLab',
             },
         ],
+        publicationTitle: 'Publicación e identificadores',
+        publicationLead:
+            'MathJSLab se publica como software abierto, con distribución de paquete, organización del código fuente e identificadores académicos.',
+        publicationText:
+            'El paquete intérprete se publica en el registro npm como mathjslab. El código fuente se mantiene en la organización MathJSLab en GitHub, y tanto el paquete como la aplicación Web complementaria tienen DOI e ISBN para citación en contextos académicos e institucionales.',
+        publications: [
+            {
+                name: 'mathjslab',
+                role: 'Paquete npm',
+                text:
+                    'El paquete intérprete en TypeScript se distribuye mediante npm, está disponible en jsDelivr y tiene licencia MIT.',
+                href: 'https://www.npmjs.com/package/mathjslab',
+                badges: [
+                    {
+                        alt: 'Versión npm',
+                        src: 'https://img.shields.io/npm/v/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'Licencia MIT',
+                        src: 'https://img.shields.io/npm/l/mathjslab',
+                        href: 'https://github.com/MathJSLab/mathjslab/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396265',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396265-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396265',
+                        href: 'https://doi.org/10.5281/zenodo.8396265',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-82338-7',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--82338--7-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-82338-7',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
+                    },
+                    {
+                        alt: 'Descargas npm',
+                        src: 'https://img.shields.io/npm/d18m/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                ],
+            },
+            {
+                name: 'mathjslab-app',
+                role: 'Aplicación Web',
+                text:
+                    'La aplicación de navegador demuestra el intérprete, se mantiene en GitHub y tiene sus propios registros DOI e ISBN.',
+                href: 'https://github.com/MathJSLab/mathjslab-app',
+                badges: [
+                    {
+                        alt: 'Licencia MIT',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
+                    },
+                    {
+                        alt: 'DOI 10.5281/zenodo.8396263',
+                        src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.8396263-blue?style=flat&link=https://doi.org/10.5281/zenodo.8396263',
+                        href: 'https://doi.org/10.5281/zenodo.8396263',
+                    },
+                    {
+                        alt: 'ISBN 978-65-00-84828-1',
+                        src: 'https://img.shields.io/badge/ISBN-978--65--00--84828--1-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                        href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
+                    },
+                    {
+                        alt: 'OpenAIRE',
+                        src: 'https://img.shields.io/badge/OpenAIRE-blue?style=flat&link=https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                        href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
+                    },
+                    {
+                        alt: 'jsDelivr hits',
+                        src: 'https://img.shields.io/jsdelivr/gh/hy/MathJSLab/mathjslab-app',
+                        href: 'https://cdn.jsdelivr.net/gh/MathJSLab/mathjslab-app/',
+                    },
+                ],
+            },
+        ],
         resourcesTitle: 'Recursos',
         resourcesLead:
             'Empieza por la aplicación, instala el paquete o explora la implementación y los archivos de ayuda.',
@@ -281,8 +546,10 @@ const source = {
             { label: 'Paquete npm', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'Organización en GitHub', href: 'https://github.com/MathJSLab' },
             { label: 'Ayuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help' },
-            { label: 'Contacto', href: 'mailto:mathjslab@gmail.com' },
         ],
+        contactTitle: 'Contacto',
+        contactLead:
+            'Para administración general del proyecto y contacto institucional, escribe a la dirección oficial de MathJSLab.',
         notices: {
             contactLabel: 'Para administración general del proyecto y contacto institucional, escribe a',
             contactEmail: 'mathjslab@gmail.com',
