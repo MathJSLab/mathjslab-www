@@ -5,8 +5,8 @@
     <h1>{{ pageData.hero.heading }}</h1>
     <p class="hero-lead">{{ pageData.hero.lead }}</p>
     <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
-      <a class="button button-primary" href="https://app.mathjslab.com/">{{ pageData.hero.primaryCta }}</a>
-      <a class="button button-secondary" href="https://github.com/MathJSLab">{{ pageData.hero.secondaryCta }}</a>
+      <a class="button button-primary" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.hero.primaryCta }}</a>
+      <a class="button button-secondary" href="https://github.com/MathJSLab" target="_blank" rel="noopener noreferrer">{{ pageData.hero.secondaryCta }}</a>
     </div>
     <div class="install-command" aria-label="{{ pageData.hero.installLabel }}">
       <span>{{ pageData.hero.installLabel }}</span>
@@ -49,7 +49,7 @@
   </div>
   <div class="repo-list">
     {% for repo in pageData.repositories %}
-      <a class="repo-card" href="{{ repo.href }}">
+      <a class="repo-card" href="{{ repo.href }}" target="_blank" rel="noopener noreferrer">
         <span>{{ repo.role }}</span>
         <strong>{{ repo.name }}</strong>
         <p>{{ repo.text }}</p>
@@ -66,7 +66,7 @@
   </div>
   <div class="resource-links">
     {% for resource in pageData.resources %}
-      <a href="{{ resource.href }}">{{ resource.label }}</a>
+      <a href="{{ resource.href }}" target="_blank" rel="noopener noreferrer">{{ resource.label }}</a>
     {% endfor %}
   </div>
   <div class="notice-grid">
