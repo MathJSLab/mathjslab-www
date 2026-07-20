@@ -70,7 +70,10 @@
     {% endfor %}
   </div>
   <div class="notice-grid">
-    <p>{{ pageData.notices.contact }}</p>
+    <p>
+      {{ pageData.notices.contactLabel }}
+      <a href="mailto:{{ pageData.notices.contactEmail }}">{{ pageData.notices.contactEmail }}</a>.
+    </p>
     <p>{{ pageData.notices.education }}</p>
     <p>{{ pageData.notices.trademark }}</p>
   </div>

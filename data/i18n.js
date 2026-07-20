@@ -88,8 +88,8 @@ const source = {
             { label: 'Contact', href: 'mailto:mathjslab@gmail.com' },
         ],
         notices: {
-            contact:
-                'For general project administration and institutional contact, write to mathjslab@gmail.com.',
+            contactLabel: 'For general project administration and institutional contact, write to',
+            contactEmail: 'mathjslab@gmail.com',
             education:
                 'MathJSLab is intended for educational purposes, helping teachers and students use a computer-aided calculation tool that runs in the browser.',
             trademark:
@@ -97,7 +97,6 @@ const source = {
         },
         footer: {
             copyright: 'Copyright 2026 MathJSLab.',
-            builtWith: 'Internationalized with intl-messageformat.',
         },
     },
     pt: {
@@ -187,8 +186,8 @@ const source = {
             { label: 'Contato', href: 'mailto:mathjslab@gmail.com' },
         ],
         notices: {
-            contact:
-                'Para administração geral do projeto e contato institucional, escreva para mathjslab@gmail.com.',
+            contactLabel: 'Para administração geral do projeto e contato institucional, escreva para',
+            contactEmail: 'mathjslab@gmail.com',
             education:
                 'O MathJSLab é voltado a fins educacionais, ajudando professores e estudantes a usar uma ferramenta de cálculo assistido que roda no navegador.',
             trademark:
@@ -196,7 +195,6 @@ const source = {
         },
         footer: {
             copyright: 'Copyright 2026 MathJSLab.',
-            builtWith: 'Internacionalizado com intl-messageformat.',
         },
     },
     es: {
@@ -286,8 +284,8 @@ const source = {
             { label: 'Contacto', href: 'mailto:mathjslab@gmail.com' },
         ],
         notices: {
-            contact:
-                'Para administración general del proyecto y contacto institucional, escribe a mathjslab@gmail.com.',
+            contactLabel: 'Para administración general del proyecto y contacto institucional, escribe a',
+            contactEmail: 'mathjslab@gmail.com',
             education:
                 'MathJSLab está orientado a fines educativos, ayudando a docentes y estudiantes a usar una herramienta de cálculo asistido que funciona en el navegador.',
             trademark:
@@ -295,7 +293,6 @@ const source = {
         },
         footer: {
             copyright: 'Copyright 2026 MathJSLab.',
-            builtWith: 'Internacionalizado con intl-messageformat.',
         },
     },
 };
