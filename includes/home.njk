@@ -6,10 +6,16 @@
     <p class="hero-lead">{{ pageData.hero.lead }}</p>
     <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
       <a class="button button-primary" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.hero.primaryCta }}</a>
-      <a class="button button-secondary" href="https://github.com/MathJSLab" target="_blank" rel="noopener noreferrer">{{ pageData.hero.secondaryCta }}</a>
+      <a class="button button-secondary" href="https://github.com/MathJSLab" target="_blank" rel="noopener noreferrer">
+        <img class="button-icon" src="/img/Octicons-mark-github.svg" alt="">
+        <span>{{ pageData.hero.secondaryCta }}</span>
+      </a>
     </div>
     <div class="install-command" aria-label="{{ pageData.hero.installLabel }}">
-      <span>{{ pageData.hero.installLabel }}</span>
+      <span>
+        <img src="/img/Npm-logo.svg" alt="">
+        {{ pageData.hero.installLabel }}
+      </span>
       <code>npm install mathjslab</code>
     </div>
   </div>
@@ -50,7 +56,12 @@
   <div class="repo-list">
     {% for repo in pageData.repositories %}
       <a class="repo-card" href="{{ repo.href }}" target="_blank" rel="noopener noreferrer">
-        <span>{{ repo.role }}</span>
+        <span>
+          {% if repo.icon %}
+            <img src="{{ repo.icon }}" alt="">
+          {% endif %}
+          {{ repo.role }}
+        </span>
         <strong>{{ repo.name }}</strong>
         <p>{{ repo.text }}</p>
       </a>
@@ -69,7 +80,12 @@
     {% for item in pageData.publications %}
       <article class="publication-card">
         <div>
-          <span>{{ item.role }}</span>
+          <span>
+            {% if item.icon %}
+              <img src="{{ item.icon }}" alt="">
+            {% endif %}
+            {{ item.role }}
+          </span>
           <h3><a href="{{ item.href }}" target="_blank" rel="noopener noreferrer">{{ item.name }}</a></h3>
           <p>{{ item.text }}</p>
         </div>
@@ -85,6 +101,24 @@
   </div>
 </section>
 
+<section id="archive" class="section-shell archive-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.archive }}</p>
+    <h2>{{ pageData.archiveTitle }}</h2>
+    <p>{{ pageData.archiveLead }}</p>
+  </div>
+  <div class="archive-list">
+    {% for item in pageData.archiveItems %}
+      <a class="archive-card" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+        <span>{{ item.language }} · {{ item.file }}</span>
+        <strong>{{ item.title }}</strong>
+        <p>{{ item.description }}</p>
+        <small>{{ item.date }}</small>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="resources" class="section-shell resources-section">
   <div class="section-heading">
     <p class="eyebrow">{{ pageData.nav.resources }}</p>
@@ -93,7 +127,12 @@
   </div>
   <div class="resource-links">
     {% for resource in pageData.resources %}
-      <a href="{{ resource.href }}" target="_blank" rel="noopener noreferrer">{{ resource.label }}</a>
+      <a href="{{ resource.href }}" target="_blank" rel="noopener noreferrer">
+        {% if resource.icon %}
+          <img src="{{ resource.icon }}" alt="">
+        {% endif %}
+        <span>{{ resource.label }}</span>
+      </a>
     {% endfor %}
   </div>
   <div class="notice-grid">
@@ -111,4 +150,18 @@
   <a class="contact-card" href="mailto:{{ pageData.notices.contactEmail }}">
     {{ pageData.notices.contactEmail }}
   </a>
+</section>
+
+<section id="license" class="section-shell license-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.license }}</p>
+    <h2>{{ pageData.licenseTitle }}</h2>
+    <p>{{ pageData.licenseLeadPrefix }}<a href="{{ pageData.licenseHref }}" target="_blank" rel="noopener noreferrer">{{ pageData.licenseLinkLabel }}</a>{{ pageData.licenseLeadSuffix }}</p>
+  </div>
+  <div class="license-panel">
+    <div class="license-branding" aria-hidden="true">
+      <img src="/img/MIT_Logo_New.svg" alt="">
+    </div>
+    <pre><code>{{ pageData.licenseText }}</code></pre>
+  </div>
 </section>

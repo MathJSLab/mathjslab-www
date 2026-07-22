@@ -42,3 +42,7 @@ package-lock.json
 
 # Output of 'npm pack'
 *.tgz
+
+# Stores VSCode versions used for testing VSCode extensions and VSCode configuration
+.vscode-test
+.vscode

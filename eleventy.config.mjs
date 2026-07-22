@@ -20,6 +20,7 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy('./site/css');
     eleventyConfig.addPassthroughCopy('./site/img');
+    eleventyConfig.addPassthroughCopy('./site/archive');
     EleventyUtil.configAddTemplateFormat(eleventyConfig, ['njk', 'scss'], '\\./site/');
 
     EleventyUtil.configAddEntries(eleventyConfig, EleventyUtil.utilFilters, 'addFilter');

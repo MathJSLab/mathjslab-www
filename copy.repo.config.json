@@ -13,7 +13,14 @@
         { "src": "images/img/ico/favicon.ico", "dest": "site/img/favicon.ico" },
         { "src": "images/img/ico/favicon-dark.ico", "dest": "site/img/favicon-dark.ico" },
         { "src": "images/mathjslab-logo.svg", "dest": "site/img/mathjslab-logo.svg" },
+        { "src": "extra/advertising/cdnlogo.com_npm-square-red.svg", "dest": "site/img/cdnlogo.com_npm-square-red.svg" },
+        { "src": "extra/advertising/MIT_Logo_New.svg", "dest": "site/img/MIT_Logo_New.svg" },
+        { "src": "extra/advertising/Npm-logo.svg", "dest": "site/img/Npm-logo.svg" },
+        { "src": "extra/advertising/Octicons-mark-github.svg", "dest": "site/img/Octicons-mark-github.svg" },
         ".prettierignore",
-        ".prettierrc"
+        ".prettierrc",
+        { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-en.pdf", "dest": "site/archive/01/main-en.pdf" },
+        { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-pt.pdf", "dest": "site/archive/01/main-pt.pdf" },
+        { "src": "extra/paper/02-mathjslab-publishing-research-software/main-pt.pdf", "dest": "site/archive/02/main-pt.pdf" }
     ]
 }
