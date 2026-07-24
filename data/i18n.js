@@ -18,6 +18,7 @@ const source = {
             contact: 'Contact',
             license: 'License',
             launch: 'Open app',
+            launchCalc: 'Open Calculator',
         },
         hero: {
             kicker: 'TypeScript numerical computing for the browser',
@@ -25,6 +26,7 @@ const source = {
             lead:
                 'Use the online app as a teaching and learning calculator, or build on the npm package to run expressions, functions, matrices, plots and MathML-rendered results in browser environments.',
             primaryCta: 'Open MathJSLab app',
+            calculatorCta: 'Open Calculator',
             secondaryCta: 'View source on GitHub',
             installLabel: 'Install package',
             terminalTitle: 'Interactive session',
@@ -73,6 +75,14 @@ const source = {
                 text:
                     'Progressive web app that exposes the interpreter in a responsive browser interface.',
                 href: 'https://github.com/MathJSLab/mathjslab-app',
+                icon: '/img/Octicons-mark-github.svg',
+            },
+            {
+                name: 'mathjslab-calc',
+                role: 'Calculator application',
+                text:
+                    'Scientific calculator prompt application hosted at calc.mathjslab.com and powered by the MathJSLab package.',
+                href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
@@ -214,6 +224,7 @@ const source = {
             'Start with the app, install the package, or browse the implementation and help files.',
         resources: [
             { label: 'Launch the app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
+            { label: 'Open Calculator', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'npm package', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
             { label: 'GitHub organization', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help', icon: '/img/Octicons-mark-github.svg' },
@@ -258,6 +269,7 @@ const source = {
             contact: 'Contato',
             license: 'Licença',
             launch: 'Abrir app',
+            launchCalc: 'Abrir Calculadora',
         },
         hero: {
             kicker: 'Computação numérica em TypeScript para o navegador',
@@ -265,6 +277,7 @@ const source = {
             lead:
                 'Use o aplicativo online como calculadora de ensino e aprendizagem, ou use o pacote npm para executar expressões, funções, matrizes, gráficos e resultados renderizados em MathML no navegador.',
             primaryCta: 'Abrir app MathJSLab',
+            calculatorCta: 'Abrir Calculadora',
             secondaryCta: 'Ver código no GitHub',
             installLabel: 'Instalar pacote',
             terminalTitle: 'Sessão interativa',
@@ -313,6 +326,14 @@ const source = {
                 text:
                     'Progressive web app que apresenta o interpretador em uma interface responsiva no navegador.',
                 href: 'https://github.com/MathJSLab/mathjslab-app',
+                icon: '/img/Octicons-mark-github.svg',
+            },
+            {
+                name: 'mathjslab-calc',
+                role: 'Aplicativo calculadora',
+                text:
+                    'Calculadora científica com interface de prompt, hospedada em calc.mathjslab.com e baseada no pacote MathJSLab.',
+                href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
@@ -454,6 +475,7 @@ const source = {
             'Comece pelo aplicativo, instale o pacote ou navegue pela implementação e pelos arquivos de ajuda.',
         resources: [
             { label: 'Abrir o app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
+            { label: 'Abrir Calculadora', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'Pacote npm', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
             { label: 'Organização no GitHub', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Ajuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help', icon: '/img/Octicons-mark-github.svg' },
@@ -498,6 +520,7 @@ const source = {
             contact: 'Contacto',
             license: 'Licencia',
             launch: 'Abrir app',
+            launchCalc: 'Abrir Calculadora',
         },
         hero: {
             kicker: 'Computación numérica en TypeScript para el navegador',
@@ -505,6 +528,7 @@ const source = {
             lead:
                 'Usa la aplicación online como calculadora para enseñanza y aprendizaje, o integra el paquete npm para ejecutar expresiones, funciones, matrices, gráficos y resultados renderizados en MathML en el navegador.',
             primaryCta: 'Abrir app MathJSLab',
+            calculatorCta: 'Abrir Calculadora',
             secondaryCta: 'Ver código en GitHub',
             installLabel: 'Instalar paquete',
             terminalTitle: 'Sesión interactiva',
@@ -553,6 +577,14 @@ const source = {
                 text:
                     'Progressive web app que presenta el intérprete en una interfaz adaptable para el navegador.',
                 href: 'https://github.com/MathJSLab/mathjslab-app',
+                icon: '/img/Octicons-mark-github.svg',
+            },
+            {
+                name: 'mathjslab-calc',
+                role: 'Aplicación calculadora',
+                text:
+                    'Calculadora científica con interfaz de prompt, alojada en calc.mathjslab.com y basada en el paquete MathJSLab.',
+                href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
@@ -694,6 +726,7 @@ const source = {
             'Empieza por la aplicación, instala el paquete o explora la implementación y los archivos de ayuda.',
         resources: [
             { label: 'Abrir la app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
+            { label: 'Abrir Calculadora', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'Paquete npm', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
             { label: 'Organización en GitHub', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Ayuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/tree/main/help', icon: '/img/Octicons-mark-github.svg' },

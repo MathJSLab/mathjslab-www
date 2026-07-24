@@ -1,6 +1,6 @@
 {
   "name": "mathjslab-www",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "MathJSLab project homepage at mathjslab.com",
   "repository": {
     "type": "git",
@@ -67,7 +67,7 @@
     "png-to-ico": "^3.0.2",
     "prettier": "^3.9.6",
     "replace-in-file": "^8.4.0",
-    "sass": "^1.101.3",
+    "sass": "^1.101.7",
     "sass-loader": "^17.0.0",
     "selfsigned": "^5.5.0",
     "shx": "^0.4.0",

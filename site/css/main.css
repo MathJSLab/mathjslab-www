@@ -142,6 +142,19 @@ img {
     background: #10552d;
 }
 
+.button-small-secondary {
+    color: #172019;
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(23, 111, 59, 0.22);
+    box-shadow: none;
+}
+
+.button-small-secondary:hover {
+    color: #172019;
+    background: white;
+    border-color: rgba(23, 111, 59, 0.42);
+}
+
 .button-secondary {
     color: #172019;
     background: rgba(255, 255, 255, 0.76);
