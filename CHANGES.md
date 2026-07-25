@@ -2,6 +2,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.7
+
+- Rewriting of content and insertion of links into the text.
+
 ## 0.0.6
 
 - Addition of buttons for the MathJSLab calculator (`mathjslab-calc` project at https://calc.mathjslab.com)

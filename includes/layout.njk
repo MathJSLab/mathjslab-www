@@ -38,15 +38,17 @@
             </li>
           {% endfor %}
         </ul>
-        <a class="button button-small" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launch }}</a>
-        <a class="button button-small button-small-secondary" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launchCalc }}</a>
+        <div class="header-buttons">
+          <a class="button button-small" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launch }}</a>
+          <a class="button button-small button-small-secondary" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launchCalc }}</a>
+        </div>
       </div>
     </header>
     <main>
       {{ content | safe }}
     </main>
     <footer class="site-footer">
-      <p>{{ pageData.footer.copyright }}</p>
+      <p>{% if pageData.footer.copyrightHtml %}{{ pageData.footer.copyrightHtml | safe }}{% else %}{{ pageData.footer.copyright }}{% endif %}</p>
     </footer>
   </body>
 </html>

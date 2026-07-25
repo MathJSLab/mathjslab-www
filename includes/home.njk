@@ -3,7 +3,7 @@
   <div class="hero-copy">
     <p class="eyebrow">{{ pageData.hero.kicker }}</p>
     <h1>{{ pageData.hero.heading }}</h1>
-    <p class="hero-lead">{{ pageData.hero.lead }}</p>
+    <p class="hero-lead">{% if pageData.hero.leadHtml %}{{ pageData.hero.leadHtml | safe }}{% else %}{{ pageData.hero.lead }}{% endif %}</p>
     <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
       <a class="button button-primary" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.hero.primaryCta }}</a>
       <a class="button button-secondary" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.hero.calculatorCta }}</a>
@@ -26,23 +26,27 @@
       <span></span>
       <span></span>
     </div>
-    <pre><code>&gt;&gt; {{ pageData.hero.promptOne }}
-{{ pageData.hero.outputOne }}
-&gt;&gt; {{ pageData.hero.promptTwo }}
-{{ pageData.hero.outputTwo }}</code></pre>
+    <div class="terminal-session">
+      <div class="terminal-line terminal-prompt"><code>&gt;&gt; {{ pageData.hero.promptOne }}</code></div>
+      <div class="terminal-line terminal-output">{{ pageData.hero.outputOneMathML | safe }}</div>
+      <div class="terminal-line terminal-prompt"><code>&gt;&gt; {{ pageData.hero.promptTwo }}</code></div>
+      <div class="terminal-line terminal-output">{{ pageData.hero.outputTwoMathML | safe }}</div>
+      <div class="terminal-line terminal-prompt"><code>&gt;&gt; {{ pageData.hero.promptThree }}</code></div>
+      <div class="terminal-line terminal-output">{{ pageData.hero.outputThreeMathML | safe }}</div>
+    </div>
   </div>
 </section>
 
 <section id="features" class="section-shell">
   <div class="section-heading">
     <p class="eyebrow">{{ pageData.nav.features }}</p>
-    <h2>{{ pageData.description }}</h2>
+    <h2>{% if pageData.descriptionHtml %}{{ pageData.descriptionHtml | safe }}{% else %}{{ pageData.description }}{% endif %}</h2>
   </div>
   <div class="feature-grid">
     {% for item in pageData.highlights %}
       <article class="feature-card">
         <h3>{{ item.title }}</h3>
-        <p>{{ item.text }}</p>
+        <p>{% if item.textHtml %}{{ item.textHtml | safe }}{% else %}{{ item.text }}{% endif %}</p>
       </article>
     {% endfor %}
   </div>
@@ -138,7 +142,7 @@
   </div>
   <div class="notice-grid">
     <p>{{ pageData.notices.education }}</p>
-    <p>{{ pageData.notices.trademark }}</p>
+    <p>{% if pageData.notices.trademarkHtml %}{{ pageData.notices.trademarkHtml | safe }}{% else %}{{ pageData.notices.trademark }}{% endif %}</p>
   </div>
 </section>
 

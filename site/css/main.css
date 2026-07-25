@@ -30,6 +30,24 @@ a:hover {
     color: #0f4d2b;
 }
 
+.software-link {
+    display: inline-flex;
+    gap: 0.2em;
+    align-items: center;
+    vertical-align: -0.13em;
+}
+
+.software-icon {
+    width: 1em;
+    height: 1em;
+    flex: 0 0 auto;
+}
+
+h2 .software-icon {
+    width: 0.78em;
+    height: 0.78em;
+}
+
 img {
     max-width: 100%;
 }
@@ -100,15 +118,29 @@ img {
 
 .header-actions {
     min-width: max-content;
+    align-items: center;
     justify-content: flex-end;
     gap: 0.75rem;
 }
 
 .language-switcher {
+    flex-direction: column;
+    align-items: stretch;
     gap: 0.1rem;
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.language-switcher a {
+    display: block;
+    text-align: center;
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
 }
 
 .button {
@@ -174,6 +206,7 @@ img {
 }
 
 .section-shell {
+    scroll-margin-top: 9rem;
     width: min(1160px, calc(100% - 2rem));
     margin: 0 auto;
     padding: 4.5rem 0;
@@ -308,12 +341,38 @@ pre {
     background: #63c174;
 }
 
-.hero-panel pre {
-    margin: 0;
+.terminal-session {
+    display: grid;
+    gap: 0.45rem;
     padding: clamp(1.25rem, 3vw, 2rem);
     overflow-x: auto;
     color: #d9f7df;
     font-size: clamp(0.95rem, 2vw, 1.08rem);
+}
+
+.terminal-line {
+    min-width: max-content;
+}
+
+.terminal-prompt code {
+    color: #d9f7df;
+    background: transparent;
+}
+
+.terminal-output {
+    color: #ecfff0;
+}
+
+.terminal-output math {
+    display: block;
+    max-width: max-content;
+    color: inherit;
+    font-family: math;
+}
+
+.terminal-output mtable {
+    column-gap: 0.35rem;
+    row-gap: 0.1rem;
 }
 
 .section-heading {
@@ -347,6 +406,10 @@ pre {
 .feature-card p,
 .repo-card p {
     margin: 0.8rem 0 0;
+}
+
+.feature-card a {
+    font-weight: 750;
 }
 
 .split-section {
