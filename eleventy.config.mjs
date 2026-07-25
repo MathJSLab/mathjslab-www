@@ -21,6 +21,8 @@ export default async function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./site/css');
     eleventyConfig.addPassthroughCopy('./site/img');
     eleventyConfig.addPassthroughCopy('./site/archive');
+    eleventyConfig.addPassthroughCopy({ './site/img/favicon.ico': 'favicon.ico' });
+    eleventyConfig.addPassthroughCopy({ './site/img/favicon-dark.ico': 'favicon-dark.ico' });
     EleventyUtil.configAddTemplateFormat(eleventyConfig, ['njk', 'scss'], '\\./site/');
 
     EleventyUtil.configAddEntries(eleventyConfig, EleventyUtil.utilFilters, 'addFilter');
