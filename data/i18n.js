@@ -26,8 +26,8 @@ const source = {
             kicker: 'TypeScript numerical computing for the browser',
             heading: 'MathJSLab brings a mathematical lab to the web.',
             leadHtml:
-                'MathJSLab simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore MathJSLab features. Use the <a class="software-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/Npm-logo.svg" alt="" aria-hidden="true">npm package</a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
-            primaryCta: 'Open MathJSLab app',
+                '<strong>MathJSLab</strong> simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore <strong>MathJSLab</strong> features. Use the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
+            primaryCtaHtml: 'Open <strong>MathJSLab</strong> app',
             calculatorCta: 'Open Calculator',
             secondaryCta: 'View source on GitHub',
             installLabel: 'Install package',
@@ -65,8 +65,8 @@ const source = {
             },
         ],
         ecosystemTitle: 'Project ecosystem',
-        ecosystemLead:
-            'The MathJSLab Organization on GitHub owns the project repositories: the npm package, the web applications, the project page and the organization profile itself.',
+        ecosystemLeadHtml:
+            'The <strong>MathJSLab</strong> Organization on GitHub owns the project repositories: the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>, the web applications, the project page and the organization profile itself.',
         repositories: [
             {
                 name: 'mathjslab',
@@ -87,29 +87,30 @@ const source = {
             {
                 name: 'mathjslab-calc',
                 role: 'Calculator application',
-                text:
-                    'Scientific calculator prompt application hosted at calc.mathjslab.com and powered by the MathJSLab package.',
+                textHtml:
+                    'Scientific calculator prompt application hosted at calc.mathjslab.com and powered by the <strong>MathJSLab</strong> package.',
                 href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
                 name: 'mathjslab-github',
                 role: 'Organization support',
-                text:
-                    'Shared profile, repository templates and project-wide support material for MathJSLab.',
+                textHtml:
+                    'Shared profile, repository templates and project-wide support material for <strong>MathJSLab</strong>.',
                 href: 'https://github.com/MathJSLab',
                 icon: '/img/Octicons-mark-github.svg',
             },
         ],
         publicationTitle: 'Publication and identifiers',
-        publicationLead:
-            'MathJSLab is published as free software, distributed as a reusable package and with persistent identifiers assigned to it.',
-        publicationText:
-            'The interpreter package is published in the npm registry as mathjslab. The source code is maintained under the MathJSLab organization on GitHub, and both the package and the companion web application have DOI and ISBN identifiers so they can be cited in academic and institutional contexts.',
+        publicationLeadHtml:
+            '<strong>MathJSLab</strong> is published as free software, distributed as a reusable package and with persistent identifiers assigned to it.',
+        publicationTextHtml:
+            'The interpreter package is published in the npm registry as mathjslab. The source code is maintained under the <strong>MathJSLab</strong> organization on GitHub, and both the package and the companion web application have DOI and ISBN identifiers so they can be cited in academic and institutional contexts.',
         publications: [
             {
                 name: 'mathjslab',
-                role: 'npm package',
+                roleHtml:
+                    '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>',
                 text:
                     'The TypeScript interpreter package is distributed through npm, mirrored through jsDelivr and licensed under MIT.',
                 href: 'https://www.npmjs.com/package/mathjslab',
@@ -189,16 +190,16 @@ const source = {
             },
         ],
         archiveTitle: 'Archive',
-        archiveLead:
-            'Files and documents related to the MathJSLab project.',
+        archiveLeadHtml:
+            'Files and documents related to the <strong>MathJSLab</strong> project.',
         archiveItems: [
             {
                 group: '01',
                 title:
                     'A methodological proposal that integrates symbolic problem-solving in physics with the MathJSLab software',
                 date: 'July 10, 2026',
-                description:
-                    'English version of the paper on symbolic problem-solving in Physics and Mathematics education with MathJSLab.',
+                descriptionHtml:
+                    'English version of the paper on symbolic problem-solving in Physics and Mathematics education with <strong>MathJSLab</strong>.',
                 language: 'English',
                 href: '/archive/01/main-en.pdf',
                 file: 'archive/01/main-en.pdf',
@@ -208,8 +209,8 @@ const source = {
                 title:
                     'Uma proposta metodológica que articula a resolução literal de problemas de Física e o software MathJSLab',
                 date: '13 de maio de 2026',
-                description:
-                    'Portuguese version of the paper on literal problem-solving in Physics and Mathematics education with MathJSLab.',
+                descriptionHtml:
+                    'Portuguese version of the paper on literal problem-solving in Physics and Mathematics education with <strong>MathJSLab</strong>.',
                 language: 'Portuguese',
                 href: '/archive/01/main-pt.pdf',
                 file: 'archive/01/main-pt.pdf',
@@ -219,25 +220,25 @@ const source = {
                 title:
                     'MathJSLab: Prova de conceito de computação científica no navegador e software como artefato acadêmico',
                 date: '4 de junho de 2026',
-                description:
-                    'Portuguese paper presenting MathJSLab as browser-based scientific computing and publishable academic software.',
+                descriptionHtml:
+                    'Portuguese paper presenting <strong>MathJSLab</strong> as browser-based scientific computing and publishable academic software.',
                 language: 'Portuguese',
                 href: '/archive/02/main-pt.pdf',
                 file: 'archive/02/main-pt.pdf',
             },
         ],
         resourcesTitle: 'Resources',
-        resourcesLead:
-            'Try the demo application or the simplified calculator. Install the npm package, browse the organization profile on GitHub or consult the command help.',
+        resourcesLeadHtml:
+            'Try the demo application or the simplified calculator. Install the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>, browse the organization profile on GitHub or consult the command help.',
         resources: [
             { label: 'Launch the app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'Open Calculator', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
-            { label: 'npm package', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
+            { labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</span>', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'GitHub organization', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/README.md', icon: '/img/Octicons-mark-github.svg' },
         ],
         licenseTitle: 'MIT License',
-        licenseLeadPrefix: 'MathJSLab is distributed as free software under the ',
+        licenseLeadPrefixHtml: '<strong>MathJSLab</strong> is distributed as free software under the ',
         licenseLinkLabel: 'MIT License',
         licenseHref: 'https://opensource.org/license/MIT',
         licenseLeadSuffix:
@@ -245,18 +246,18 @@ const source = {
         licenseText:
             'MIT License\n\nCopyright (c) 2016-2026 Sergio Lindau, mathjslab.com, ISBN 978-65-00-82338-7\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         contactTitle: 'Contact',
-        contactLead:
-            'To contact the MathJSLab project organization, write to the address',
+        contactLeadHtml:
+            'To contact the <strong>MathJSLab</strong> project organization, write to the address',
         notices: {
             contactLabel: 'To contact the MathJSLab project organization, write to the address',
             contactEmail: 'mathjslab@gmail.com',
-            education:
-                'MathJSLab is intended for educational purposes, helping teachers and students use a computer-aided calculation tool that runs in the browser.',
+            educationHtml:
+                '<strong>MathJSLab</strong> is intended for educational purposes, helping teachers and students use a computer-aided calculation tool that runs in the browser.',
             trademarkHtml:
-                'MathJSLab is not affiliated, sponsored or endorsed by <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; is a registered trademark of <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
+                '<strong>MathJSLab</strong> is not affiliated, sponsored or endorsed by <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; is a registered trademark of <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
         },
         footer: {
-            copyrightHtml: 'Copyright &copy; 2026 MathJSLab.',
+            copyrightHtml: 'Copyright &copy; 2026 <strong>MathJSLab</strong>.',
         },
     },
     pt: {
@@ -284,8 +285,8 @@ const source = {
             kicker: 'Computação numérica em TypeScript para o navegador',
             heading: 'MathJSLab leva um laboratório matemático para a web.',
             leadHtml:
-                'MathJSLab simula um subconjunto da linguagem <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>. Use um dos aplicativos online para conhecer os recursos do MathJSLab. Use o <a class="software-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/Npm-logo.svg" alt="" aria-hidden="true">pacote npm</a> em seu projeto para executar expressões, funções, matrizes, com resultados renderizados em <a href="https://developer.mozilla.org/pt-BR/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> e compatibilidade completa no navegador web.',
-            primaryCta: 'Abrir app MathJSLab',
+                '<strong>MathJSLab</strong> simula um subconjunto da linguagem <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>. Use um dos aplicativos online para conhecer os recursos do <strong>MathJSLab</strong>. Use o <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">pacote <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a> em seu projeto para executar expressões, funções, matrizes, com resultados renderizados em <a href="https://developer.mozilla.org/pt-BR/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> e compatibilidade completa no navegador web.',
+            primaryCtaHtml: 'Abrir app <strong>MathJSLab</strong>',
             calculatorCta: 'Abrir Calculadora',
             secondaryCta: 'Ver código no GitHub',
             installLabel: 'Instalar pacote',
@@ -323,8 +324,8 @@ const source = {
             },
         ],
         ecosystemTitle: 'Ecossistema do projeto',
-        ecosystemLead:
-            'A Organização MathJSLab no GitHub detém os repositórios do projeto: o pacote npm, os aplicativos web, a página do projeto e o perfil da própria organização.',
+        ecosystemLeadHtml:
+            'A Organização <strong>MathJSLab</strong> no GitHub detém os repositórios do projeto: o <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">pacote <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>, os aplicativos web, a página do projeto e o perfil da própria organização.',
         repositories: [
             {
                 name: 'mathjslab',
@@ -345,29 +346,30 @@ const source = {
             {
                 name: 'mathjslab-calc',
                 role: 'Aplicativo calculadora',
-                text:
-                    'Calculadora científica com interface de prompt, hospedada em calc.mathjslab.com e baseada no pacote MathJSLab.',
+                textHtml:
+                    'Calculadora científica com interface de prompt, hospedada em calc.mathjslab.com e baseada no pacote <strong>MathJSLab</strong>.',
                 href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
                 name: 'mathjslab-github',
                 role: 'Suporte da organização',
-                text:
-                    'Perfil, modelos de repositório e materiais de suporte compartilhados para o MathJSLab.',
+                textHtml:
+                    'Perfil, modelos de repositório e materiais de suporte compartilhados para o <strong>MathJSLab</strong>.',
                 href: 'https://github.com/MathJSLab',
                 icon: '/img/Octicons-mark-github.svg',
             },
         ],
         publicationTitle: 'Publicação e identificadores',
-        publicationLead:
-            'O MathJSLab é publicado como software livre, distribuído como um pacote reutilizável e com identificadores persistentes atribuídos a ele.',
-        publicationText:
-            'O pacote interpretador é publicado no registro npm como mathjslab. O código-fonte é mantido na organização MathJSLab no GitHub, e tanto o pacote quanto a aplicação Web complementar possuem DOI e ISBN para citação em contextos acadêmicos e institucionais.',
+        publicationLeadHtml:
+            'O <strong>MathJSLab</strong> é publicado como software livre, distribuído como um pacote reutilizável e com identificadores persistentes atribuídos a ele.',
+        publicationTextHtml:
+            'O pacote interpretador é publicado no registro npm como mathjslab. O código-fonte é mantido na organização <strong>MathJSLab</strong> no GitHub, e tanto o pacote quanto a aplicação Web complementar possuem DOI e ISBN para citação em contextos acadêmicos e institucionais.',
         publications: [
             {
                 name: 'mathjslab',
-                role: 'Pacote npm',
+                roleHtml:
+                    '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">Pacote <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>',
                 text:
                     'O pacote interpretador em TypeScript é distribuído pelo npm, espelhado pelo jsDelivr e licenciado sob MIT.',
                 href: 'https://www.npmjs.com/package/mathjslab',
@@ -447,16 +449,16 @@ const source = {
             },
         ],
         archiveTitle: 'Arquivo',
-        archiveLead:
-            'Arquivos e documentos relacionados ao projeto MathJSLab.',
+        archiveLeadHtml:
+            'Arquivos e documentos relacionados ao projeto <strong>MathJSLab</strong>.',
         archiveItems: [
             {
                 group: '01',
                 title:
                     'Uma proposta metodológica que articula a resolução literal de problemas de Física e o software MathJSLab',
                 date: '13 de maio de 2026',
-                description:
-                    'Versão em português do artigo sobre resolução literal de problemas no ensino de Física e Matemática com o MathJSLab.',
+                descriptionHtml:
+                    'Versão em português do artigo sobre resolução literal de problemas no ensino de Física e Matemática com o <strong>MathJSLab</strong>.',
                 language: 'Português',
                 href: '/archive/01/main-pt.pdf',
                 file: 'archive/01/main-pt.pdf',
@@ -466,8 +468,8 @@ const source = {
                 title:
                     'A methodological proposal that integrates symbolic problem-solving in physics with the MathJSLab software',
                 date: 'July 10, 2026',
-                description:
-                    'Versão em inglês do artigo sobre resolução simbólica de problemas no ensino de Física e Matemática com o MathJSLab.',
+                descriptionHtml:
+                    'Versão em inglês do artigo sobre resolução simbólica de problemas no ensino de Física e Matemática com o <strong>MathJSLab</strong>.',
                 language: 'Inglês',
                 href: '/archive/01/main-en.pdf',
                 file: 'archive/01/main-en.pdf',
@@ -477,25 +479,25 @@ const source = {
                 title:
                     'MathJSLab: Prova de conceito de computação científica no navegador e software como artefato acadêmico',
                 date: '4 de junho de 2026',
-                description:
-                    'Artigo em português que apresenta o MathJSLab como computação científica no navegador e software publicável como artefato acadêmico.',
+                descriptionHtml:
+                    'Artigo em português que apresenta o <strong>MathJSLab</strong> como computação científica no navegador e software publicável como artefato acadêmico.',
                 language: 'Português',
                 href: '/archive/02/main-pt.pdf',
                 file: 'archive/02/main-pt.pdf',
             },
         ],
         resourcesTitle: 'Links úteis',
-        resourcesLead:
-            'Experimente o aplicativo de demonstração ou a calculadora simplificada. Instale o pacote npm, navegue pelo perfil da organização no GitHub ou consulte a ajuda de comandos.',
+        resourcesLeadHtml:
+            'Experimente o aplicativo de demonstração ou a calculadora simplificada. Instale o <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">pacote <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>, navegue pelo perfil da organização no GitHub ou consulte a ajuda de comandos.',
         resources: [
             { label: 'Abrir o app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'Abrir Calculadora', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
-            { label: 'Pacote npm', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
+            { labelHtml: '<span class="software-link npm-wordmark-link">Pacote <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></span>', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'Organização no GitHub', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Ajuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/LEIAME.md', icon: '/img/Octicons-mark-github.svg' },
         ],
         licenseTitle: 'Licença MIT',
-        licenseLeadPrefix: 'O MathJSLab é distribuído como software livre sob a ',
+        licenseLeadPrefixHtml: 'O <strong>MathJSLab</strong> é distribuído como software livre sob a ',
         licenseLinkLabel: 'Licença MIT',
         licenseHref: 'https://opensource.org/license/MIT',
         licenseLeadSuffix:
@@ -503,18 +505,18 @@ const source = {
         licenseText:
             'MIT License\n\nCopyright (c) 2016-2026 Sergio Lindau, mathjslab.com, ISBN 978-65-00-82338-7\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         contactTitle: 'Contato',
-        contactLead:
-            'Para entrar em contato com a organização do projeto MathJSLab, escreva para o endereço',
+        contactLeadHtml:
+            'Para entrar em contato com a organização do projeto <strong>MathJSLab</strong>, escreva para o endereço',
         notices: {
             contactLabel: 'Para entrar em contato com a organização do projeto MathJSLab, escreva para o endereço',
             contactEmail: 'mathjslab@gmail.com',
-            education:
-                'O MathJSLab é voltado a fins educacionais, ajudando professores e estudantes a usar uma ferramenta de cálculo assistido que roda no navegador.',
+            educationHtml:
+                'O <strong>MathJSLab</strong> é voltado a fins educacionais, ajudando professores e estudantes a usar uma ferramenta de cálculo assistido que roda no navegador.',
             trademarkHtml:
-                'MathJSLab não é afiliado, patrocinado nem endossado pela <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; é marca registrada da <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
+                '<strong>MathJSLab</strong> não é afiliado, patrocinado nem endossado pela <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; é marca registrada da <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
         },
         footer: {
-            copyrightHtml: 'Copyright &copy; 2026 MathJSLab.',
+            copyrightHtml: 'Copyright &copy; 2026 <strong>MathJSLab</strong>.',
         },
     },
     es: {
@@ -542,8 +544,8 @@ const source = {
             kicker: 'Computación numérica en TypeScript para el navegador',
             heading: 'MathJSLab lleva un laboratorio matemático a la web.',
             leadHtml:
-                'MathJSLab simula un subconjunto del lenguaje <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>. Usa una de las aplicaciones online para conocer los recursos de MathJSLab. Usa el <a class="software-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/Npm-logo.svg" alt="" aria-hidden="true">paquete npm</a> en tu proyecto para ejecutar expresiones, funciones y matrices, con resultados renderizados en <a href="https://developer.mozilla.org/es/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> y compatibilidad completa en el navegador web.',
-            primaryCta: 'Abrir app MathJSLab',
+                '<strong>MathJSLab</strong> simula un subconjunto del lenguaje <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>. Usa una de las aplicaciones online para conocer los recursos de <strong>MathJSLab</strong>. Usa el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a> en tu proyecto para ejecutar expresiones, funciones y matrices, con resultados renderizados en <a href="https://developer.mozilla.org/es/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> y compatibilidad completa en el navegador web.',
+            primaryCtaHtml: 'Abrir app <strong>MathJSLab</strong>',
             calculatorCta: 'Abrir Calculadora',
             secondaryCta: 'Ver código en GitHub',
             installLabel: 'Instalar paquete',
@@ -581,8 +583,8 @@ const source = {
             },
         ],
         ecosystemTitle: 'Ecosistema del proyecto',
-        ecosystemLead:
-            'La Organización MathJSLab en GitHub posee los repositorios del proyecto: el paquete npm, las aplicaciones web, la página del proyecto y el perfil de la propia organización.',
+        ecosystemLeadHtml:
+            'La Organización <strong>MathJSLab</strong> en GitHub posee los repositorios del proyecto: el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>, las aplicaciones web, la página del proyecto y el perfil de la propia organización.',
         repositories: [
             {
                 name: 'mathjslab',
@@ -603,29 +605,30 @@ const source = {
             {
                 name: 'mathjslab-calc',
                 role: 'Aplicación calculadora',
-                text:
-                    'Calculadora científica con interfaz de prompt, alojada en calc.mathjslab.com y basada en el paquete MathJSLab.',
+                textHtml:
+                    'Calculadora científica con interfaz de prompt, alojada en calc.mathjslab.com y basada en el paquete <strong>MathJSLab</strong>.',
                 href: 'https://github.com/MathJSLab/mathjslab-calc',
                 icon: '/img/Octicons-mark-github.svg',
             },
             {
                 name: 'mathjslab-github',
                 role: 'Soporte de la organización',
-                text:
-                    'Perfil, plantillas de repositorio y materiales de soporte compartidos para MathJSLab.',
+                textHtml:
+                    'Perfil, plantillas de repositorio y materiales de soporte compartidos para <strong>MathJSLab</strong>.',
                 href: 'https://github.com/MathJSLab',
                 icon: '/img/Octicons-mark-github.svg',
             },
         ],
         publicationTitle: 'Publicación e identificadores',
-        publicationLead:
-            'MathJSLab se publica como software libre, distribuido como un paquete reutilizable y con identificadores persistentes asignados.',
-        publicationText:
-            'El paquete intérprete se publica en el registro npm como mathjslab. El código fuente se mantiene en la organización MathJSLab en GitHub, y tanto el paquete como la aplicación Web complementaria tienen DOI e ISBN para citación en contextos académicos e institucionales.',
+        publicationLeadHtml:
+            '<strong>MathJSLab</strong> se publica como software libre, distribuido como un paquete reutilizable y con identificadores persistentes asignados.',
+        publicationTextHtml:
+            'El paquete intérprete se publica en el registro npm como mathjslab. El código fuente se mantiene en la organización <strong>MathJSLab</strong> en GitHub, y tanto el paquete como la aplicación Web complementaria tienen DOI e ISBN para citación en contextos académicos e institucionales.',
         publications: [
             {
                 name: 'mathjslab',
-                role: 'Paquete npm',
+                roleHtml:
+                    '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">Paquete <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>',
                 text:
                     'El paquete intérprete en TypeScript se distribuye mediante npm, está disponible en jsDelivr y tiene licencia MIT.',
                 href: 'https://www.npmjs.com/package/mathjslab',
@@ -705,16 +708,16 @@ const source = {
             },
         ],
         archiveTitle: 'Archivo',
-        archiveLead:
-            'Archivos y documentos relacionados con el proyecto MathJSLab.',
+        archiveLeadHtml:
+            'Archivos y documentos relacionados con el proyecto <strong>MathJSLab</strong>.',
         archiveItems: [
             {
                 group: '01',
                 title:
                     'Uma proposta metodológica que articula a resolução literal de problemas de Física e o software MathJSLab',
                 date: '13 de maio de 2026',
-                description:
-                    'Versión en portugués del artículo sobre resolución literal de problemas en la enseñanza de Física y Matemática con MathJSLab.',
+                descriptionHtml:
+                    'Versión en portugués del artículo sobre resolución literal de problemas en la enseñanza de Física y Matemática con <strong>MathJSLab</strong>.',
                 language: 'Portugués',
                 href: '/archive/01/main-pt.pdf',
                 file: 'archive/01/main-pt.pdf',
@@ -724,8 +727,8 @@ const source = {
                 title:
                     'A methodological proposal that integrates symbolic problem-solving in physics with the MathJSLab software',
                 date: 'July 10, 2026',
-                description:
-                    'Versión en inglés del artículo sobre resolución simbólica de problemas en la enseñanza de Física y Matemática con MathJSLab.',
+                descriptionHtml:
+                    'Versión en inglés del artículo sobre resolución simbólica de problemas en la enseñanza de Física y Matemática con <strong>MathJSLab</strong>.',
                 language: 'Inglés',
                 href: '/archive/01/main-en.pdf',
                 file: 'archive/01/main-en.pdf',
@@ -735,25 +738,25 @@ const source = {
                 title:
                     'MathJSLab: Prova de conceito de computação científica no navegador e software como artefato acadêmico',
                 date: '4 de junho de 2026',
-                description:
-                    'Artículo en portugués que presenta MathJSLab como computación científica en el navegador y software publicable como artefacto académico.',
+                descriptionHtml:
+                    'Artículo en portugués que presenta <strong>MathJSLab</strong> como computación científica en el navegador y software publicable como artefacto académico.',
                 language: 'Portugués',
                 href: '/archive/02/main-pt.pdf',
                 file: 'archive/02/main-pt.pdf',
             },
         ],
         resourcesTitle: 'Recursos',
-        resourcesLead:
-            'Prueba la aplicación de demostración o la calculadora simplificada. Instala el paquete npm, navega por el perfil de la organización en GitHub o consulta la ayuda de comandos.',
+        resourcesLeadHtml:
+            'Prueba la aplicación de demostración o la calculadora simplificada. Instala el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></a>, navega por el perfil de la organización en GitHub o consulta la ayuda de comandos.',
         resources: [
             { label: 'Abrir la app', href: 'https://app.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
             { label: 'Abrir Calculadora', href: 'https://calc.mathjslab.com/', icon: '/img/mathjslab-logo.svg' },
-            { label: 'Paquete npm', href: 'https://www.npmjs.com/package/mathjslab', icon: '/img/Npm-logo.svg' },
+            { labelHtml: '<span class="software-link npm-wordmark-link">Paquete <img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"></span>', href: 'https://www.npmjs.com/package/mathjslab' },
             { label: 'Organización en GitHub', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
             { label: 'Ayuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/LEAME.md', icon: '/img/Octicons-mark-github.svg' },
         ],
         licenseTitle: 'Licencia MIT',
-        licenseLeadPrefix: 'MathJSLab se distribuye como software libre bajo la ',
+        licenseLeadPrefixHtml: '<strong>MathJSLab</strong> se distribuye como software libre bajo la ',
         licenseLinkLabel: 'Licencia MIT',
         licenseHref: 'https://opensource.org/license/MIT',
         licenseLeadSuffix:
@@ -761,18 +764,18 @@ const source = {
         licenseText:
             'MIT License\n\nCopyright (c) 2016-2026 Sergio Lindau, mathjslab.com, ISBN 978-65-00-82338-7\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.',
         contactTitle: 'Contacto',
-        contactLead:
-            'Para contactar con la organización del proyecto MathJSLab, escribe a la dirección',
+        contactLeadHtml:
+            'Para contactar con la organización del proyecto <strong>MathJSLab</strong>, escribe a la dirección',
         notices: {
             contactLabel: 'Para contactar con la organización del proyecto MathJSLab, escribe a la dirección',
             contactEmail: 'mathjslab@gmail.com',
-            education:
-                'MathJSLab está orientado a fines educativos, ayudando a docentes y estudiantes a usar una herramienta de cálculo asistido que funciona en el navegador.',
+            educationHtml:
+                '<strong>MathJSLab</strong> está orientado a fines educativos, ayudando a docentes y estudiantes a usar una herramienta de cálculo asistido que funciona en el navegador.',
             trademarkHtml:
-                'MathJSLab no está afiliado, patrocinado ni respaldado por <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; es una marca registrada de <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
+                '<strong>MathJSLab</strong> no está afiliado, patrocinado ni respaldado por <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; es una marca registrada de <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
         },
         footer: {
-            copyrightHtml: 'Copyright &copy; 2026 MathJSLab.',
+            copyrightHtml: 'Copyright &copy; 2026 <strong>MathJSLab</strong>.',
         },
     },
 };
