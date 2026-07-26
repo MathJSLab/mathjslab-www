@@ -80,10 +80,5 @@
     "typescript": "^7.0.2",
     "uuid": "^14.0.1",
     "yaml": "^2.9.0"
-  },
-  "allowScripts": {
-    "@parcel/watcher@2.5.1": true,
-    "esbuild@0.28.1": true,
-    "sharp@0.33.5": true
   }
 }
