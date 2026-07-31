@@ -1,0 +1,60 @@
+{% set pageData = i18n.pages[lang] %}
+{% set hub = pageData.appHub %}
+{% set firstApp = hub.apps[0] %}
+<!DOCTYPE html>
+<html lang="{{ pageData.htmlLang }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ hub.title }}</title>
+    <meta name="description" content="{{ hub.description }}">
+    <link rel="canonical" href="{{ site.url }}/{{ lang }}/app/">
+    {% for locale in i18n.locales %}
+      <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url }}/{{ locale }}/app/">
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/app/">
+    <link rel="icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body class="app-hub-page">
+    <header class="app-hub-bar">
+      <a class="app-hub-brand" href="/{{ lang }}/" aria-label="{{ hub.backLabel }}">
+        <img src="/img/mathjslab-logo.svg" alt="" width="42" height="42">
+        <span><strong>MathJSLab</strong></span>
+      </a>
+      <nav class="app-selector" aria-label="{{ hub.selectorLabel }}">
+        {% for app in hub.apps %}
+          <button type="button" data-app-src="{{ app.href }}" data-app-label="{{ app.label }}" aria-pressed="{% if loop.first %}true{% else %}false{% endif %}">
+            {{ app.shortLabel }}
+          </button>
+        {% endfor %}
+      </nav>
+      <div class="app-hub-actions">
+        <a id="app-external-link" class="button button-small" href="{{ firstApp.href }}" target="_blank" rel="noopener noreferrer">{{ hub.openExternalLabel }}</a>
+        <a class="button button-small button-small-secondary" href="/{{ lang }}/">{{ hub.backLabel }}</a>
+      </div>
+    </header>
+    <iframe id="app-frame" class="app-frame" src="{{ firstApp.href }}" title="{{ hub.frameTitle }}" allow="clipboard-read; clipboard-write; fullscreen"></iframe>
+    <script>
+      (() => {
+        const frame = document.querySelector('#app-frame');
+        const externalLink = document.querySelector('#app-external-link');
+        const buttons = [...document.querySelectorAll('.app-selector button')];
+
+        const selectApp = (selectedButton) => {
+          for (const button of buttons) {
+            button.setAttribute('aria-pressed', String(button === selectedButton));
+          }
+
+          frame.src = selectedButton.dataset.appSrc;
+          frame.title = selectedButton.dataset.appLabel;
+          externalLink.href = selectedButton.dataset.appSrc;
+        };
+
+        for (const button of buttons) {
+          button.addEventListener('click', () => selectApp(button));
+        }
+      })();
+    </script>
+  </body>
+</html>
