@@ -170,14 +170,14 @@ const source = {
                         href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
                     },
                     {
-                        alt: 'jsDelivr hits npm',
-                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
-                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
-                    },
-                    {
                         alt: 'NPM Downloads',
                         src: 'https://img.shields.io/npm/d18m/mathjslab',
                         href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
                     },
                     {
                         alt: 'Libraries.io SourceRank',
@@ -205,11 +205,6 @@ const source = {
                 icon: '/img/Octicons-mark-github.svg',
                 badges: [
                     {
-                        alt: 'MIT License',
-                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
-                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
-                    },
-                    {
                         alt: 'Netlify Status',
                         src: 'https://api.netlify.com/api/v1/badges/6cec5ea5-c2dd-4b90-a3c1-ff95c8d1f521/deploy-status',
                         href: 'https://app.netlify.com/sites/mathjslab-app/deploys',
@@ -228,6 +223,11 @@ const source = {
                         alt: 'GitHub Created At',
                         src: 'https://img.shields.io/github/created-at/MathJSLab/mathjslab-app',
                         href: 'https://github.com/MathJSLab/mathjslab-app',
+                    },
+                    {
+                        alt: 'MIT License',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
                     },
                     {
                         alt: 'DOI 10.5281/zenodo.8396263',
@@ -612,14 +612,14 @@ const source = {
                         href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
                     },
                     {
-                        alt: 'jsDelivr hits npm',
-                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
-                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
-                    },
-                    {
                         alt: 'Downloads npm',
                         src: 'https://img.shields.io/npm/d18m/mathjslab',
                         href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
                     },
                     {
                         alt: 'SourceRank Libraries.io',
@@ -647,11 +647,6 @@ const source = {
                 icon: '/img/Octicons-mark-github.svg',
                 badges: [
                     {
-                        alt: 'Licença MIT',
-                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
-                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
-                    },
-                    {
                         alt: 'Status Netlify',
                         src: 'https://api.netlify.com/api/v1/badges/6cec5ea5-c2dd-4b90-a3c1-ff95c8d1f521/deploy-status',
                         href: 'https://app.netlify.com/sites/mathjslab-app/deploys',
@@ -670,6 +665,11 @@ const source = {
                         alt: 'Criado no GitHub em',
                         src: 'https://img.shields.io/github/created-at/MathJSLab/mathjslab-app',
                         href: 'https://github.com/MathJSLab/mathjslab-app',
+                    },
+                    {
+                        alt: 'Licença MIT',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
                     },
                     {
                         alt: 'DOI 10.5281/zenodo.8396263',
@@ -1054,14 +1054,14 @@ const source = {
                         href: 'https://explore.openaire.eu/search/advanced/research-outcomes?f0=q&fv0=MathJSLab',
                     },
                     {
-                        alt: 'jsDelivr hits npm',
-                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
-                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
-                    },
-                    {
                         alt: 'Descargas npm',
                         src: 'https://img.shields.io/npm/d18m/mathjslab',
                         href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'jsDelivr hits npm',
+                        src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
+                        href: 'https://www.jsdelivr.com/package/npm/mathjslab',
                     },
                     {
                         alt: 'SourceRank Libraries.io',
@@ -1089,11 +1089,6 @@ const source = {
                 icon: '/img/Octicons-mark-github.svg',
                 badges: [
                     {
-                        alt: 'Licencia MIT',
-                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
-                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
-                    },
-                    {
                         alt: 'Estado Netlify',
                         src: 'https://api.netlify.com/api/v1/badges/6cec5ea5-c2dd-4b90-a3c1-ff95c8d1f521/deploy-status',
                         href: 'https://app.netlify.com/sites/mathjslab-app/deploys',
@@ -1112,6 +1107,11 @@ const source = {
                         alt: 'Creado en GitHub el',
                         src: 'https://img.shields.io/github/created-at/MathJSLab/mathjslab-app',
                         href: 'https://github.com/MathJSLab/mathjslab-app',
+                    },
+                    {
+                        alt: 'Licencia MIT',
+                        src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
+                        href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/LICENSE',
                     },
                     {
                         alt: 'DOI 10.5281/zenodo.8396263',
