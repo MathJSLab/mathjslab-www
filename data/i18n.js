@@ -175,6 +175,11 @@ const source = {
                         href: 'https://www.npmjs.com/package/mathjslab',
                     },
                     {
+                        alt: 'NPM Downloads per week',
+                        src: 'https://img.shields.io/npm/dw/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
                         alt: 'jsDelivr hits npm',
                         src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
                         href: 'https://www.jsdelivr.com/package/npm/mathjslab',
@@ -617,6 +622,11 @@ const source = {
                         href: 'https://www.npmjs.com/package/mathjslab',
                     },
                     {
+                        alt: 'Downloads npm por semana',
+                        src: 'https://img.shields.io/npm/dw/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
                         alt: 'jsDelivr hits npm',
                         src: 'https://img.shields.io/jsdelivr/npm/hy/mathjslab',
                         href: 'https://www.jsdelivr.com/package/npm/mathjslab',
@@ -1056,6 +1066,11 @@ const source = {
                     {
                         alt: 'Descargas npm',
                         src: 'https://img.shields.io/npm/d18m/mathjslab',
+                        href: 'https://www.npmjs.com/package/mathjslab',
+                    },
+                    {
+                        alt: 'Descargas npm por semana',
+                        src: 'https://img.shields.io/npm/dw/mathjslab',
                         href: 'https://www.npmjs.com/package/mathjslab',
                     },
                     {
