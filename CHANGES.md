@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.10
+
+- A new multilingual pipeline section has been added after the overview,
+  showing the MathJSLab processing flow with localized SVG diagrams in English,
+  Portuguese and Spanish.
+- The main navigation now links to the new pipeline section.
+
 ## 0.0.9
 
 - A downloads/week badge has been added to the `mathjslab` project card.

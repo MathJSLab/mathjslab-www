@@ -394,6 +394,26 @@ pre {
     font-size: 1.08rem;
 }
 
+.pipeline-section {
+    padding-top: 2rem;
+}
+
+.pipeline-figure {
+    margin: 2rem 0 0;
+    overflow-x: auto;
+    border: 1px solid rgba(23, 111, 59, 0.16);
+    border-radius: 8px;
+    padding: clamp(0.75rem, 2vw, 1.2rem);
+    background: rgba(255, 255, 255, 0.78);
+}
+
+.pipeline-figure img {
+    display: block;
+    width: 100%;
+    min-width: 720px;
+    height: auto;
+}
+
 .feature-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -910,6 +930,10 @@ pre {
 
     .feature-card {
         min-height: auto;
+    }
+
+    .pipeline-figure img {
+        min-width: 46rem;
     }
 
     .app-hub-brand span {

@@ -12,6 +12,7 @@ const source = {
             'MathJSLab is an interpreter with syntax like <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, intended for educational purposes and available in the navigator.',
         nav: {
             overview: 'Overview',
+            pipeline: 'Flow',
             features: 'Features',
             ecosystem: 'Ecosystem',
             publication: 'Publication',
@@ -41,6 +42,15 @@ const source = {
             promptThree: 'f = @(x) a*x^2+b*x+c',
             outputThreeMathML:
                 '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo>=</mo><mo>@</mo><mo>(</mo><mi>x</mi><mo>)</mo><mi>a</mi><mo>&#x2062;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mo>&#x2062;</mo><mi>x</mi><mo>+</mo><mi>c</mi></mrow></math>',
+        },
+        pipeline: {
+            kicker: 'Execution flow',
+            title: 'How MathJSLab processes an expression',
+            leadHtml:
+                '<strong>MathJSLab</strong> reads the input, parses it into an internal representation, evaluates expressions and commands, and renders mathematical results as <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> for the browser.',
+            image: '/img/mathjslab-pipeline-en.svg',
+            imageAlt:
+                'Diagram showing the MathJSLab pipeline from user input through parsing, evaluation, command processing and MathML rendering.',
         },
         highlights: [
             {
@@ -459,6 +469,7 @@ const source = {
             'MathJSLab é um interpretador com sintaxe semelhante ao <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, criado para finalidades educativas e disponível no navegador.',
         nav: {
             overview: 'Visão geral',
+            pipeline: 'Fluxo',
             features: 'Recursos',
             ecosystem: 'Ecossistema',
             publication: 'Publicação',
@@ -488,6 +499,15 @@ const source = {
             promptThree: 'f = @(x) a*x^2+b*x+c',
             outputThreeMathML:
                 '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo>=</mo><mo>@</mo><mo>(</mo><mi>x</mi><mo>)</mo><mi>a</mi><mo>&#x2062;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mo>&#x2062;</mo><mi>x</mi><mo>+</mo><mi>c</mi></mrow></math>',
+        },
+        pipeline: {
+            kicker: 'Fluxo de execução',
+            title: 'Como o MathJSLab processa uma expressão',
+            leadHtml:
+                'O <strong>MathJSLab</strong> lê a entrada, transforma o texto em uma representação interna, avalia expressões e comandos, e renderiza resultados matemáticos em <a href="https://developer.mozilla.org/pt-BR/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> para o navegador.',
+            image: '/img/mathjslab-pipeline-pt.svg',
+            imageAlt:
+                'Diagrama mostrando o pipeline do MathJSLab desde a entrada do usuário até parser, avaliação, processamento de comandos e renderização em MathML.',
         },
         highlights: [
             {
@@ -906,6 +926,7 @@ const source = {
             'MathJSLab es un intérprete con sintaxis similar a <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, creado con fines educativos y disponible en el navegador.',
         nav: {
             overview: 'Resumen',
+            pipeline: 'Flujo',
             features: 'Funciones',
             ecosystem: 'Ecosistema',
             publication: 'Publicación',
@@ -935,6 +956,15 @@ const source = {
             promptThree: 'f = @(x) a*x^2+b*x+c',
             outputThreeMathML:
                 '<math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><mrow><mi>f</mi><mo>=</mo><mo>@</mo><mo>(</mo><mi>x</mi><mo>)</mo><mi>a</mi><mo>&#x2062;</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><mi>b</mi><mo>&#x2062;</mo><mi>x</mi><mo>+</mo><mi>c</mi></mrow></math>',
+        },
+        pipeline: {
+            kicker: 'Flujo de ejecución',
+            title: 'Cómo MathJSLab procesa una expresión',
+            leadHtml:
+                '<strong>MathJSLab</strong> lee la entrada, transforma el texto en una representación interna, evalúa expresiones y comandos, y renderiza resultados matemáticos en <a href="https://developer.mozilla.org/es/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> para el navegador.',
+            image: '/img/mathjslab-pipeline-es.svg',
+            imageAlt:
+                'Diagrama que muestra el pipeline de MathJSLab desde la entrada del usuario hasta el parser, evaluación, procesamiento de comandos y renderizado en MathML.',
         },
         highlights: [
             {

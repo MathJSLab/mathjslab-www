@@ -1,6 +1,6 @@
 {
   "name": "mathjslab-www",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "MathJSLab project homepage at mathjslab.com",
   "repository": {
     "type": "git",
@@ -24,7 +24,7 @@
     "clone:copy:clean:repository": "npm run clone:repository && npm run copy:repository && npm run clean:repository",
     "install:approve:all": "npm install-scripts approve --all && npm install",
     "install:all": "npm install && npm run clone:copy:clean:repository && npm run clean && npm run build:script",
-    "update": "npx npm-check-updates -u -x @types/node,chalk && npm run install:all",
+    "update": "npx npm-check-updates -u -x typescript,@types/node,eslint,@eslint/js,chalk && npm run install:all",
     "pregit:add": "replace-in-file --verbose --configFile=replace.fix-linebreak.json",
     "git:add": "git add .",
     "git:commit": "node script/helper/git-commit.cjs",
@@ -58,7 +58,7 @@
     "cross-env": "^10.1.0",
     "cson": "^8.4.0",
     "css-loader": "^7.1.4",
-    "eslint": "^10.8.0",
+    "eslint": "^9.39.5",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.6",
@@ -79,8 +79,8 @@
     "ts-loader": "^9.6.2",
     "ts-node": "^10.9.2",
     "tsconfig-paths": "^4.2.0",
-    "tsx": "^4.23.5",
-    "typescript": "^7.0.2",
+    "tsx": "^4.23.11",
+    "typescript": "^6.0.3",
     "uuid": "^14.0.1",
     "yaml": "^2.9.0"
   }

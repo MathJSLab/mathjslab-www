@@ -36,6 +36,17 @@
   </div>
 </section>
 
+<section id="pipeline" class="section-shell pipeline-section">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.pipeline.kicker }}</p>
+    <h2>{{ pageData.pipeline.title }}</h2>
+    <p>{% if pageData.pipeline.leadHtml %}{{ pageData.pipeline.leadHtml | safe }}{% else %}{{ pageData.pipeline.lead }}{% endif %}</p>
+  </div>
+  <figure class="pipeline-figure">
+    <img src="{{ pageData.pipeline.image }}" alt="{{ pageData.pipeline.imageAlt }}" width="1672" height="941" loading="lazy">
+  </figure>
+</section>
+
 <section id="features" class="section-shell">
   <div class="section-heading">
     <p class="eyebrow">{{ pageData.nav.features }}</p>
