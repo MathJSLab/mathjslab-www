@@ -1,5 +1,0 @@
-{
-    "files": ["data/**", "includes/**", "site/**", "www/**", "script/**"],
-    "from": "/\\r?\\n/gm",
-    "to": "\r\n"
-}
