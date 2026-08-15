@@ -17,22 +17,28 @@
   <body>
     <header class="site-header">
       <a class="brand" href="/{{ lang }}/" aria-label="MathJSLab">
-        <img src="/img/mathjslab-logo.svg" alt="" width="101" height="101">
+        <img src="/img/mathjslab-logo.svg" alt="" width="121" height="121">
         <span><strong>MathJSLab</strong></span>
       </a>
-      <nav class="main-nav" aria-label="Main navigation">
-        <a href="#overview">{{ pageData.nav.overview }}</a>
-        <a href="#pipeline">{{ pageData.nav.pipeline }}</a>
-        <a href="#features">{{ pageData.nav.features }}</a>
-        <a href="#ecosystem">{{ pageData.nav.ecosystem }}</a>
-        <a href="#publication">{{ pageData.nav.publication }}</a>
-        <a href="#archive">{{ pageData.nav.archive }}</a>
-        <a href="#resources">{{ pageData.nav.resources }}</a>
-        <a href="#contact">{{ pageData.nav.contact }}</a>
-        <a href="#license">{{ pageData.nav.license }}</a>
-      </nav>
+      <div id="site-menu" class="site-menu">
+        <nav class="main-nav" aria-label="{{ pageData.nav.mainNavLabel }}">
+          <a href="#overview">{{ pageData.nav.overview }}</a>
+          <a href="#pipeline">{{ pageData.nav.pipeline }}</a>
+          <a href="#features">{{ pageData.nav.features }}</a>
+          <a href="#ecosystem">{{ pageData.nav.ecosystem }}</a>
+          <a href="#publication">{{ pageData.nav.publication }}</a>
+          <a href="#archive">{{ pageData.nav.archive }}</a>
+          <a href="#resources">{{ pageData.nav.resources }}</a>
+          <a href="#contact">{{ pageData.nav.contact }}</a>
+          <a href="#license">{{ pageData.nav.license }}</a>
+        </nav>
+      </div>
       <div class="header-actions">
-        <ul class="language-switcher" aria-label="Language">
+        <button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu">
+          <img class="language-toggle-icon" src="/img/language-switch.svg" alt="" aria-hidden="true">
+          <span>{{ pageData.nav.languageMenu }}</span>
+        </button>
+        <ul id="language-menu" class="language-switcher" aria-label="{{ pageData.nav.languageLabel }}">
           {% for locale in i18n.locales %}
             <li>
               <a {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/">{{ i18n.languageNames[locale] }}</a>
@@ -43,6 +49,10 @@
           <a class="button button-small" href="/{{ lang }}/app/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launch }}</a>
         </div>
       </div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span>{{ pageData.nav.menu }}</span>
+      </button>
     </header>
     <main>
       {{ content | safe }}
@@ -50,5 +60,69 @@
     <footer class="site-footer">
       <p>{% if pageData.footer.copyrightHtml %}{{ pageData.footer.copyrightHtml | safe }}{% else %}{{ pageData.footer.copyright }}{% endif %}</p>
     </footer>
+    <script>
+      (() => {
+        const toggle = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('#site-menu');
+        const languageToggle = document.querySelector('.language-toggle');
+        const languageMenu = document.querySelector('#language-menu');
+
+        if (!toggle || !menu || !languageToggle || !languageMenu) {
+          return;
+        }
+
+        const closeMenu = () => {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.removeAttribute('data-open');
+        };
+
+        const closeLanguageMenu = () => {
+          languageToggle.setAttribute('aria-expanded', 'false');
+          languageMenu.removeAttribute('data-open');
+        };
+
+        toggle.addEventListener('click', () => {
+          const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+          toggle.setAttribute('aria-expanded', String(shouldOpen));
+          menu.toggleAttribute('data-open', shouldOpen);
+          closeLanguageMenu();
+        });
+
+        languageToggle.addEventListener('click', () => {
+          const shouldOpen = languageToggle.getAttribute('aria-expanded') !== 'true';
+          languageToggle.setAttribute('aria-expanded', String(shouldOpen));
+          languageMenu.toggleAttribute('data-open', shouldOpen);
+          closeMenu();
+        });
+
+        menu.addEventListener('click', (event) => {
+          if (window.innerWidth <= 760 && event.target.closest('a')) {
+            closeMenu();
+          }
+        });
+
+        languageMenu.addEventListener('click', (event) => {
+          if (window.innerWidth <= 760 && event.target.closest('a')) {
+            closeLanguageMenu();
+          }
+        });
+
+        document.addEventListener('click', (event) => {
+          if (window.innerWidth > 760 || event.target.closest('.site-header')) {
+            return;
+          }
+
+          closeMenu();
+          closeLanguageMenu();
+        });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 760) {
+            closeMenu();
+            closeLanguageMenu();
+          }
+        });
+      })();
+    </script>
   </body>
 </html>

@@ -11,6 +11,10 @@ const source = {
         descriptionHtml:
             'MathJSLab is an interpreter with syntax like <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, intended for educational purposes and available in the navigator.',
         nav: {
+            menu: 'Menu',
+            mainNavLabel: 'Main navigation',
+            languageLabel: 'Language',
+            languageMenu: 'Language',
             overview: 'Overview',
             pipeline: 'Flow',
             features: 'Features',
@@ -468,6 +472,10 @@ const source = {
         descriptionHtml:
             'MathJSLab é um interpretador com sintaxe semelhante ao <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, criado para finalidades educativas e disponível no navegador.',
         nav: {
+            menu: 'Menu',
+            mainNavLabel: 'Navegação principal',
+            languageLabel: 'Idioma',
+            languageMenu: 'Idioma',
             overview: 'Visão geral',
             pipeline: 'Fluxo',
             features: 'Recursos',
@@ -925,6 +933,10 @@ const source = {
         descriptionHtml:
             'MathJSLab es un intérprete con sintaxis similar a <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, creado con fines educativos y disponible en el navegador.',
         nav: {
+            menu: 'Menú',
+            mainNavLabel: 'Navegación principal',
+            languageLabel: 'Idioma',
+            languageMenu: 'Idioma',
             overview: 'Resumen',
             pipeline: 'Flujo',
             features: 'Funciones',
