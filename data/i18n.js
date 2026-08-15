@@ -25,6 +25,7 @@ const source = {
             contact: 'Contact',
             license: 'License',
             launch: 'Open app',
+            launchShort: 'App',
             launchCalc: 'Open Calculator',
         },
         hero: {
@@ -486,6 +487,7 @@ const source = {
             contact: 'Contato',
             license: 'Licença',
             launch: 'Abrir app',
+            launchShort: 'App',
             launchCalc: 'Abrir Calculadora',
         },
         hero: {
@@ -947,6 +949,7 @@ const source = {
             contact: 'Contacto',
             license: 'Licencia',
             launch: 'Abrir app',
+            launchShort: 'App',
             launchCalc: 'Abrir Calculadora',
         },
         hero: {
