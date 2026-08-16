@@ -34,6 +34,10 @@
         </nav>
       </div>
       <div class="header-actions">
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="menu-toggle-icon" aria-hidden="true"></span>
+          <span>{{ pageData.nav.menu }}</span>
+        </button>
         <button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu">
           <img class="language-toggle-icon" src="/img/language-switch.svg" alt="" aria-hidden="true">
           <span>{{ pageData.nav.languageMenu }}</span>
@@ -52,10 +56,6 @@
           </a>
         </div>
       </div>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
-        <span class="menu-toggle-icon" aria-hidden="true"></span>
-        <span>{{ pageData.nav.menu }}</span>
-      </button>
     </header>
     <main>
       {{ content | safe }}
@@ -65,6 +65,7 @@
     </footer>
     <script>
       (() => {
+        const mobileBreakpoint = 900;
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('#site-menu');
         const languageToggle = document.querySelector('.language-toggle');
@@ -99,19 +100,19 @@
         });
 
         menu.addEventListener('click', (event) => {
-          if (window.innerWidth <= 760 && event.target.closest('a')) {
+          if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
             closeMenu();
           }
         });
 
         languageMenu.addEventListener('click', (event) => {
-          if (window.innerWidth <= 760 && event.target.closest('a')) {
+          if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
             closeLanguageMenu();
           }
         });
 
         document.addEventListener('click', (event) => {
-          if (window.innerWidth > 760 || event.target.closest('.site-header')) {
+          if (window.innerWidth > mobileBreakpoint || event.target.closest('.site-header')) {
             return;
           }
 
@@ -120,10 +121,78 @@
         });
 
         window.addEventListener('resize', () => {
-          if (window.innerWidth > 760) {
+          if (window.innerWidth > mobileBreakpoint) {
             closeMenu();
             closeLanguageMenu();
           }
+        });
+
+        document.querySelectorAll('[data-pipeline-carousel]').forEach((carousel) => {
+          const openButton = carousel.querySelector('.pipeline-carousel-open');
+          const overlay = carousel.querySelector('.pipeline-carousel-overlay');
+          const images = [...carousel.querySelectorAll('.pipeline-carousel-image')];
+          const indicators = [...carousel.querySelectorAll('.pipeline-carousel-indicators span')];
+          let currentIndex = 0;
+          let touchStartX = 0;
+
+          if (!openButton || !overlay || images.length === 0) {
+            return;
+          }
+
+          const showPanel = (index) => {
+            currentIndex = index;
+            images.forEach((image, imageIndex) => {
+              image.classList.toggle('is-active', imageIndex === currentIndex);
+            });
+            indicators.forEach((indicator, indicatorIndex) => {
+              indicator.classList.toggle('is-active', indicatorIndex === currentIndex);
+            });
+          };
+
+          const closeCarousel = () => {
+            overlay.removeAttribute('data-open');
+            overlay.setAttribute('aria-hidden', 'true');
+          };
+
+          const openCarousel = () => {
+            showPanel(0);
+            overlay.setAttribute('data-open', '');
+            overlay.setAttribute('aria-hidden', 'false');
+          };
+
+          const advanceCarousel = () => {
+            if (currentIndex >= images.length - 1) {
+              closeCarousel();
+              return;
+            }
+
+            showPanel(currentIndex + 1);
+          };
+
+          openButton.addEventListener('click', openCarousel);
+
+          overlay.addEventListener('click', (event) => {
+            if (event.target === overlay) {
+              closeCarousel();
+            }
+          });
+
+          overlay.addEventListener('touchstart', (event) => {
+            touchStartX = event.changedTouches[0].clientX;
+          }, { passive: true });
+
+          overlay.addEventListener('touchend', (event) => {
+            const touchEndX = event.changedTouches[0].clientX;
+            if (touchStartX - touchEndX > 30) {
+              advanceCarousel();
+            }
+          }, { passive: true });
+
+          document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && overlay.hasAttribute('data-open')) {
+              closeCarousel();
+            }
+          });
         });
       })();
     </script>

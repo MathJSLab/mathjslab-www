@@ -45,6 +45,25 @@
   <figure class="pipeline-figure">
     <img src="{{ pageData.pipeline.image }}" alt="{{ pageData.pipeline.imageAlt }}" width="1672" height="941" loading="lazy">
   </figure>
+  <div class="pipeline-mobile-carousel" data-pipeline-carousel>
+    <button class="pipeline-carousel-open" type="button" aria-label="{{ pageData.pipeline.carouselOpenLabel }}">
+      <img src="{{ pageData.pipeline.carouselThumb }}" alt="{{ pageData.pipeline.imageAlt }}" loading="lazy">
+    </button>
+    <div class="pipeline-carousel-overlay" aria-hidden="true">
+      <div class="pipeline-carousel-panel" role="dialog" aria-modal="true" aria-label="{{ pageData.pipeline.title }}">
+        <div class="pipeline-carousel-stage">
+          {% for panel in pageData.pipeline.carouselPanels %}
+            <img class="pipeline-carousel-image{% if loop.first %} is-active{% endif %}" src="{{ panel }}" alt="{{ pageData.pipeline.imageAlt }}" loading="lazy" data-carousel-panel="{{ loop.index0 }}">
+          {% endfor %}
+        </div>
+        <div class="pipeline-carousel-indicators" aria-hidden="true">
+          {% for panel in pageData.pipeline.carouselPanels %}
+            <span{% if loop.first %} class="is-active"{% endif %}>→</span>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="features" class="section-shell">

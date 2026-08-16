@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.12
+
+- Full responsiveness implemented. The MathJSLab execution flow panel in section 2 has been implemented as a carousel for mobile.
+
 ## 0.0.11
 
 - Implementation of responsiveness on the page has begun. The menu has been implemented as a collapsible panel triggered by a button in the top-right corner. The language selector also takes the form of a button.
