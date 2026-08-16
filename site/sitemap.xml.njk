@@ -15,29 +15,28 @@
         }}</lastmod>
         <priority>1.0</priority>
     </url>
-    {% for locale in i18n.locales %}
-        <url>
-            <loc>{{ site.url }}/{{ locale }}/</loc>
-            <lastmod>{{
-                [
-                    'site/' ~ locale ~ '/index.html.njk',
-                    'includes/layout.njk',
-                    'data/i18n-' ~ locale ~ '.js'
-                ] | sitemapLastmod
-            }}</lastmod>
-            <priority>0.9</priority>
-        </url>
-
-        <url>
-            <loc>{{ site.url }}/{{ locale }}/app/</loc>
-            <lastmod>{{
-                [
-                    'site/' ~ locale ~ '/app/index.html.njk',
-                    'includes/layout.njk',
-                    'data/i18n-' ~ locale ~ '.js'
-                ] | sitemapLastmod
-            }}</lastmod>
-            <priority>0.8</priority>
-        </url>
-    {% endfor %}
+    {% for locale in i18n.locales -%}
+    <url>
+        <loc>{{ site.url }}/{{ locale }}/</loc>
+        <lastmod>{{
+            [
+                'site/' ~ locale ~ '/index.html.njk',
+                'includes/layout.njk',
+                'data/i18n-' ~ locale ~ '.js'
+            ] | sitemapLastmod
+        }}</lastmod>
+        <priority>0.9</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/{{ locale }}/app/</loc>
+        <lastmod>{{
+            [
+                'site/' ~ locale ~ '/app/index.html.njk',
+                'includes/layout.njk',
+                'data/i18n-' ~ locale ~ '.js'
+            ] | sitemapLastmod
+        }}</lastmod>
+        <priority>0.8</priority>
+    </url>
+    {% endfor -%}
 </urlset>

@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.13
+
+- Implemented SEO support (`sitemap.xml`, `robots.txt`, and meta tags in `includes/layout.njk` and `site/index.html.njk`).
+
 ## 0.0.12
 
 - Full responsiveness implemented. The MathJSLab execution flow panel in section 2 has been implemented as a carousel for mobile.
