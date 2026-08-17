@@ -5,6 +5,7 @@
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
     <url>
         <loc>{{ site.url }}/</loc>
         <lastmod>{{
@@ -14,7 +15,7 @@
             ] | sitemapLastmod
         }}</lastmod>
     </url>
-    {% for locale in i18n.locales -%}
+    {% for locale in i18n.locales %}
     <url>
         <loc>{{ site.url }}/{{ locale }}/</loc>
         <lastmod>{{
@@ -25,6 +26,7 @@
             ] | sitemapLastmod
         }}</lastmod>
     </url>
+
     <url>
         <loc>{{ site.url }}/{{ locale }}/app/</loc>
         <lastmod>{{
@@ -35,5 +37,5 @@
             ] | sitemapLastmod
         }}</lastmod>
     </url>
-    {% endfor -%}
+    {% endfor %}
 </urlset>

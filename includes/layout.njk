@@ -1,4 +1,10 @@
 {% set pageData = i18n.pages[lang] %}
+{% set ogLocale = 'en_US' %}
+{% if pageData.locale == 'es' %}
+  {% set ogLocale = 'es_ES' %}
+{% elif pageData.locale == 'pt' %}
+  {% set ogLocale = 'pt_BR' %}
+{% endif %}
 <!DOCTYPE html>
 <html lang="{{ pageData.htmlLang }}">
   <head>
@@ -11,7 +17,7 @@
     <meta property="og:description" content="{{ pageData.description }}">
     <meta property="og:url" content="{{ site.url }}/{{ lang }}/">
     <meta property="og:site_name" content="MathJSLab">
-    <meta property="og:locale" content="{{ pageData.htmlLang }}">
+    <meta property="og:locale" content="{{ ogLocale }}">
     <meta property="og:image" content="{{ site.url }}/img/mathjslab-logo.svg">
     <meta property="og:image:width" content="630">
     <meta property="og:image:height" content="630">
@@ -24,33 +30,61 @@
         "@context": "https://schema.org",
         "@graph": [
           {
-            "@type": "SoftwareApplication",
-            "@id": "https://mathjslab.com/pt/#software",
+            "@type": "WebPage",
+            "@id": "{{ site.url }}/{{ lang }}/#webpage",
+            "url": "{{ site.url }}/{{ lang }}/",
+            "name": "{{ pageData.title }}",
+            "description": "{{ pageData.description }}",
+            "inLanguage": "{{ pageData.htmlLang }}",
+            "isPartOf": {
+              "@id": "{{ site.url }}/#website"
+            },
+            "about": {
+              "@id": "{{ site.url }}/#software"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}/#website",
+            "url": "{{ site.url }}/",
             "name": "MathJSLab",
-            "url": "https://mathjslab.com/pt/",
-            "description": "MathJSLab é um interpretador com sintaxe semelhante ao MATLAB/Octave, criado para finalidades educativas e disponível no navegador.",
+            "publisher": {
+              "@id": "{{ site.url }}/#organization"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "{{ site.url }}/#software",
+            "name": "MathJSLab",
+            "url": "{{ site.url }}/{{ lang }}/",
+            "description": "{{ pageData.description }}",
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Web",
-            "inLanguage": "pt-BR",
+            "inLanguage": "{{ pageData.htmlLang }}",
             "license": "https://opensource.org/license/MIT",
             "author": {
-              "@id": "https://mathjslab.com/pt/#author"
+              "@id": "{{ site.url }}/#author"
             },
             "publisher": {
-              "@id": "https://mathjslab.com/pt/#organization"
+              "@id": "{{ site.url }}/#organization"
             }
           },
           {
             "@type": "Person",
-            "@id": "https://mathjslab.com/pt/#author",
+            "@id": "{{ site.url }}/#author",
             "name": "Sergio Lindau"
           },
           {
             "@type": "Organization",
-            "@id": "https://mathjslab.com/pt/#organization",
+            "@id": "{{ site.url }}/#organization",
             "name": "MathJSLab",
-            "url": "https://mathjslab.com/",
-            "logo": "https://mathjslab.com/img/mathjslab-logo.svg",
+            "url": "{{ site.url }}/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "{{ site.url }}/img/mathjslab-logo.svg",
+              "width": 630,
+              "height": 630
+            },
             "sameAs": [
               "https://github.com/MathJSLab"
             ]

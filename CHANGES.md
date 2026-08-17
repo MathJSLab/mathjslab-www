@@ -3,9 +3,18 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.14
+
+- Adjustment of JSON-LD data in the `includes/layout.njk` file.
+
 ## 0.0.13
 
 - Implemented SEO support (`sitemap.xml`, `robots.txt`, and meta tags in `includes/layout.njk` and `site/index.html.njk`).
+- The `data/i18n.js` file has been split into separate files for each language:
+  - `data/i18n-en.js`.
+  - `data/i18n-es.js`.
+  - `data/i18n-pt.js`.
+  The file `data/i18n-licenseText.js` was also created, containing the MIT license text in English, which is common to all languages.
 
 ## 0.0.12
 
