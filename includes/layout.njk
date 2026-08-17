@@ -25,31 +25,35 @@
         "@graph": [
           {
             "@type": "SoftwareApplication",
-            "@id": "{{ site.url }}/{{ lang }}/#software",
+            "@id": "https://mathjslab.com/pt/#software",
             "name": "MathJSLab",
-            "url": "{{ site.url }}/{{ lang }}/",
-            "description": "{{ pageData.description }}",
+            "url": "https://mathjslab.com/pt/",
+            "description": "MathJSLab é um interpretador com sintaxe semelhante ao MATLAB/Octave, criado para finalidades educativas e disponível no navegador.",
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Web",
-            "inLanguage": "{{ pageData.htmlLang }}",
-            "license": "{{ pageData.licenseHref }}",
+            "inLanguage": "pt-BR",
+            "license": "https://opensource.org/license/MIT",
             "author": {
-              "@id": "{{ site.url }}/{{ lang }}/#author"
+              "@id": "https://mathjslab.com/pt/#author"
             },
             "publisher": {
-              "@id": "{{ site.url }}/{{ lang }}/#organization"
+              "@id": "https://mathjslab.com/pt/#organization"
             }
           },
           {
             "@type": "Person",
-            "@id": "{{ site.url }}/{{ lang }}/#author",
+            "@id": "https://mathjslab.com/pt/#author",
             "name": "Sergio Lindau"
           },
           {
             "@type": "Organization",
-            "@id": "{{ site.url }}/{{ lang }}/#organization",
+            "@id": "https://mathjslab.com/pt/#organization",
             "name": "MathJSLab",
-            "url": "https://github.com/MathJSLab"
+            "url": "https://mathjslab.com/",
+            "logo": "https://mathjslab.com/img/mathjslab-logo.svg",
+            "sameAs": [
+              "https://github.com/MathJSLab"
+            ]
           }
         ]
       }
