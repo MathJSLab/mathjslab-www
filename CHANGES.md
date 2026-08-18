@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ## 0.0.16
 
 - Introduction of the `"offers"` field in the JSON-LD record.
+- Use of `mathjslab-logo.png` in Open Graph and Twitter records.
 
 ## 0.0.15
 
