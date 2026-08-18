@@ -8,9 +8,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ hub.title }}</title>
     <meta name="description" content="{{ hub.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ hub.title }}">
+    <meta property="og:description" content="{{ hub.description }}">
+    <meta property="og:url" content="{{ site.url }}/{{ lang }}/app/">
+    <meta property="og:site_name" content="MathJSLab">
+    <meta property="og:locale" content="{{ pageData.htmlLang | replace('-', '_') }}">
+    <meta property="og:image" content="{{ site.url }}/img/mathjslab-logo.svg">
+    <meta property="og:image:width" content="630">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ hub.title }}">
+    <meta name="twitter:description" content="{{ hub.description }}">
+    <meta name="twitter:image" content="{{ site.url }}/img/mathjslab-logo.svg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "{{ site.url }}/{{ lang }}/app/#webpage",
+            "url": "{{ site.url }}/{{ lang }}/app/",
+            "name": "{{ hub.title }}",
+            "description": "{{ hub.description }}",
+            "inLanguage": "{{ pageData.htmlLang }}",
+            "isPartOf": {
+              "@id": "{{ site.url }}/#website"
+            },
+            "about": {
+              "@id": "{{ site.url }}/#software"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}/#website",
+            "url": "{{ site.url }}/",
+            "name": "MathJSLab",
+            "publisher": {
+              "@id": "{{ site.url }}/#organization"
+            }
+          },
+          {
+            "@type": "SoftwareApplication",
+            "@id": "{{ site.url }}/#software",
+            "name": "MathJSLab",
+            "url": "{{ site.url }}/{{ lang }}/",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "author": {
+              "@id": "{{ site.url }}/#author"
+            },
+            "publisher": {
+              "@id": "{{ site.url }}/#organization"
+            }
+          },
+          {
+            "@type": "ItemList",
+            "@id": "{{ site.url }}/{{ lang }}/app/#applications",
+            "name": "{{ hub.title }}",
+            "numberOfItems": {{ hub.apps | length }},
+            "itemListElement": [
+              {% for app in hub.apps %}
+                {
+                  "@type": "ListItem",
+                  "position": {{ loop.index }},
+                  "item": {
+                    "@type": "SoftwareApplication",
+                    "@id": "{{ app.href }}#software",
+                    "name": "{{ app.label }}",
+                    "description": "{{ app.description }}",
+                    "url": "{{ app.href }}",
+                    "applicationCategory": "EducationalApplication",
+                    "operatingSystem": "Web",
+                    "publisher": {
+                      "@id": "{{ site.url }}/#organization"
+                    }
+                  }
+                }{% if not loop.last %},{% endif %}
+              {% endfor %}
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "{{ site.url }}/#author",
+            "name": "Sergio Lindau"
+          },
+          {
+            "@type": "Organization",
+            "@id": "{{ site.url }}/#organization",
+            "name": "MathJSLab",
+            "url": "{{ site.url }}/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "{{ site.url }}/img/mathjslab-logo.svg",
+              "width": 630,
+              "height": 630
+            },
+            "sameAs": [
+              "https://github.com/MathJSLab"
+            ]
+          }
+        ]
+      }
+    </script>
     <link rel="canonical" href="{{ site.url }}/{{ lang }}/app/">
     {% for locale in i18n.locales %}
-      <link rel="alternate" hreflang="{{ locale }}" href="{{ site.url }}/{{ locale }}/app/">
+      <link rel="alternate" hreflang="{{ i18n.pages[locale].htmlLang }}" href="{{ site.url }}/{{ locale }}/app/">
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/app/">
     <link rel="icon" href="/img/favicon.ico">
@@ -20,13 +123,11 @@
     <header class="app-hub-bar">
       <a class="app-hub-brand" href="/{{ lang }}/" aria-label="{{ hub.backLabel }}">
         <img src="/img/mathjslab-logo.svg" alt="" width="42" height="42">
-        <span><strong>MathJSLab</strong></span>
+        <h1>MathJSLab</h1>
       </a>
       <nav class="app-selector" aria-label="{{ hub.selectorLabel }}">
         {% for app in hub.apps %}
-          <button type="button" data-app-src="{{ app.href }}" data-app-label="{{ app.label }}" aria-pressed="{% if loop.first %}true{% else %}false{% endif %}">
-            {{ app.shortLabel }}
-          </button>
+          <a href="{{ app.href }}" data-app-src="{{ app.href }}" data-app-label="{{ app.label }}">{{ app.shortLabel }}</a>
         {% endfor %}
       </nav>
       <div class="app-hub-actions">
@@ -39,20 +140,23 @@
       (() => {
         const frame = document.querySelector('#app-frame');
         const externalLink = document.querySelector('#app-external-link');
-        const buttons = [...document.querySelectorAll('.app-selector button')];
-
-        const selectApp = (selectedButton) => {
-          for (const button of buttons) {
-            button.setAttribute('aria-pressed', String(button === selectedButton));
+        const apps = [...document.querySelectorAll('.app-selector a')];
+        const selectApp = (selectedApp) => {
+          for (const app of apps) {
+            app.setAttribute('aria-current', app === selectedApp ? 'page' : 'false');
           }
-
-          frame.src = selectedButton.dataset.appSrc;
-          frame.title = selectedButton.dataset.appLabel;
-          externalLink.href = selectedButton.dataset.appSrc;
+          frame.src = selectedApp.dataset.appSrc;
+          frame.title = selectedApp.dataset.appLabel;
+          externalLink.href = selectedApp.dataset.appSrc;
         };
-
-        for (const button of buttons) {
-          button.addEventListener('click', () => selectApp(button));
+        for (const app of apps) {
+          app.addEventListener('click', (event) => {
+            event.preventDefault();
+            selectApp(app);
+          });
+        }
+        if (apps.length > 0) {
+          selectApp(apps[0]);
         }
       })();
     </script>

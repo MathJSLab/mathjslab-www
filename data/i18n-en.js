@@ -3,6 +3,7 @@ import licenseText from './i18n-licenseText.js';
 export default {
     locale: 'en',
     htmlLang: 'en',
+    ogLocale: 'en_US',
     languageName: 'English',
     title: 'MathJSLab - browser-based MATLAB/Octave-like interpreter',
     description:

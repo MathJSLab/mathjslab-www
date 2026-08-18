@@ -1,10 +1,4 @@
 {% set pageData = i18n.pages[lang] %}
-{% set ogLocale = 'en_US' %}
-{% if pageData.locale == 'es' %}
-  {% set ogLocale = 'es_ES' %}
-{% elif pageData.locale == 'pt' %}
-  {% set ogLocale = 'pt_BR' %}
-{% endif %}
 <!DOCTYPE html>
 <html lang="{{ pageData.htmlLang }}">
   <head>
@@ -17,7 +11,12 @@
     <meta property="og:description" content="{{ pageData.description }}">
     <meta property="og:url" content="{{ site.url }}/{{ lang }}/">
     <meta property="og:site_name" content="MathJSLab">
-    <meta property="og:locale" content="{{ ogLocale }}">
+    <meta property="og:locale" content="{{ pageData.ogLocale }}">
+    {% for locale in i18n.locales %}
+      {% if locale != lang %}
+        <meta property="og:locale:alternate" content="{{ i18n.pages[locale].ogLocale }}">
+      {% endif %}
+    {% endfor %}
     <meta property="og:image" content="{{ site.url }}/img/mathjslab-logo.svg">
     <meta property="og:image:width" content="630">
     <meta property="og:image:height" content="630">
@@ -94,11 +93,7 @@
     </script>
     <link rel="canonical" href="{{ site.url }}/{{ lang }}/">
     {% for locale in i18n.locales %}
-      <link
-        rel="alternate"
-        hreflang="{{ i18n.pages[locale].htmlLang }}"
-        href="{{ site.url }}/{{ locale }}/"
-      >
+      <link rel="alternate" hreflang="{{ i18n.pages[locale].htmlLang }}" href="{{ site.url }}/{{ locale }}/">
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
     <link rel="icon" href="/img/favicon.ico">
@@ -160,63 +155,52 @@
         const menu = document.querySelector('#site-menu');
         const languageToggle = document.querySelector('.language-toggle');
         const languageMenu = document.querySelector('#language-menu');
-
         if (!toggle || !menu || !languageToggle || !languageMenu) {
           return;
         }
-
         const closeMenu = () => {
           toggle.setAttribute('aria-expanded', 'false');
           menu.removeAttribute('data-open');
         };
-
         const closeLanguageMenu = () => {
           languageToggle.setAttribute('aria-expanded', 'false');
           languageMenu.removeAttribute('data-open');
         };
-
         toggle.addEventListener('click', () => {
           const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
           toggle.setAttribute('aria-expanded', String(shouldOpen));
           menu.toggleAttribute('data-open', shouldOpen);
           closeLanguageMenu();
         });
-
         languageToggle.addEventListener('click', () => {
           const shouldOpen = languageToggle.getAttribute('aria-expanded') !== 'true';
           languageToggle.setAttribute('aria-expanded', String(shouldOpen));
           languageMenu.toggleAttribute('data-open', shouldOpen);
           closeMenu();
         });
-
         menu.addEventListener('click', (event) => {
           if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
             closeMenu();
           }
         });
-
         languageMenu.addEventListener('click', (event) => {
           if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
             closeLanguageMenu();
           }
         });
-
         document.addEventListener('click', (event) => {
           if (window.innerWidth > mobileBreakpoint || event.target.closest('.site-header')) {
             return;
           }
-
           closeMenu();
           closeLanguageMenu();
         });
-
         window.addEventListener('resize', () => {
           if (window.innerWidth > mobileBreakpoint) {
             closeMenu();
             closeLanguageMenu();
           }
         });
-
         document.querySelectorAll('[data-pipeline-carousel]').forEach((carousel) => {
           const openButton = carousel.querySelector('.pipeline-carousel-open');
           const overlay = carousel.querySelector('.pipeline-carousel-overlay');
@@ -224,11 +208,9 @@
           const indicators = [...carousel.querySelectorAll('.pipeline-carousel-indicators span')];
           let currentIndex = 0;
           let touchStartX = 0;
-
           if (!openButton || !overlay || images.length === 0) {
             return;
           }
-
           const showPanel = (index) => {
             currentIndex = index;
             images.forEach((image, imageIndex) => {
@@ -238,46 +220,37 @@
               indicator.classList.toggle('is-active', indicatorIndex === currentIndex);
             });
           };
-
           const closeCarousel = () => {
             overlay.removeAttribute('data-open');
             overlay.setAttribute('aria-hidden', 'true');
           };
-
           const openCarousel = () => {
             showPanel(0);
             overlay.setAttribute('data-open', '');
             overlay.setAttribute('aria-hidden', 'false');
           };
-
           const advanceCarousel = () => {
             if (currentIndex >= images.length - 1) {
               closeCarousel();
               return;
             }
-
             showPanel(currentIndex + 1);
           };
-
           openButton.addEventListener('click', openCarousel);
-
           overlay.addEventListener('click', (event) => {
             if (event.target === overlay) {
               closeCarousel();
             }
           });
-
           overlay.addEventListener('touchstart', (event) => {
             touchStartX = event.changedTouches[0].clientX;
           }, { passive: true });
-
           overlay.addEventListener('touchend', (event) => {
             const touchEndX = event.changedTouches[0].clientX;
             if (touchStartX - touchEndX > 30) {
               advanceCarousel();
             }
           }, { passive: true });
-
           document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && overlay.hasAttribute('data-open')) {
               closeCarousel();

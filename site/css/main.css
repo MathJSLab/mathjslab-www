@@ -822,9 +822,13 @@ pre {
     height: 2.65rem;
 }
 
-.app-hub-brand span {
+.app-hub-brand h1 {
     font-size: 1.25rem;
     line-height: 1;
+}
+
+.app-hub-brand h1:hover {
+    color: #0f4d2b;
 }
 
 .app-selector {
@@ -835,7 +839,7 @@ pre {
     min-width: 0;
 }
 
-.app-selector button {
+.app-selector a {
     min-height: 2.35rem;
     border: 1px solid rgba(23, 111, 59, 0.18);
     border-radius: 8px;
@@ -848,8 +852,8 @@ pre {
     cursor: pointer;
 }
 
-.app-selector button:hover,
-.app-selector button[aria-pressed='true'] {
+.app-selector a:hover,
+.app-selector a[aria-pressed='true'] {
     color: white;
     background: #176f3b;
     border-color: #176f3b;
@@ -922,6 +926,7 @@ pre {
 }
 
 @media (max-width: 640px) {
+
     .site-header,
     .section-shell,
     .site-footer {
@@ -956,11 +961,11 @@ pre {
         min-width: 46rem;
     }
 
-    .app-hub-brand span {
+    .app-hub-brand h1 {
         font-size: 1.05rem;
     }
 
-    .app-selector button,
+    .app-selector a,
     .app-hub-actions .button-small {
         flex: 1 1 auto;
     }
