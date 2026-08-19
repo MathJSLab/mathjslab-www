@@ -36,7 +36,8 @@
     "crono:stop": "npm run tsx script/helper/mark-crono.ts -- stop",
     "build:script": "tsc -p script/tsconfig.json",
     "eleventy": "eleventy --config=eleventy.config.mjs",
-    "build": "npm run clean:build && node eleventy.build.mjs",
+    "copy:seo": "shx cp seo.html www/seo.html",
+    "build": "npm run clean:build && node eleventy.build.mjs && npm run copy:seo",
     "serve": "npm run eleventy -- --serve --port 8081",
     "watch": "npm run eleventy -- --watch --port 8081",
     "do:all": "npm run crono:start && npm run clean:all && npm run update && npm run build && npm run git:all && echo script \"do:all\" finished. && npm run crono:stop"
