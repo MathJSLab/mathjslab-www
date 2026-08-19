@@ -3,6 +3,9 @@ logs
 *.log
 npm-debug.log*
 
+# Build chronometer utility status file.
+mark.crono.json
+
 # Build generated files
 www/
 
