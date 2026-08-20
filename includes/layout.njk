@@ -12,10 +12,10 @@
     <meta property="og:url" content="{{ site.url }}/{{ lang }}/">
     <meta property="og:site_name" content="MathJSLab">
     <meta property="og:locale" content="{{ pageData.ogLocale }}">
-    {% for locale in i18n.locales %}
-      {% if locale != lang %}
-        <meta property="og:locale:alternate" content="{{ i18n.pages[locale].ogLocale }}">
-      {% endif %}
+    {%- for locale in i18n.locales %}
+      {%- if locale != lang %}
+    <meta property="og:locale:alternate" content="{{ i18n.pages[locale].ogLocale }}">
+      {%- endif -%}
     {% endfor %}
     <meta property="og:image" content="{{ site.url }}/img/mathjslab-og.png">
     <meta property="og:image:type" content="image/png">

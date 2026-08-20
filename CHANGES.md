@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.0.17
+
+- Use of `img/mathjslab-og.png` (1200x630) in Open Graph and Twitter records.
+- Introduction of the `seo.html` file, featuring links to online tools for technical SEO.
+
 ## 0.0.16
 
 - Introduction of the `"offers"` field in the JSON-LD record.
