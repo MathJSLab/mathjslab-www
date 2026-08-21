@@ -1,0 +1,98 @@
+@use '../base/colors';
+@use '../abstract/define-map';
+
+@mixin semantic-theme($theme-name) {
+  color-scheme: $theme-name;
+
+  @include define-map.mixin(colors.get($theme-name));
+}
+
+@mixin site-theme($theme-name) {
+  @if $theme-name == light {
+    --site-body-background:
+      radial-gradient(circle at top left, rgba(92, 170, 92, 0.18), transparent 34rem),
+      linear-gradient(135deg, #f8fbf8 0%, #f4f6fa 52%, #fff7ed 100%);
+    --site-surface: rgba(255, 255, 255, 0.78);
+    --site-surface-strong: white;
+    --site-surface-soft: rgba(255, 255, 255, 0.72);
+    --site-surface-elevated: rgba(255, 255, 255, 0.94);
+    --site-surface-menu: rgba(255, 255, 255, 0.98);
+    --site-primary: #176f3b;
+    --site-primary-hover: #10552d;
+    --site-primary-muted: rgba(41, 126, 77, 0.12);
+    --site-secondary: #a73f29;
+    --site-accent: #2c7a7b;
+    --site-border: rgba(23, 111, 59, 0.18);
+    --site-border-soft: rgba(23, 111, 59, 0.14);
+    --site-border-strong: rgba(23, 111, 59, 0.22);
+    --site-border-hover: rgba(167, 63, 41, 0.36);
+    --site-text: #172019;
+    --site-heading: #111814;
+    --site-muted: #47574d;
+    --site-muted-strong: #33443a;
+    --site-muted-soft: #5d6d62;
+    --site-shadow: rgba(30, 43, 34, 0.28);
+    --site-shadow-soft: rgba(30, 43, 34, 0.1);
+    --site-menu-shadow: rgba(13, 45, 27, 0.12);
+    --site-terminal-background: #111814;
+    --site-terminal-bar: #202b24;
+    --site-terminal-text: #d9f7df;
+    --site-terminal-output: #ecfff0;
+  } @else if $theme-name == dark {
+    --site-body-background:
+      radial-gradient(circle at top left, rgba(92, 170, 92, 0.14), transparent 34rem),
+      linear-gradient(135deg, var(--color-background) 0%, var(--color-background-soft) 58%, hsl(25, 40%, 11%) 100%);
+    --site-surface: rgba(33, 33, 33, 0.78);
+    --site-surface-strong: var(--color-background-soft);
+    --site-surface-soft: rgba(33, 33, 33, 0.72);
+    --site-surface-elevated: rgba(33, 33, 33, 0.94);
+    --site-surface-menu: rgba(33, 33, 33, 0.98);
+    --site-primary: var(--color-a-text);
+    --site-primary-hover: hsl(120, 100%, 45%);
+    --site-primary-muted: var(--color-a-background-hover);
+    --site-secondary: hsl(12, 71%, 64%);
+    --site-accent: hsl(181, 47%, 56%);
+    --site-border: var(--color-border);
+    --site-border-soft: hsla(0, 0%, 33%, 0.35);
+    --site-border-strong: var(--color-border-hover);
+    --site-border-hover: hsla(12, 71%, 64%, 0.5);
+    --site-text: var(--color-heading);
+    --site-heading: var(--color-heading);
+    --site-muted: var(--color-text);
+    --site-muted-strong: hsla(0, 0%, 92%, 0.78);
+    --site-muted-soft: hsla(0, 0%, 92%, 0.68);
+    --site-shadow: rgba(0, 0, 0, 0.42);
+    --site-shadow-soft: rgba(0, 0, 0, 0.28);
+    --site-menu-shadow: rgba(0, 0, 0, 0.32);
+    --site-terminal-background: hsl(0, 0%, 7%);
+    --site-terminal-bar: var(--color-background-mute);
+    --site-terminal-text: hsl(120, 65%, 86%);
+    --site-terminal-output: hsl(120, 100%, 96%);
+  } @else {
+    @error "Invalid MathJSLab site theme: #{$theme-name}.";
+  }
+}
+
+@mixin theme-definitions {
+  :root {
+    @include semantic-theme(light);
+    @include site-theme(light);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include semantic-theme(dark);
+      @include site-theme(dark);
+    }
+  }
+
+  html[data-theme='light'] {
+    @include semantic-theme(light);
+    @include site-theme(light);
+  }
+
+  html[data-theme='dark'] {
+    @include semantic-theme(dark);
+    @include site-theme(dark);
+  }
+}
