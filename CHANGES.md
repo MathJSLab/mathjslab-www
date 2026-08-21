@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.0
+
+- The project page was implemented using SCSS templates in the same way as in the `mathjslab-app` project, by copying files from the organization's repository.
+- Implemented color switching between light and dark modes based on browser appearance settings using styles defined in the SCSS templates.
+- More online SEO tools in the `seo.html` file.
+
 ## 0.0.17
 
 - Use of `img/mathjslab-og.png` (1200x630) in Open Graph and Twitter records.

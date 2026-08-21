@@ -6,6 +6,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
     <title>{{ hub.title }}</title>
     <meta name="description" content="{{ hub.description }}">
     <meta property="og:type" content="website">
@@ -119,7 +120,8 @@
       <link rel="alternate" hreflang="{{ i18n.pages[locale].htmlLang }}" href="{{ site.url }}/{{ locale }}/app/">
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/app/">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="/img/favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body class="app-hub-page">
