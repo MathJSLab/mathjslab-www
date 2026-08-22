@@ -1,69 +1,69 @@
 {
-    "repository": ".github",
-    "files": [
-        { "src": "resource/mathjslab-www/eleventy.build.json", "dest": "eleventy.build.json" },
-        "script/tsconfig.json",
-        "script/helper/clean-package-lock.cjs",
-        "script/helper/EleventyUtil.mjs",
-        "script/helper/readFileBom.ts",
-        "script/helper/readFileBomSync.ts",
-        "script/helper/mark-crono.ts",
-        "script/helper/mkDirIfNotExist.ts",
-        "script/helper/git-commit.cjs",
-        "script/helper/toIco.ts",
-        {
-            "src": "includes/styles/base/_colors.scss",
-            "dest": "includes/styles/base/_colors.scss"
-        },
-        {
-            "src": "includes/styles/base/_sizes.scss",
-            "dest": "includes/styles/base/_sizes.scss"
-        },
-        {
-            "src": "includes/styles/abstract/_define-map.scss",
-            "dest": "includes/styles/abstract/_define-map.scss"
-        },
-        {
-            "src": "includes/styles/abstract/_constants.scss",
-            "dest": "includes/styles/abstract/_constants.scss"
-        },
-        {
-            "src": "includes/styles/constants.json.njk",
-            "dest": "includes/styles/constants.json.njk"
-        },
-        { "src": "images/img/ico/favicon.ico", "dest": "site/img/favicon.ico" },
-        { "src": "images/img/ico/favicon-dark.ico", "dest": "site/img/favicon-dark.ico" },
-        { "src": "images/mathjslab-logo.svg", "dest": "site/img/mathjslab-logo.svg" },
-        { "src": "images/img/mathjslab-og-1200.png", "dest": "site/img/mathjslab-og.png" },
-        { "src": "images/mathjslab-pipeline-en.svg", "dest": "site/img/mathjslab-pipeline-en.svg" },
-        { "src": "images/mathjslab-pipeline-en-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-en-1-grammar-panel.svg" },
-        { "src": "images/mathjslab-pipeline-en-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-en-2-code-panel.svg" },
-        { "src": "images/mathjslab-pipeline-en-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-en-3-ast-panel.svg" },
-        { "src": "images/mathjslab-pipeline-en-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-en-4-evaluator-panel.svg" },
-        { "src": "images/mathjslab-pipeline-en.webp", "dest": "site/img/mathjslab-pipeline-en.webp" },
-        { "src": "images/mathjslab-pipeline-es.svg", "dest": "site/img/mathjslab-pipeline-es.svg" },
-        { "src": "images/mathjslab-pipeline-es-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-es-1-grammar-panel.svg" },
-        { "src": "images/mathjslab-pipeline-es-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-es-2-code-panel.svg" },
-        { "src": "images/mathjslab-pipeline-es-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-es-3-ast-panel.svg" },
-        { "src": "images/mathjslab-pipeline-es-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-es-4-evaluator-panel.svg" },
-        { "src": "images/mathjslab-pipeline-es.webp", "dest": "site/img/mathjslab-pipeline-es.webp" },
-        { "src": "images/mathjslab-pipeline-pt.svg", "dest": "site/img/mathjslab-pipeline-pt.svg" },
-        { "src": "images/mathjslab-pipeline-pt-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-1-grammar-panel.svg" },
-        { "src": "images/mathjslab-pipeline-pt-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-2-code-panel.svg" },
-        { "src": "images/mathjslab-pipeline-pt-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-3-ast-panel.svg" },
-        { "src": "images/mathjslab-pipeline-pt-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-4-evaluator-panel.svg" },
-        { "src": "images/mathjslab-pipeline-pt.webp", "dest": "site/img/mathjslab-pipeline-pt.webp" },
-        { "src": "images/matlab-icon.svg", "dest": "site/img/matlab-icon.svg" },
-        { "src": "images/language-switch.svg", "dest": "site/img/language-switch.svg" },
-        { "src": "images/cdnlogo.com_npm-square-red.svg", "dest": "site/img/cdnlogo.com_npm-square-red.svg" },
-        { "src": "images/MIT_Logo_New.svg", "dest": "site/img/MIT_Logo_New.svg" },
-        { "src": "images/Npm-logo.svg", "dest": "site/img/Npm-logo.svg" },
-        { "src": "images/octave-logo.svg", "dest": "site/img/octave-logo.svg" },
-        { "src": "images/Octicons-mark-github.svg", "dest": "site/img/Octicons-mark-github.svg" },
-        ".prettierignore",
-        ".prettierrc",
-        { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-en.pdf", "dest": "site/archive/01/main-en.pdf" },
-        { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-pt.pdf", "dest": "site/archive/01/main-pt.pdf" },
-        { "src": "extra/paper/02-mathjslab-publishing-research-software/main-pt.pdf", "dest": "site/archive/02/main-pt.pdf" }
-    ]
+  "repository": ".github",
+  "files": [
+    { "src": "resource/mathjslab-www/eleventy.build.json", "dest": "eleventy.build.json" },
+    "script/tsconfig.json",
+    "script/helper/clean-package-lock.cjs",
+    "script/helper/EleventyUtil.mjs",
+    "script/helper/readFileBom.ts",
+    "script/helper/readFileBomSync.ts",
+    "script/helper/mark-crono.ts",
+    "script/helper/mkDirIfNotExist.ts",
+    "script/helper/git-commit.cjs",
+    "script/helper/toIco.ts",
+    {
+      "src": "includes/styles/base/_colors.scss",
+      "dest": "includes/styles/base/_colors.scss"
+    },
+    {
+      "src": "includes/styles/base/_sizes.scss",
+      "dest": "includes/styles/base/_sizes.scss"
+    },
+    {
+      "src": "includes/styles/abstract/_define-map.scss",
+      "dest": "includes/styles/abstract/_define-map.scss"
+    },
+    {
+      "src": "includes/styles/abstract/_constants.scss",
+      "dest": "includes/styles/abstract/_constants.scss"
+    },
+    {
+      "src": "includes/styles/constants.json.njk",
+      "dest": "includes/styles/constants.json.njk"
+    },
+    { "src": "images/img/ico/favicon.ico", "dest": "site/img/favicon.ico" },
+    { "src": "images/img/ico/favicon-dark.ico", "dest": "site/img/favicon-dark.ico" },
+    { "src": "images/mathjslab-logo.svg", "dest": "site/img/mathjslab-logo.svg" },
+    { "src": "images/img/mathjslab-og-1200.png", "dest": "site/img/mathjslab-og.png" },
+    { "src": "images/mathjslab-pipeline-en.svg", "dest": "site/img/mathjslab-pipeline-en.svg" },
+    { "src": "images/mathjslab-pipeline-en-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-en-1-grammar-panel.svg" },
+    { "src": "images/mathjslab-pipeline-en-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-en-2-code-panel.svg" },
+    { "src": "images/mathjslab-pipeline-en-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-en-3-ast-panel.svg" },
+    { "src": "images/mathjslab-pipeline-en-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-en-4-evaluator-panel.svg" },
+    { "src": "images/mathjslab-pipeline-en.webp", "dest": "site/img/mathjslab-pipeline-en.webp" },
+    { "src": "images/mathjslab-pipeline-es.svg", "dest": "site/img/mathjslab-pipeline-es.svg" },
+    { "src": "images/mathjslab-pipeline-es-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-es-1-grammar-panel.svg" },
+    { "src": "images/mathjslab-pipeline-es-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-es-2-code-panel.svg" },
+    { "src": "images/mathjslab-pipeline-es-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-es-3-ast-panel.svg" },
+    { "src": "images/mathjslab-pipeline-es-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-es-4-evaluator-panel.svg" },
+    { "src": "images/mathjslab-pipeline-es.webp", "dest": "site/img/mathjslab-pipeline-es.webp" },
+    { "src": "images/mathjslab-pipeline-pt.svg", "dest": "site/img/mathjslab-pipeline-pt.svg" },
+    { "src": "images/mathjslab-pipeline-pt-1-grammar-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-1-grammar-panel.svg" },
+    { "src": "images/mathjslab-pipeline-pt-2-code-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-2-code-panel.svg" },
+    { "src": "images/mathjslab-pipeline-pt-3-ast-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-3-ast-panel.svg" },
+    { "src": "images/mathjslab-pipeline-pt-4-evaluator-panel.svg", "dest": "site/img/mathjslab-pipeline-pt-4-evaluator-panel.svg" },
+    { "src": "images/mathjslab-pipeline-pt.webp", "dest": "site/img/mathjslab-pipeline-pt.webp" },
+    { "src": "images/matlab-icon.svg", "dest": "site/img/matlab-icon.svg" },
+    { "src": "images/language-switch.svg", "dest": "site/img/language-switch.svg" },
+    { "src": "images/cdnlogo.com_npm-square-red.svg", "dest": "site/img/cdnlogo.com_npm-square-red.svg" },
+    { "src": "images/MIT_Logo_New.svg", "dest": "site/img/MIT_Logo_New.svg" },
+    { "src": "images/Npm-logo.svg", "dest": "site/img/Npm-logo.svg" },
+    { "src": "images/octave-logo.svg", "dest": "site/img/octave-logo.svg" },
+    { "src": "images/Octicons-mark-github.svg", "dest": "site/img/Octicons-mark-github.svg" },
+    ".prettierignore",
+    ".prettierrc",
+    { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-en.pdf", "dest": "site/archive/01/main-en.pdf" },
+    { "src": "extra/paper/01-physics-education-symbolic-problem-solving/main-pt.pdf", "dest": "site/archive/01/main-pt.pdf" },
+    { "src": "extra/paper/02-mathjslab-publishing-research-software/main-pt.pdf", "dest": "site/archive/02/main-pt.pdf" }
+  ]
 }

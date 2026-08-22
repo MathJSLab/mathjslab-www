@@ -34,13 +34,14 @@
     "crono:start": "npm run tsx script/helper/mark-crono.ts -- start",
     "crono:mark": "npm run tsx script/helper/mark-crono.ts -- mark",
     "crono:stop": "npm run tsx script/helper/mark-crono.ts -- stop",
+    "format": "prettier --plugin=@prettier/plugin-xml --write **/*.{ts,tsx,js,jsx,cjs,mjs,css,scss,html,htm,json,jsonc,yml,yaml,xml,svgmd,yml,yaml}",
     "build:script": "tsc -p script/tsconfig.json",
     "eleventy": "eleventy --config=eleventy.config.mjs",
     "copy:seo": "shx cp seo.html www/seo.html",
     "build": "npm run clean:build && node eleventy.build.mjs && npm run copy:seo",
     "serve": "npm run eleventy -- --serve --port 8081",
     "watch": "npm run eleventy -- --watch --port 8081",
-    "do:all": "npm run crono:start && npm run clean:all && npm run update && npm run build && npm run git:all && echo script \"do:all\" finished. && npm run crono:stop"
+    "do:all": "npm run crono:start && npm run clean:all && npm run update && npm run format && npm run build && npm run format && npm run git:all && echo script \"do:all\" finished. && npm run crono:stop"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
