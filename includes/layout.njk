@@ -1,111 +1,15 @@
-{% set pageData = i18n.pages[lang] %}
+{%- set pageData = i18n.pages[lang] -%}
+{%- set main = pageData -%}
+{%- set alternatePostfix = '' -%}
 <!DOCTYPE html>
 <html lang="{{ pageData.htmlLang }}">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>{{ pageData.title }}</title>
-    <meta name="description" content="{{ pageData.description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ pageData.title }}">
-    <meta property="og:description" content="{{ pageData.description }}">
-    <meta property="og:url" content="{{ site.url }}/{{ lang }}/">
-    <meta property="og:site_name" content="MathJSLab">
-    <meta property="og:locale" content="{{ pageData.ogLocale }}">
-    {%- for locale in i18n.locales %}
-      {%- if locale != lang %}
-    <meta property="og:locale:alternate" content="{{ i18n.pages[locale].ogLocale }}">
-      {%- endif -%}
-    {% endfor %}
-    <meta property="og:image" content="{{ site.url }}/img/mathjslab-og.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="630">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="MathJSLab">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="{{ pageData.title }}">
-    <meta name="twitter:description" content="{{ pageData.description }}">
-    <meta name="twitter:image" content="{{ site.url }}/img/mathjslab-og.png">
-    <meta name="twitter:image:alt" content="MathJSLab">
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "WebPage",
-            "@id": "{{ site.url }}/{{ lang }}/#webpage",
-            "url": "{{ site.url }}/{{ lang }}/",
-            "name": "{{ pageData.title }}",
-            "description": "{{ pageData.description }}",
-            "inLanguage": "{{ pageData.htmlLang }}",
-            "isPartOf": {
-              "@id": "{{ site.url }}/#website"
-            },
-            "about": {
-              "@id": "{{ site.url }}/#software"
-            }
-          },
-          {
-            "@type": "WebSite",
-            "@id": "{{ site.url }}/#website",
-            "url": "{{ site.url }}/",
-            "name": "MathJSLab",
-            "publisher": {
-              "@id": "{{ site.url }}/#organization"
-            }
-          },
-          {
-            "@type": "SoftwareApplication",
-            "@id": "{{ site.url }}/#software",
-            "name": "MathJSLab",
-            "url": "{{ site.url }}/{{ lang }}/",
-            "description": "{{ pageData.description }}",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Web",
-            "inLanguage": "{{ pageData.htmlLang }}",
-            "license": "https://opensource.org/license/MIT",
-            "offers": {
-              "@type": "Offer",
-              "price": 0
-            },
-            "author": {
-              "@id": "{{ site.url }}/#author"
-            },
-            "publisher": {
-              "@id": "{{ site.url }}/#organization"
-            }
-          },
-          {
-            "@type": "Person",
-            "@id": "{{ site.url }}/#author",
-            "name": "Sergio Lindau"
-          },
-          {
-            "@type": "Organization",
-            "@id": "{{ site.url }}/#organization",
-            "name": "MathJSLab",
-            "url": "{{ site.url }}/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "{{ site.url }}/img/mathjslab-logo.svg",
-              "width": 630,
-              "height": 630
-            },
-            "sameAs": [
-              "https://github.com/MathJSLab"
-            ]
-          }
-        ]
-      }
-    </script>
-    <link rel="canonical" href="{{ site.url }}/{{ lang }}/">
-    {% for locale in i18n.locales %}
-      <link rel="alternate" hreflang="{{ i18n.pages[locale].htmlLang }}" href="{{ site.url }}/{{ locale }}/">
-    {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
-    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="/img/favicon-dark.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
+{% include "head-begin.njk" -%}
+{%- include "head-og.njk" -%}
+{%- include "head-twitter.njk" -%}
+{%- include "head-json-ld.njk" -%}
+{%- include "head-alternate.njk" -%}
+{%- include "head-scheme-favicon.njk" %}
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
