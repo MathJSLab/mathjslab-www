@@ -7,13 +7,13 @@
     <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
       <a class="button button-primary" href="/{{ lang }}/app/" target="_blank" rel="noopener noreferrer">{% if pageData.hero.primaryCtaHtml %}{{ pageData.hero.primaryCtaHtml | safe }}{% else %}{{ pageData.hero.primaryCta }}{% endif %}</a>
       <a class="button button-secondary" href="https://github.com/MathJSLab" target="_blank" rel="noopener noreferrer">
-        <img class="button-icon" src="/img/Octicons-mark-github.svg" alt="">
+        <img class="button-icon" src="/images/Octicons-mark-github.svg" alt="">
         <span>{{ pageData.hero.secondaryCta }}</span>
       </a>
     </div>
     <div class="install-command" aria-label="{{ pageData.hero.installLabel }}">
       <span>
-        <img src="/img/Npm-logo.svg" alt="">
+        <img src="/images/Npm-logo.svg" alt="">
         {{ pageData.hero.installLabel }}
       </span>
       <code>npm install mathjslab</code>
@@ -190,7 +190,7 @@
     <p>{% if pageData.contactLeadHtml %}{{ pageData.contactLeadHtml | safe }}{% else %}{{ pageData.contactLead }}{% endif %}</p>
   </div>
   <a class="contact-card" href="mailto:{{ pageData.notices.contactEmail }}">
-    <img src="/img/mathjslab-logo.svg" alt="" width="48" height="48">
+    <img src="/images/mathjslab-logo.svg" alt="" width="48" height="48">
     <span>{{ pageData.notices.contactEmail }}</span>
   </a>
 </section>
@@ -203,7 +203,7 @@
   </div>
   <div class="license-panel">
     <div class="license-branding" aria-hidden="true">
-      <img src="/img/MIT_Logo_New.svg" alt="">
+      <img src="/images/MIT_Logo_New.svg" alt="">
     </div>
     <pre><code>{{ pageData.licenseText }}</code></pre>
   </div>

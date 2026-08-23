@@ -8,7 +8,7 @@ export default {
     title: 'MathJSLab - browser-based MATLAB/Octave-like interpreter',
     description: 'MathJSLab is an interpreter with syntax like MATLAB/Octave, intended for educational purposes and available in the browser.',
     descriptionHtml:
-        'MathJSLab is an interpreter with syntax like <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, intended for educational purposes and available in the browser.',
+        'MathJSLab is an interpreter with syntax like <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a>, intended for educational purposes and available in the browser.',
     nav: {
         menu: 'Menu',
         mainNavLabel: 'Main navigation',
@@ -31,7 +31,7 @@ export default {
         kicker: 'TypeScript numerical computing for the browser',
         heading: 'MathJSLab brings a mathematical lab to the web.',
         leadHtml:
-            '<strong>MathJSLab</strong> simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore <strong>MathJSLab</strong> features. Use the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
+            '<strong>MathJSLab</strong> simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore <strong>MathJSLab</strong> features. Use the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
         primaryCtaHtml: 'Open <strong>MathJSLab</strong> app',
         calculatorCta: 'Open Calculator',
         secondaryCta: 'View source on GitHub',
@@ -51,22 +51,22 @@ export default {
         title: 'How MathJSLab processes an expression',
         leadHtml:
             '<strong>MathJSLab</strong> reads the input, parses it into an internal representation, evaluates expressions and commands, and renders mathematical results as <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> for the browser.',
-        image: '/img/mathjslab-pipeline-en.svg',
+        image: '/images/mathjslab-pipeline-en.svg',
         imageAlt: 'Diagram showing the MathJSLab pipeline from user input through parsing, evaluation, command processing and MathML rendering.',
         carouselOpenLabel: 'Open pipeline carousel',
-        carouselThumb: '/img/mathjslab-pipeline-en.webp',
+        carouselThumb: '/images/mathjslab-pipeline-en.webp',
         carouselPanels: [
-            '/img/mathjslab-pipeline-en-1-grammar-panel.svg',
-            '/img/mathjslab-pipeline-en-2-code-panel.svg',
-            '/img/mathjslab-pipeline-en-3-ast-panel.svg',
-            '/img/mathjslab-pipeline-en-4-evaluator-panel.svg',
+            '/images/mathjslab-pipeline-en-1-grammar-panel.svg',
+            '/images/mathjslab-pipeline-en-2-code-panel.svg',
+            '/images/mathjslab-pipeline-en-3-ast-panel.svg',
+            '/images/mathjslab-pipeline-en-4-evaluator-panel.svg',
         ],
     },
     highlights: [
         {
             title: 'Interpreter engine',
             textHtml:
-                'The core package is written in <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a> and simulates a subset of <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/octave-logo.svg" alt="" aria-hidden="true">Octave</a> syntax.',
+                'The core package is written in <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener noreferrer">TypeScript</a> and simulates a subset of <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a> syntax.',
         },
         {
             title: 'Browser-ready app',
@@ -86,42 +86,42 @@ export default {
     ],
     ecosystemTitle: 'Project ecosystem',
     ecosystemLeadHtml:
-        'The <strong>MathJSLab</strong> Organization on GitHub owns the project repositories: the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>, the web applications, the project page and the organization profile itself.',
+        'The <strong>MathJSLab</strong> Organization on GitHub owns the project repositories: the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>, the web applications, the project page and the organization profile itself.',
     repositories: [
         {
             name: 'mathjslab',
             role: 'Interpreter package',
             text: 'TypeScript engine published to npm, with parser, evaluator and mathematical rendering components.',
             href: 'https://github.com/MathJSLab/mathjslab',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-app',
             role: 'Demo application',
             text: 'Progressive web app that exposes the interpreter in a responsive browser interface.',
             href: 'https://github.com/MathJSLab/mathjslab-app',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-calc',
             role: 'Calculator application',
             textHtml: 'Scientific calculator prompt application hosted at calc.mathjslab.com and powered by the <strong>MathJSLab</strong> package.',
             href: 'https://github.com/MathJSLab/mathjslab-calc',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-batch',
             role: 'Batch application',
             textHtml: 'Batch-processing web application hosted at batch.mathjslab.com and powered by the <strong>MathJSLab</strong> package.',
             href: 'https://github.com/MathJSLab/mathjslab-batch',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-github',
             role: 'Organization support',
             textHtml: 'Shared profile, repository templates and project-wide support material for <strong>MathJSLab</strong>.',
             href: 'https://github.com/MathJSLab',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
         },
     ],
     publicationTitle: 'Publication and identifiers',
@@ -132,10 +132,10 @@ export default {
         {
             name: 'mathjslab',
             roleHtml:
-                '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>',
+                '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>',
             text: 'The TypeScript interpreter package is distributed through npm, mirrored through jsDelivr and licensed under MIT.',
             href: 'https://www.npmjs.com/package/mathjslab',
-            icon: '/img/Npm-logo.svg',
+            icon: '/images/Npm-logo.svg',
             badges: [
                 {
                     alt: 'NPM Version',
@@ -154,7 +154,7 @@ export default {
                 },
                 {
                     alt: 'CircleCI',
-                    src: 'https://dl.circleci.com/status-badge/img/gh/MathJSLab/mathjslab/tree/main.svg?style=svg',
+                    src: 'https://dl.circleci.com/status-badge/images/gh/MathJSLab/mathjslab/tree/main.svg?style=svg',
                     href: 'https://dl.circleci.com/status-badge/redirect/gh/MathJSLab/mathjslab/tree/main',
                 },
                 {
@@ -219,7 +219,7 @@ export default {
             role: 'web application',
             text: 'The browser application demonstrates the interpreter, is maintained on GitHub and has its own DOI and ISBN records.',
             href: 'https://github.com/MathJSLab/mathjslab-app',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
             badges: [
                 {
                     alt: 'Netlify Status',
@@ -233,7 +233,7 @@ export default {
                 },
                 {
                     alt: 'CircleCI',
-                    src: 'https://dl.circleci.com/status-badge/img/gh/MathJSLab/mathjslab-app/tree/main.svg?style=svg',
+                    src: 'https://dl.circleci.com/status-badge/images/gh/MathJSLab/mathjslab-app/tree/main.svg?style=svg',
                     href: 'https://dl.circleci.com/status-badge/redirect/gh/MathJSLab/mathjslab-app/tree/main',
                 },
                 {
@@ -273,7 +273,7 @@ export default {
             role: 'calculator application',
             text: 'The calculator application offers a simplified prompt interface hosted at calc.mathjslab.com, with its own DOI and project publication badges.',
             href: 'https://github.com/MathJSLab/mathjslab-calc',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
             badges: [
                 {
                     alt: 'Netlify Status',
@@ -317,7 +317,7 @@ export default {
             role: 'batch application',
             textHtml: 'The batch application provides a text-area interface with syntax highlighting for running <strong>MathJSLab</strong> commands in sequence.',
             href: 'https://github.com/MathJSLab/mathjslab-batch',
-            icon: '/img/Octicons-mark-github.svg',
+            icon: '/images/Octicons-mark-github.svg',
             badges: [
                 {
                     alt: 'Netlify Status',
@@ -390,15 +390,15 @@ export default {
     ],
     resourcesTitle: 'Resources',
     resourcesLeadHtml:
-        'Try the web applications from the app hub. Install the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</a>, browse the organization profile on GitHub or consult the command help.',
+        'Try the web applications from the app hub. Install the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>, browse the organization profile on GitHub or consult the command help.',
     resources: [
-        { label: 'Open app', href: '/en/app/', icon: '/img/mathjslab-logo.svg' },
+        { label: 'Open app', href: '/en/app/', icon: '/images/mathjslab-logo.svg' },
         {
-            labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/img/Npm-logo.svg" alt="npm"> package</span>',
+            labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</span>',
             href: 'https://www.npmjs.com/package/mathjslab',
         },
-        { label: 'GitHub organization', href: 'https://github.com/MathJSLab', icon: '/img/Octicons-mark-github.svg' },
-        { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/README.md', icon: '/img/Octicons-mark-github.svg' },
+        { label: 'GitHub organization', href: 'https://github.com/MathJSLab', icon: '/images/Octicons-mark-github.svg' },
+        { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/README.md', icon: '/images/Octicons-mark-github.svg' },
     ],
     appHub: {
         title: 'MathJSLab apps',
@@ -444,7 +444,7 @@ export default {
         contactEmail: 'mathjslab@gmail.com',
         educationHtml: '<strong>MathJSLab</strong> is intended for educational purposes, helping teachers and students use a computer-aided calculation tool that runs in the browser.',
         trademarkHtml:
-            '<strong>MathJSLab</strong> is not affiliated, sponsored or endorsed by <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/img/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; is a registered trademark of <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
+            '<strong>MathJSLab</strong> is not affiliated, sponsored or endorsed by <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>. <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg; is a registered trademark of <a href="https://www.mathworks.com/" target="_blank" rel="noopener noreferrer">The MathWorks, Inc</a>.',
     },
     footer: {
         copyrightHtml: 'Copyright &copy; 2026 <strong>MathJSLab</strong>.',

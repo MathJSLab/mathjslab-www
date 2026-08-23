@@ -1,23 +1,26 @@
 ---json
 {
-  "permalink": "/index.html"
+  "lang": "en",
+  "rootEndpoint": true,
+  "robotsFollow": true,
+  "permalink": "/index.html",
+  "main": {
+    "title": "MathJSLab",
+    "description": "Choose a language for the MathJSLab project page."
+  }
 }
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MathJSLab</title>
-    <meta name="description" content="Choose a language for the MathJSLab project page.">
-    <meta name="robots" content="index, follow">
+{% include "head-begin.njk" -%}
     <meta property="og:type" content="website">
     <meta property="og:title" content="MathJSLab">
     <meta property="og:description" content="Choose a language for the MathJSLab project page.">
     <meta property="og:url" content="{{ site.url }}/">
     <meta property="og:site_name" content="MathJSLab">
     <meta property="og:locale" content="en">
-    <meta property="og:image" content="{{ site.url }}/img/mathjslab-og.png">
+    <meta property="og:image" content="{{ site.url }}/images/mathjslab-og.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="630">
     <meta property="og:image:height" content="630">
@@ -25,7 +28,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="MathJSLab">
     <meta name="twitter:description" content="Choose a language for the MathJSLab project page.">
-    <meta name="twitter:image" content="{{ site.url }}/img/mathjslab-og.png">
+    <meta name="twitter:image" content="{{ site.url }}/images/mathjslab-og.png">
     <meta name="twitter:image:alt" content="MathJSLab">
     {% for locale in i18n.locales %}
       <link
@@ -35,7 +38,7 @@
       >
     {% endfor %}
     <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
-    <link rel="icon" href="/img/favicon.ico">
+    <link rel="icon" href="/images/favicon.ico">
     <link rel="stylesheet" href="/css/main.css">
     <script>
       const language = (navigator.language || 'en').toLowerCase();
@@ -50,7 +53,7 @@
   </head>
   <body class="language-gateway">
     <main class="gateway-panel">
-      <img src="/img/mathjslab-logo.svg" alt="MathJSLab" width="94" height="94">
+      <img src="/images/mathjslab-logo.svg" alt="MathJSLab" width="94" height="94">
       <h1>MathJSLab</h1>
       <p>Choose your language.</p>
       <nav class="gateway-links" aria-label="Language">
