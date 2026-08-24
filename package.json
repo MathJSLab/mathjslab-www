@@ -53,8 +53,7 @@
     "format": "prettier --plugin=@prettier/plugin-xml --write **/*.{ts,tsx,js,jsx,cjs,mjs,css,scss,html,htm,json,jsonc,yml,yaml,xml,svgmd,yml,yaml}",
     "build:script": "tsc -p script/tsconfig.json",
     "eleventy": "eleventy --config=eleventy.config.mjs",
-    "copy:seo": "shx cp seo.html www/seo.html",
-    "build": "npm run clean:build && node eleventy.build.mjs && npm run copy:seo",
+    "build": "npm run clean:build && node eleventy.build.mjs",
     "serve": "npm run eleventy -- --serve --port 8081",
     "watch": "npm run eleventy -- --watch --port 8081",
     "do:all": "npm run crono:start && npm run clean:all && npm run update && npm run format && npm run build && npm run format && npm run git:all && echo script \"do:all\" finished. && npm run crono:stop"

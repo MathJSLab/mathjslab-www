@@ -7,7 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - The project page was implemented using SCSS templates in the same way as in the `mathjslab-app` project, by copying files from the organization's repository.
 - Implemented color switching between light and dark modes based on browser appearance settings using styles defined in the SCSS templates.
-- More online SEO tools in the `seo.html` file.
+- More online SEO tools in the `seo.html` (`site/seo.html.njk`) file.
 
 ## 0.0.17
 
