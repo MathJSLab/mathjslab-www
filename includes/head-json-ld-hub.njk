@@ -1,7 +1,5 @@
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
+{%- from 'includes/head-macros.njk' import headJsonLdGraph -%}
+{% call headJsonLdGraph() %}
           {
             "@type": "WebPage",
             "@id": "{{ site.url }}/{{ lang }}/app/#webpage",
@@ -85,6 +83,4 @@
               "https://github.com/MathJSLab"
             ]
           }
-        ]
-      }
-    </script>
+{% endcall %}

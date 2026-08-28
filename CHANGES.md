@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.1
+
+- Added `includes/head-macros.njk` to centralize reusable HTML head macros for base metadata, Open Graph, Twitter cards, alternate language links and icons.
+- Updated the main site, app hub, redirect page and SEO utility templates to use the shared head macros instead of separate head include files.
+- Removed the older single-purpose head include files now covered by the macro-based implementation.
+- Refactored the `seo.html` utility page to generate diagnosis links from structured endpoint and tool lists.
+- Improved the SEO diagnosis page with responsive cards, consistent MathJSLab branding, dark-mode-aware styling, and `noindex,nofollow` metadata.
+
 ## 0.1.0
 
 - The project page was implemented using SCSS templates in the same way as in the `mathjslab-app` project, by copying files from the organization's repository.

@@ -10,45 +10,18 @@
   }
 }
 ---
+{%- from 'includes/head-macros.njk' import headBegin, headOpenGraph, headTwitter, headAlternate, headIcon -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">
   <head>
-{% include "head-begin.njk" -%}
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MathJSLab">
-    <meta property="og:description" content="Choose a language for the MathJSLab project page.">
-    <meta property="og:url" content="{{ site.url }}/">
-    <meta property="og:site_name" content="MathJSLab">
-    <meta property="og:locale" content="en">
-    <meta property="og:image" content="{{ site.url }}/images/mathjslab-og.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="630">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="MathJSLab">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MathJSLab">
-    <meta name="twitter:description" content="Choose a language for the MathJSLab project page.">
-    <meta name="twitter:image" content="{{ site.url }}/images/mathjslab-og.png">
-    <meta name="twitter:image:alt" content="MathJSLab">
-    {% for locale in i18n.locales %}
-      <link
-        rel="alternate"
-        hreflang="{{ i18n.pages[locale].htmlLang }}"
-        href="{{ site.url }}/{{ locale }}/"
-      >
-    {% endfor %}
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/en/">
-    <link rel="icon" href="/images/favicon.ico">
+{{ headBegin(main.title, main.description, pkg.author, pkg.keywords.join()) }}
+{{ headOpenGraph(i18n = false, lang = 'en', title = main.title, description = main.description, url = site.url + '/' + 'en', name = site.title, image = '/images/mathjslab-og.png') }}
+{{ headTwitter(main.title, main.description, site.url, '/images/mathjslab-og.png', site.title) }}
+{{ headAlternate(i18n, url = site.url) }}
+{{ headIcon(light = '/images/favicon.ico', dark = '/images/favicon-dark.ico', svg = '/images/mathjslab-logo.svg') }}
     <link rel="stylesheet" href="/css/main.css">
     <script>
-      const language = (navigator.language || 'en').toLowerCase();
-      const locale =
-        language.startsWith('pt')
-          ? 'pt'
-          : language.startsWith('es')
-            ? 'es'
-            : 'en';
-      window.location.replace(`/${locale}/`);
+      window.location.replace(`/${(navigator.language || 'en').toLowerCase().substring(0,2)}/`);
     </script>
   </head>
   <body class="language-gateway">

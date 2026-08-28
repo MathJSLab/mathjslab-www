@@ -1,15 +1,16 @@
+{%- from 'includes/head-macros.njk' import headBegin, headOpenGraph, headTwitter, headAlternate, headIcon -%}
 {%- set pageData = i18n.pages[lang] -%}
 {%- set main = pageData -%}
 {%- set alternatePostfix = '' -%}
 <!DOCTYPE html>
 <html lang="{{ pageData.htmlLang }}">
   <head>
-{% include "head-begin.njk" -%}
-{%- include "head-og.njk" -%}
-{%- include "head-twitter.njk" -%}
+{{ headBegin(main.title, main.description, pkg.author, pkg.keywords.join()) }}
+{{ headOpenGraph(i18n, lang, main.title, main.description, site.url + '/' + lang, site.title, '/images/mathjslab-og.png') }}
+{{ headTwitter(main.title, main.description, site.url, '/images/mathjslab-og.png', site.title) }}
 {%- include "head-json-ld.njk" -%}
-{%- include "head-alternate.njk" -%}
-{%- include "head-scheme-favicon.njk" %}
+{{ headAlternate(i18n, lang, site.url) }}
+{{ headIcon(light = '/images/favicon.ico', dark = '/images/favicon-dark.ico', svg = '/images/mathjslab-logo.svg') }}
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
