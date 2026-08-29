@@ -1,86 +1,43 @@
-{%- from 'includes/head-macros.njk' import headJsonLdGraph -%}
+{%- from 'includes/head-macros.njk' import headJsonLdGraph, headJsonLdWebPage, headJsonLdWebSite, headJsonLdApplication, headJsonLdApplicationList, headJsonLdPerson, headJsonLdOrganization -%}
 {% call headJsonLdGraph() %}
-          {
-            "@type": "WebPage",
-            "@id": "{{ site.url }}/{{ lang }}/app/#webpage",
-            "url": "{{ site.url }}/{{ lang }}/app/",
-            "name": "{{ hub.title }}",
-            "description": "{{ hub.description }}",
-            "inLanguage": "{{ pageData.htmlLang }}",
-            "isPartOf": {
-              "@id": "{{ site.url }}/#website"
-            },
-            "about": {
-              "@id": "{{ site.url }}/#software"
-            }
-          },
-          {
-            "@type": "WebSite",
-            "@id": "{{ site.url }}/#website",
-            "url": "{{ site.url }}/",
-            "name": "{{ site.title }}",
-            "publisher": {
-              "@id": "{{ site.url }}/#organization"
-            }
-          },
-          {
-            "@type": "SoftwareApplication",
-            "@id": "{{ site.url }}/#software",
-            "name": "{{ site.title }}",
-            "url": "{{ site.url }}/{{ lang }}/",
-            "applicationCategory": "EducationalApplication",
-            "operatingSystem": "Web",
-            "author": {
-              "@id": "{{ site.url }}/#author"
-            },
-            "publisher": {
-              "@id": "{{ site.url }}/#organization"
-            }
-          },
-          {
-            "@type": "ItemList",
-            "@id": "{{ site.url }}/{{ lang }}/app/#applications",
-            "name": "{{ hub.title }}",
-            "numberOfItems": {{ hub.apps | length }},
-            "itemListElement": [
-              {% for app in hub.apps %}
-                {
-                  "@type": "ListItem",
-                  "position": {{ loop.index }},
-                  "item": {
-                    "@type": "SoftwareApplication",
-                    "@id": "{{ app.href }}#software",
-                    "name": "{{ app.label }}",
-                    "description": "{{ app.description }}",
-                    "url": "{{ app.href }}",
-                    "applicationCategory": "EducationalApplication",
-                    "operatingSystem": "Web",
-                    "publisher": {
-                      "@id": "{{ site.url }}/#organization"
-                    }
-                  }
-                }{% if not loop.last %},{% endif %}
-              {% endfor %}
-            ]
-          },
-          {
-            "@type": "Person",
-            "@id": "{{ site.url }}/#author",
-            "name": "Sergio Lindau"
-          },
-          {
-            "@type": "Organization",
-            "@id": "{{ site.url }}/#organization",
-            "name": "{{ site.title }}",
-            "url": "{{ site.url }}/",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "{{ site.url }}/images/mathjslab-logo.svg",
-              "width": 630,
-              "height": 630
-            },
-            "sameAs": [
-              "https://github.com/MathJSLab"
-            ]
-          }
+{{ headJsonLdWebPage(
+  site.url + '/' + lang + '/app/#webpage',
+  site.url + '/' + lang + '/app/',
+  hub.title,
+  hub.description,
+  pageData.htmlLang,
+  site.url + '/#website',
+  site.url + '/#software'
+) }}
+{{ headJsonLdWebSite(
+  site.url + '/#website',
+  site.url + '/',
+  site.title,
+  site.url + '/#organization'
+) }}
+{{ headJsonLdApplication(
+  'SoftwareApplication',
+  site.url + '/#software',
+  site.title,
+  site.url + '/' + lang + '/',
+  authorId = site.url + '/#author',
+  publisherId = site.url + '/#organization'
+) }}
+{{ headJsonLdApplicationList(
+  site.url + '/' + lang + '/app/#applications',
+  hub.title,
+  hub.apps,
+  site.url + '/#organization'
+) }}
+{{ headJsonLdPerson(site.url + '/#author', 'Sergio Lindau') }}
+{{ headJsonLdOrganization(
+  site.url + '/#organization',
+  site.title,
+  site.url + '/',
+  site.url + '/images/mathjslab-logo.svg',
+  630,
+  630,
+  ['https://github.com/MathJSLab'],
+  comma = false
+) }}
 {% endcall %}
