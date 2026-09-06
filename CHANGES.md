@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.2
+
+- Added reusable web components for appearance mode and language switching, with a dedicated component build step.
+- Added themed MathJSLab assets and synchronized theme-aware icon handling in the HTML head.
+- Improved the application hub entry points and root `/app/` language gateway.
+- Refined mobile header behavior and related responsive styles.
+
 ## 0.1.1
 
 - Added `includes/head-macros.njk` to centralize reusable HTML head macros for base metadata, Open Graph, Twitter cards, alternate language links and icons.

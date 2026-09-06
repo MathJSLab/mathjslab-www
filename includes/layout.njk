@@ -6,12 +6,13 @@
 <html lang="{{ pageData.htmlLang }}">
   <head>
 {{ headBegin(main.title, main.description, pkg.author, pkg.keywords.join()) }}
-{{ headOpenGraph(i18n, lang, main.title, main.description, site.url + '/' + lang, site.title, '/images/mathjslab-og.png') }}
+{{ headOpenGraph(i18n, lang, main.title, main.description, site.url, site.title, '/images/mathjslab-og.png', pageUrl = site.url + '/' + lang + '/') }}
 {{ headTwitter(main.title, main.description, site.url, '/images/mathjslab-og.png', site.title) }}
 {%- include "site-json-ld.njk" -%}
 {{ headAlternate(i18n, lang, site.url) }}
 {{ headIcon(light = '/images/favicon.ico', dark = '/images/favicon-dark.ico', svg = '/images/mathjslab-logo.svg') }}
     <link rel="stylesheet" href="/css/main.css">
+    <script type="module" src="/js/components.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -37,17 +38,20 @@
           <span class="menu-toggle-icon" aria-hidden="true"></span>
           <span>{{ pageData.nav.menu }}</span>
         </button>
-        <button class="language-toggle" type="button" aria-expanded="false" aria-controls="language-menu">
-          <img class="language-toggle-icon" src="/images/language-switch.svg" alt="" aria-hidden="true">
-          <span>{{ pageData.nav.languageMenu }}</span>
-        </button>
-        <ul id="language-menu" class="language-switcher" aria-label="{{ pageData.nav.languageLabel }}">
+        <language-switcher
+          locale="{{ lang }}"
+          button-label="{{ pageData.nav.languageMenu }}"
+          menu-label="{{ pageData.nav.languageLabel }}"
+          icon-src="/images/language-switch.svg">
           {% for locale in i18n.locales %}
-            <li>
-              <a {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/">{{ i18n.languageNames[locale] }}</a>
-            </li>
+            <a data-locale="{{ locale }}" {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/">{{ i18n.languageNames[locale] }}</a>
           {% endfor %}
-        </ul>
+        </language-switcher>
+        <appearance-mode
+          light-label="{{ pageData.theme.light }}"
+          dark-label="{{ pageData.theme.dark }}"
+          light-icon-src="/images/theme-light-mathjslab.svg"
+          dark-icon-src="/images/theme-dark-mathjslab.svg"></appearance-mode>
         <div class="header-buttons">
           <a class="button button-small" href="/{{ lang }}/app/" target="_blank" rel="noopener noreferrer">
             <span class="button-label-full">{{ pageData.nav.launch }}</span>
@@ -67,54 +71,33 @@
         const mobileBreakpoint = 900;
         const toggle = document.querySelector('.menu-toggle');
         const menu = document.querySelector('#site-menu');
-        const languageToggle = document.querySelector('.language-toggle');
-        const languageMenu = document.querySelector('#language-menu');
-        if (!toggle || !menu || !languageToggle || !languageMenu) {
-          return;
+        if (toggle && menu) {
+          const closeMenu = () => {
+            toggle.setAttribute('aria-expanded', 'false');
+            menu.removeAttribute('data-open');
+          };
+          toggle.addEventListener('click', () => {
+            const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+            toggle.setAttribute('aria-expanded', String(shouldOpen));
+            menu.toggleAttribute('data-open', shouldOpen);
+          });
+          menu.addEventListener('click', (event) => {
+            if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
+              closeMenu();
+            }
+          });
+          document.addEventListener('click', (event) => {
+            if (window.innerWidth > mobileBreakpoint || event.target.closest('.site-header')) {
+              return;
+            }
+            closeMenu();
+          });
+          window.addEventListener('resize', () => {
+            if (window.innerWidth > mobileBreakpoint) {
+              closeMenu();
+            }
+          });
         }
-        const closeMenu = () => {
-          toggle.setAttribute('aria-expanded', 'false');
-          menu.removeAttribute('data-open');
-        };
-        const closeLanguageMenu = () => {
-          languageToggle.setAttribute('aria-expanded', 'false');
-          languageMenu.removeAttribute('data-open');
-        };
-        toggle.addEventListener('click', () => {
-          const shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
-          toggle.setAttribute('aria-expanded', String(shouldOpen));
-          menu.toggleAttribute('data-open', shouldOpen);
-          closeLanguageMenu();
-        });
-        languageToggle.addEventListener('click', () => {
-          const shouldOpen = languageToggle.getAttribute('aria-expanded') !== 'true';
-          languageToggle.setAttribute('aria-expanded', String(shouldOpen));
-          languageMenu.toggleAttribute('data-open', shouldOpen);
-          closeMenu();
-        });
-        menu.addEventListener('click', (event) => {
-          if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
-            closeMenu();
-          }
-        });
-        languageMenu.addEventListener('click', (event) => {
-          if (window.innerWidth <= mobileBreakpoint && event.target.closest('a')) {
-            closeLanguageMenu();
-          }
-        });
-        document.addEventListener('click', (event) => {
-          if (window.innerWidth > mobileBreakpoint || event.target.closest('.site-header')) {
-            return;
-          }
-          closeMenu();
-          closeLanguageMenu();
-        });
-        window.addEventListener('resize', () => {
-          if (window.innerWidth > mobileBreakpoint) {
-            closeMenu();
-            closeLanguageMenu();
-          }
-        });
         document.querySelectorAll('[data-pipeline-carousel]').forEach((carousel) => {
           const openButton = carousel.querySelector('.pipeline-carousel-open');
           const overlay = carousel.querySelector('.pipeline-carousel-overlay');

@@ -27,6 +27,10 @@ export default {
         launchShort: 'App',
         launchCalc: 'Abrir Calculadora',
     },
+    theme: {
+        light: 'Cambiar al modo claro',
+        dark: 'Cambiar al modo oscuro',
+    },
     hero: {
         kicker: 'Computación numérica en TypeScript para el navegador',
         heading: 'MathJSLab lleva un laboratorio matemático a la web.',

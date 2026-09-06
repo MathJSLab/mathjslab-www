@@ -8,12 +8,13 @@
 <html lang="{{ pageData.htmlLang }}">
   <head>
 {{ headBegin(main.title, main.description, pkg.author, pkg.keywords.join()) }}
-{{ headOpenGraph(i18n, lang, main.title, main.description, site.url + '/' + lang, site.title, '/images/mathjslab-og.png') }}
+{{ headOpenGraph(i18n, lang, main.title, main.description, site.url, site.title, '/images/mathjslab-og.png', pageUrl = site.url + '/' + lang + '/app/') }}
 {{ headTwitter(main.title, main.description, site.url, '/images/mathjslab-og.png', site.title) }}
 {%- include "app-hub-json-ld.njk" -%}
 {{ headAlternate(i18n, lang, site.url) }}
 {{ headIcon(light = '/images/favicon.ico', dark = '/images/favicon-dark.ico', svg = '/images/mathjslab-logo.svg') }}
     <link rel="stylesheet" href="/css/main.css">
+    <script type="module" src="/js/components.js"></script>
   </head>
   <body class="app-hub-page">
     <header class="app-hub-bar">
@@ -27,6 +28,21 @@
         {% endfor %}
       </nav>
       <div class="app-hub-actions">
+        <language-switcher
+          locale="{{ lang }}"
+          path-suffix="app/"
+          button-label="{{ pageData.nav.languageMenu }}"
+          menu-label="{{ pageData.nav.languageLabel }}"
+          icon-src="/images/language-switch.svg">
+          {% for locale in i18n.locales %}
+            <a data-locale="{{ locale }}" {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/app/">{{ i18n.languageNames[locale] }}</a>
+          {% endfor %}
+        </language-switcher>
+        <appearance-mode
+          light-label="{{ pageData.theme.light }}"
+          dark-label="{{ pageData.theme.dark }}"
+          light-icon-src="/images/theme-light-mathjslab.svg"
+          dark-icon-src="/images/theme-dark-mathjslab.svg"></appearance-mode>
         <a id="app-external-link" class="button button-small" href="{{ firstApp.href }}" target="_blank" rel="noopener noreferrer">{{ hub.openExternalLabel }}</a>
         <a class="button button-small button-small-secondary" href="/{{ lang }}/">{{ hub.backLabel }}</a>
       </div>
