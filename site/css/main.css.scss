@@ -117,10 +117,6 @@ img {
   display: none;
 }
 
-.button-label-short {
-  display: none;
-}
-
 .main-nav {
   min-width: 0;
   flex-wrap: wrap;
@@ -790,101 +786,6 @@ pre {
   background: var(--site-surface-strong);
 }
 
-.app-hub-page {
-  display: grid;
-  grid-template-rows: auto minmax(0, 1fr);
-  height: 100vh;
-  overflow: hidden;
-  background: var(--color-background);
-}
-
-.app-hub-bar {
-  z-index: 2;
-  display: grid;
-  grid-template-columns: max-content minmax(0, 1fr) max-content;
-  gap: 0.85rem;
-  align-items: center;
-  border-bottom: 1px solid var(--site-border);
-  padding: 0.65rem 0.85rem;
-  background: var(--site-surface-elevated);
-  box-shadow: 0 10px 28px var(--site-shadow-soft);
-}
-
-.app-hub-brand {
-  display: inline-flex;
-  gap: 0.5rem;
-  align-items: center;
-  min-width: max-content;
-  color: var(--site-text);
-  font-weight: 850;
-}
-
-.app-hub-brand img {
-  width: 2.65rem;
-  height: 2.65rem;
-}
-
-.app-hub-brand h1 {
-  font-size: 1.25rem;
-  line-height: 1;
-}
-
-.app-hub-brand h1:hover {
-  color: var(--site-primary-hover);
-}
-
-.app-selector {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  justify-content: center;
-  min-width: 0;
-}
-
-.app-selector a {
-  min-height: 2.35rem;
-  border: 1px solid var(--site-border);
-  border-radius: 8px;
-  padding: 0.48rem 0.8rem;
-  color: var(--site-text);
-  background: var(--site-surface-strong);
-  font: inherit;
-  font-size: 0.92rem;
-  font-weight: 750;
-  cursor: pointer;
-}
-
-.app-selector a:hover,
-.app-selector a[aria-current='page'] {
-  color: var(--color-button-text);
-  text-shadow: 0 1px 0 var(--color-button-text-shadow);
-  border-color: var(--color-button-border);
-  background: linear-gradient(
-    to bottom,
-    var(--color-button-background-to) 5%,
-    var(--color-button-background-from) 100%
-  );
-  background-color: var(--color-button-background-to);
-  box-shadow: 0 10px 14px -7px var(--color-button-box-shadow);
-}
-
-.app-hub-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.45rem;
-  justify-content: flex-end;
-  min-width: max-content;
-}
-
-.app-frame {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-  background: var(--color-background);
-}
-
 @media (max-width: 980px) {
   .site-header {
     grid-template-columns: 1fr;
@@ -920,15 +821,6 @@ pre {
   .publication-grid {
     grid-template-columns: 1fr;
   }
-
-  .app-hub-bar {
-    grid-template-columns: 1fr;
-  }
-
-  .app-hub-brand,
-  .app-hub-actions {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 640px) {
@@ -963,15 +855,6 @@ pre {
 
   .pipeline-figure img {
     min-width: 46rem;
-  }
-
-  .app-hub-brand h1 {
-    font-size: 1.05rem;
-  }
-
-  .app-selector a,
-  .app-hub-actions .button-small {
-    flex: 1 1 auto;
   }
 }
 
@@ -1023,11 +906,18 @@ pre {
     min-width: 2.35rem;
     min-height: 2.35rem;
     height: 2.35rem;
-    border: 1px solid var(--site-border-strong);
+    border: 1px solid var(--color-button-border);
     border-radius: 8px;
     padding: 0.5rem;
-    color: var(--site-primary);
-    background: var(--site-surface-elevated);
+    color: var(--color-button-text);
+    text-shadow: 0 1px 0 var(--color-button-text-shadow);
+    background: linear-gradient(
+      to bottom,
+      var(--color-button-background-to) 5%,
+      var(--color-button-background-from) 100%
+    );
+    background-color: var(--color-button-background-to);
+    box-shadow: 0 10px 14px -7px var(--color-button-box-shadow);
     appearance: none;
     box-sizing: border-box;
     font: inherit;
@@ -1041,8 +931,15 @@ pre {
   }
 
   .menu-toggle:hover,
-  .menu-toggle[aria-expanded='true'] {
-    background: var(--site-primary-muted);
+  .menu-toggle[aria-expanded='true'],
+  .header-buttons .button-small:hover {
+    color: var(--color-button-text);
+    background: linear-gradient(
+      to bottom,
+      var(--color-button-background-from) 5%,
+      var(--color-button-background-to) 100%
+    );
+    background-color: var(--color-button-background-from);
   }
 
   .menu-toggle-icon {
@@ -1105,13 +1002,8 @@ pre {
     white-space: nowrap;
   }
 
-  .button-label-full,
   .menu-toggle span:last-child {
     display: none;
-  }
-
-  .button-label-short {
-    display: inline;
   }
 
   .pipeline-figure {

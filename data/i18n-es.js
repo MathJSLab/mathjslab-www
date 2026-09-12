@@ -23,9 +23,8 @@ export default {
         resources: 'Recursos',
         contact: 'Contacto',
         license: 'Licencia',
-        launch: 'Abrir app',
         launchShort: 'App',
-        launchCalc: 'Abrir Calculadora',
+        launchCalcShort: 'Calc',
     },
     theme: {
         light: 'Cambiar al modo claro',
@@ -36,8 +35,6 @@ export default {
         heading: 'MathJSLab lleva un laboratorio matemático a la web.',
         leadHtml:
             '<strong>MathJSLab</strong> simula un subconjunto del lenguaje <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a>. Usa una de las aplicaciones online para conocer los recursos de <strong>MathJSLab</strong>. Usa el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"></a> en tu proyecto para ejecutar expresiones, funciones y matrices, con resultados renderizados en <a href="https://developer.mozilla.org/es/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a> y compatibilidad completa en el navegador web.',
-        primaryCtaHtml: 'Abrir app <strong>MathJSLab</strong>',
-        calculatorCta: 'Abrir Calculadora',
         secondaryCta: 'Ver código en GitHub',
         installLabel: 'Instalar paquete',
         terminalTitle: 'Sesión interactiva',
@@ -114,13 +111,6 @@ export default {
             icon: '/images/Octicons-mark-github.svg',
         },
         {
-            name: 'mathjslab-batch',
-            role: 'Aplicación por lotes',
-            textHtml: 'Aplicación web de procesamiento por lotes, alojada en batch.mathjslab.com y basada en el paquete <strong>MathJSLab</strong>.',
-            href: 'https://github.com/MathJSLab/mathjslab-batch',
-            icon: '/images/Octicons-mark-github.svg',
-        },
-        {
             name: 'mathjslab-github',
             role: 'Soporte de la organización',
             textHtml: 'Perfil, plantillas de repositorio y materiales de soporte compartidos para <strong>MathJSLab</strong>.',
@@ -131,7 +121,7 @@ export default {
     publicationTitle: 'Publicación e identificadores',
     publicationLeadHtml: '<strong>MathJSLab</strong> se publica como software libre, distribuido como un paquete reutilizable y con identificadores persistentes asignados.',
     publicationTextHtml:
-        'El paquete intérprete se publica en el registro npm como mathjslab. El código fuente se mantiene en la organización <strong>MathJSLab</strong> en GitHub, y el paquete, la aplicación Web complementaria, la calculadora y la aplicación por lotes tienen DOI e ISBN para citación en contextos académicos e institucionales.',
+        'El paquete intérprete se publica en el registro npm como mathjslab. El código fuente se mantiene en la organización <strong>MathJSLab</strong> en GitHub, y el paquete, la aplicación Web complementaria y la calculadora tienen DOI e ISBN para citación en contextos académicos e institucionales.',
     publications: [
         {
             name: 'mathjslab',
@@ -316,50 +306,6 @@ export default {
                 },
             ],
         },
-        {
-            name: 'mathjslab-batch',
-            role: 'Aplicación por lotes',
-            textHtml: 'La aplicación por lotes ofrece una interfaz de área de texto con resaltado de sintaxis para ejecutar comandos <strong>MathJSLab</strong> en secuencia.',
-            href: 'https://github.com/MathJSLab/mathjslab-batch',
-            icon: '/images/Octicons-mark-github.svg',
-            badges: [
-                {
-                    alt: 'Estado Netlify',
-                    src: 'https://api.netlify.com/api/v1/badges/8de91465-3f1a-4348-bf3c-69d96d9a1616/deploy-status',
-                    href: 'https://app.netlify.com/projects/mathjslab-batch/deploys',
-                },
-                {
-                    alt: 'Sitio web',
-                    src: 'https://img.shields.io/website?url=https%3A%2F%2Fmathjslab.com%2F',
-                    href: 'https://mathjslab.com/',
-                },
-                {
-                    alt: 'Creado en GitHub el',
-                    src: 'https://img.shields.io/github/created-at/MathJSLab/mathjslab-batch',
-                    href: 'https://github.com/MathJSLab/mathjslab-batch',
-                },
-                {
-                    alt: 'Licencia MIT',
-                    src: 'https://img.shields.io/badge/License-MIT-brightgreen.svg',
-                    href: 'https://github.com/MathJSLab/mathjslab-batch/blob/main/LICENSE',
-                },
-                {
-                    alt: 'DOI 10.5281/zenodo.21680709',
-                    src: 'https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21680709-blue?style=flat&link=https://doi.org/10.5281/zenodo.21680709',
-                    href: 'https://doi.org/10.5281/zenodo.21680709',
-                },
-                {
-                    alt: 'ISBN 978-65-00-84828-1',
-                    src: 'https://img.shields.io/badge/ISBN-978--65--00--84828--1-green?style=flat&link=https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
-                    href: 'https://grp.isbn-international.org/search/piid_solr?keys=978-65-00-84828-1',
-                },
-                {
-                    alt: 'Accesos jsDelivr',
-                    src: 'https://img.shields.io/jsdelivr/gh/hy/MathJSLab/mathjslab-batch',
-                    href: 'https://cdn.jsdelivr.net/gh/MathJSLab/mathjslab-batch/',
-                },
-            ],
-        },
     ],
     archiveTitle: 'Archivo',
     archiveLeadHtml: 'Archivos y documentos relacionados con el proyecto <strong>MathJSLab</strong>.',
@@ -394,9 +340,10 @@ export default {
     ],
     resourcesTitle: 'Recursos',
     resourcesLeadHtml:
-        'Prueba las aplicaciones web desde el hub de aplicaciones. Instala el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"></a>, navega por el perfil de la organización en GitHub o consulta la ayuda de comandos.',
+        'Prueba directamente las aplicaciones web. Instala el <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer">paquete <img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"></a>, navega por el perfil de la organización en GitHub o consulta la ayuda de comandos.',
     resources: [
-        { label: 'Abrir app', href: '/es/app/', icon: '/images/mathjslab-logo.svg' },
+        { label: 'App', href: 'https://app.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
+        { label: 'Calc', href: 'https://calc.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
         {
             labelHtml: '<span class="software-link npm-wordmark-link">Paquete <img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"></span>',
             href: 'https://www.npmjs.com/package/mathjslab',
@@ -404,37 +351,6 @@ export default {
         { label: 'Organización en GitHub', href: 'https://github.com/MathJSLab', icon: '/images/Octicons-mark-github.svg' },
         { label: 'Ayuda de comandos', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/LEAME.md', icon: '/images/Octicons-mark-github.svg' },
     ],
-    appHub: {
-        title: 'Aplicaciones MathJSLab',
-        description: 'Elige una de las aplicaciones web de MathJSLab y úsala dentro de esta página.',
-        backLabel: 'Página del proyecto',
-        selectorLabel: 'Selector de aplicación',
-        openExternalLabel: 'Abrir en nueva pestaña',
-        frameTitle: 'Aplicación MathJSLab seleccionada',
-        apps: [
-            {
-                id: 'lab',
-                label: 'Aplicación MathJSLab',
-                shortLabel: 'Laboratorio',
-                href: 'https://app.mathjslab.com/',
-                description: 'Entorno completo de demostración del intérprete.',
-            },
-            {
-                id: 'calc',
-                label: 'Calculadora MathJSLab',
-                shortLabel: 'Calculadora',
-                href: 'https://calc.mathjslab.com/',
-                description: 'Interfaz simplificada de calculadora científica.',
-            },
-            {
-                id: 'batch',
-                label: 'MathJSLab Batch',
-                shortLabel: 'Batch',
-                href: 'https://batch.mathjslab.com/',
-                description: 'Interfaz de comandos por lotes con resaltado de sintaxis.',
-            },
-        ],
-    },
     licenseTitle: 'Licencia MIT',
     licenseLeadPrefixHtml: '<strong>MathJSLab</strong> se distribuye como software libre bajo la ',
     licenseLinkLabel: 'Licencia MIT',

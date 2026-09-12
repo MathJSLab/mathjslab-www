@@ -26,16 +26,5 @@
             ] | sitemapLastmod
         }}</lastmod>
     </url>
-
-    <url>
-        <loc>{{ site.url }}/{{ locale }}/app/</loc>
-        <lastmod>{{
-            [
-                'site/' ~ locale ~ '/app/index.html.njk',
-                'includes/layout.njk',
-                'data/i18n-' ~ locale ~ '.js'
-            ] | sitemapLastmod
-        }}</lastmod>
-    </url>
     {% endfor %}
 </urlset>

@@ -1,7 +1,6 @@
 {%- from 'includes/head-macros.njk' import headBegin, headOpenGraph, headTwitter, headAlternate, headIcon -%}
 {%- set pageData = i18n.pages[lang] -%}
 {%- set main = pageData -%}
-{%- set alternatePostfix = '' -%}
 <!DOCTYPE html>
 <html lang="{{ pageData.htmlLang }}">
   <head>
@@ -42,7 +41,7 @@
           locale="{{ lang }}"
           button-label="{{ pageData.nav.languageMenu }}"
           menu-label="{{ pageData.nav.languageLabel }}"
-          icon-src="/images/language-switch.svg">
+          icon-src="/images/language-switch-white.svg">
           {% for locale in i18n.locales %}
             <a data-locale="{{ locale }}" {% if locale == lang %}aria-current="page"{% endif %} href="/{{ locale }}/">{{ i18n.languageNames[locale] }}</a>
           {% endfor %}
@@ -50,12 +49,14 @@
         <appearance-mode
           light-label="{{ pageData.theme.light }}"
           dark-label="{{ pageData.theme.dark }}"
-          light-icon-src="/images/theme-light-mathjslab.svg"
-          dark-icon-src="/images/theme-dark-mathjslab.svg"></appearance-mode>
+          light-icon-src="/images/theme-light-white-mathjslab.svg"
+          dark-icon-src="/images/theme-dark-white-mathjslab.svg"></appearance-mode>
         <div class="header-buttons">
-          <a class="button button-small" href="/{{ lang }}/app/" target="_blank" rel="noopener noreferrer">
-            <span class="button-label-full">{{ pageData.nav.launch }}</span>
-            <span class="button-label-short">{{ pageData.nav.launchShort }}</span>
+          <a class="button button-small" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">
+            <span>{{ pageData.nav.launchShort }}</span>
+          </a>
+          <a class="button button-small" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer">
+            <span>{{ pageData.nav.launchCalcShort }}</span>
           </a>
         </div>
       </div>

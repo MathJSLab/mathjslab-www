@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## 0.1.3
+
+- Removed `mathjslab-batch` from the project ecosystem, publication metadata and SEO diagnosis tools.
+- Replaced the application hub and localized `/app/` routes with direct `App` and `Calc` links to their respective subdomains throughout the site.
+- Removed the obsolete hub templates, JSON-LD macro, styles, sitemap entries and related multilingual data.
+- Refined the responsive header controls with compact green application and menu buttons plus color-aware language and appearance icons.
+- Updated the TypeScript ESLint development dependencies.
+
 ## 0.1.2
 
 - Added reusable web components for appearance mode and language switching, with a dedicated component build step.
