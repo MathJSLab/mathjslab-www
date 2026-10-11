@@ -19,7 +19,6 @@ export default async function (eleventyConfig) {
     eleventyConfig.setOutputDirectory(config.dir.output);
 
     eleventyConfig.addPassthroughCopy('./site/images');
-    eleventyConfig.addPassthroughCopy('./site/archive');
     eleventyConfig.addPassthroughCopy({ './site/js/*.js': 'js' });
     EleventyUtil.configAddTemplateFormat(eleventyConfig, ['njk', 'scss'], '\\./site/');
 

@@ -27,6 +27,18 @@
   publisherId = site.url + '/#organization',
   offersPrice = '0'
 ) }}
+{{ headJsonLdApplication(
+  'SoftwareApplication',
+  site.url + '/#markdown',
+  'mathjslab-markdown',
+  'https://www.npmjs.com/package/mathjslab-markdown',
+  pageData.markdown.leadHtml | striptags,
+  pageData.htmlLang,
+  license = 'https://opensource.org/license/MIT',
+  authorId = site.url + '/#author',
+  publisherId = site.url + '/#organization',
+  offersPrice = '0'
+) }}
 {{ headJsonLdPerson(site.url + '/#author', 'Sergio Lindau') }}
 {{ headJsonLdOrganization(
   site.url + '/#organization',

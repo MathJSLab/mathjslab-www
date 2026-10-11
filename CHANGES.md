@@ -1,7 +1,15 @@
 # Release notes
 
-All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
+All notable changes to this project will be documented in this file. This project adheres to [Semantic Versioning](http://semver.org/).
+
+## 0.2.0
+
+- Added a dedicated presentation of `mathjslab-markdown`, including installation, educational extensions, document navigation and optional interpreter integration.
+- Updated the ecosystem, publication cards, useful links and structured metadata to distinguish the interpreter and Markdown packages while keeping `mathjslab` as the project core.
+- Expanded the interpreter feature overview with programming constructs, classes and asynchronous, resumable sessions.
+- Updated application labels and standardized package and web application cards in English, Portuguese and Spanish.
+- Removed the Archive section, navigation entry, PDF documents, obsolete styles and repository-copy mappings.
+- Updated development dependencies and corrected the application website publication badge.
 
 ## 0.1.3
 
@@ -54,10 +62,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 - Implemented SEO support (`sitemap.xml`, `robots.txt`, and meta tags in `includes/layout.njk` and `site/index.html.njk`).
 - The `data/i18n.js` file has been split into separate files for each language:
-  - `data/i18n-en.js`.
-  - `data/i18n-es.js`.
-  - `data/i18n-pt.js`.
-  The file `data/i18n-licenseText.js` was also created, containing the MIT license text in English, which is common to all languages.
+    - `data/i18n-en.js`.
+    - `data/i18n-es.js`.
+    - `data/i18n-pt.js`. The file `data/i18n-licenseText.js` was also created, containing the MIT license text in English, which is common to all languages.
 
 ## 0.0.12
 
@@ -69,9 +76,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.10
 
-- A new multilingual pipeline section has been added after the overview,
-  showing the MathJSLab processing flow with localized SVG diagrams in English,
-  Portuguese and Spanish.
+- A new multilingual pipeline section has been added after the overview, showing the MathJSLab processing flow with localized SVG diagrams in English, Portuguese and Spanish.
 - The main navigation now links to the new pipeline section.
 
 ## 0.0.9
@@ -92,54 +97,35 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## 0.0.5
 
-- The temporary redirect to `app.mathjslab.com` has been replaced by an
-  initial MathJSLab project homepage with navigation, project highlights,
-  repository links, resources and educational/trademark notices.
-- Multilingual pages have been added for English, Portuguese and Spanish using
-  `intl-messageformat` and shared Nunjucks templates.
-- The root page now redirects visitors to the appropriate localized page based
-  on the browser language, while still providing manual language links.
-- The Eleventy development environment has been fixed with a shared
-  `eleventy.config.mjs` configuration, corrected layout directory settings and
-  working `serve` and `watch` scripts.
-- The homepage visual style has been updated, including responsive layout,
-  smaller hero title text without intra-word wrapping, and enlarged MathJSLab
-  logo/brand text in the header.
+- The temporary redirect to `app.mathjslab.com` has been replaced by an initial MathJSLab project homepage with navigation, project highlights, repository links, resources and educational/trademark notices.
+- Multilingual pages have been added for English, Portuguese and Spanish using `intl-messageformat` and shared Nunjucks templates.
+- The root page now redirects visitors to the appropriate localized page based on the browser language, while still providing manual language links.
+- The Eleventy development environment has been fixed with a shared `eleventy.config.mjs` configuration, corrected layout directory settings and working `serve` and `watch` scripts.
+- The homepage visual style has been updated, including responsive layout, smaller hero title text without intra-word wrapping, and enlarged MathJSLab logo/brand text in the header.
 - The sitemap has been updated to include the localized pages.
 
 ## 0.0.4
 
-- The system of downloading raw files from the repository on GitHub has been
-  replaced by cloning the repository and copying selected files.
-- The MathJSLab logo has been updated and the logo in the .md files has been
-  modified to use logo image in the website (this repository).
+- The system of downloading raw files from the repository on GitHub has been replaced by cloning the repository and copying selected files.
+- The MathJSLab logo has been updated and the logo in the .md files has been modified to use logo image in the website (this repository).
 
 ## 0.0.3
 
-- Some TypeScript development dependencies has been installed (`tsx`,
-  `ts-config-paths` and `ts-node`).
+- Some TypeScript development dependencies has been installed (`tsx`, `ts-config-paths` and `ts-node`).
 - The ESLint and Prettier dependencies has been installed.
 - The `dotenv` and `dotenv-expand` dependencies has been removed.
 - All Webpack related dependencies has been removed.
 - The following scripts in the `package.json`file has been renamed:
-  * `"download-resources"` to `"download"`.
-  * `"clean:download-resources"` to `"clean:download"`.
+    - `"download-resources"` to `"download"`.
+    - `"clean:download-resources"` to `"clean:download"`.
 
 ## 0.0.2
 
 - Development dependencies installed in the project.
-- Files generated in the organization repository have been added. It is
-downloaded from the organization repository using the `download-files.cjs`
-script, which also provides a means to clean up the downloaded files. The
-download of these files is triggered by the script in the `package.json` file:
-`"download-resources"`.
-- Building the site using the `EleventyUtil.mjs` tool. Build configuration in
-the `eleventy.build.mjs` file.
+- Files generated in the organization repository have been added. It is downloaded from the organization repository using the `download-files.cjs` script, which also provides a means to clean up the downloaded files. The download of these files is triggered by the script in the `package.json` file: `"download-resources"`.
+- Building the site using the `EleventyUtil.mjs` tool. Build configuration in the `eleventy.build.mjs` file.
 
 ## 0.0.1
 
-- Start of the project. The `mathjslab.com` web page was structured using
-Nunjucks templates with data in Markdown and json files using the
-`@11ty/eleventy` npm package through `npx` (withouth installing any
-dependencies) for the replacement process during the build.
+- Start of the project. The `mathjslab.com` web page was structured using Nunjucks templates with data in Markdown and json files using the `@11ty/eleventy` npm package through `npx` (withouth installing any dependencies) for the replacement process during the build.
 - The site temporarily redirects to `app.mathjslab.com`.

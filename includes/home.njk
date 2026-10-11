@@ -82,6 +82,26 @@
   </div>
 </section>
 
+<section id="markdown" class="section-shell">
+  <div class="section-heading">
+    <p class="eyebrow">{{ pageData.nav.markdown }}</p>
+    <h2>{{ pageData.markdown.title }}</h2>
+    <p>{{ pageData.markdown.leadHtml | safe }}</p>
+  </div>
+  <div class="feature-grid">
+    {% for item in pageData.markdown.cards %}
+      <article class="feature-card"><h3>{{ item.title }}</h3><p>{{ item.textHtml | safe }}</p></article>
+    {% endfor %}
+  </div>
+  <div class="install-command" aria-label="{{ pageData.markdown.installLabel }}">
+    <span>
+      <img src="/images/Npm-logo.svg" alt="">
+      {{ pageData.markdown.installLabel }}
+    </span>
+    <code>npm install mathjslab-markdown</code>
+  </div>
+</section>
+
 <section id="ecosystem" class="section-shell split-section">
   <div class="section-heading">
     <p class="eyebrow">{{ pageData.nav.ecosystem }}</p>
@@ -136,24 +156,6 @@
           {% endfor %}
         </div>
       </article>
-    {% endfor %}
-  </div>
-</section>
-
-<section id="archive" class="section-shell archive-section">
-  <div class="section-heading">
-    <p class="eyebrow">{{ pageData.nav.archive }}</p>
-    <h2>{{ pageData.archiveTitle }}</h2>
-    <p>{% if pageData.archiveLeadHtml %}{{ pageData.archiveLeadHtml | safe }}{% else %}{{ pageData.archiveLead }}{% endif %}</p>
-  </div>
-  <div class="archive-list">
-    {% for item in pageData.archiveItems %}
-      <a class="archive-card" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
-        <span>{{ item.language }} · {{ item.file }}</span>
-        <strong>{% if item.titleHtml %}{{ item.titleHtml | safe }}{% else %}{{ item.title }}{% endif %}</strong>
-        <p>{% if item.descriptionHtml %}{{ item.descriptionHtml | safe }}{% else %}{{ item.description }}{% endif %}</p>
-        <small>{{ item.date }}</small>
-      </a>
     {% endfor %}
   </div>
 </section>

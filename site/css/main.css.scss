@@ -584,48 +584,6 @@ pre {
   max-width: 100%;
 }
 
-.archive-section {
-  padding-top: 3.5rem;
-}
-
-.archive-list {
-  display: grid;
-  gap: 0.9rem;
-  margin-top: 2rem;
-}
-
-.archive-card {
-  display: grid;
-  gap: 0.45rem;
-  border: 1px solid var(--site-border-soft);
-  border-radius: 8px;
-  padding: 1.2rem;
-  background: var(--site-surface-soft);
-}
-
-.archive-card:hover {
-  border-color: var(--site-border-hover);
-  transform: translateY(-2px);
-}
-
-.archive-card span,
-.archive-card small {
-  color: var(--site-secondary);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.archive-card strong {
-  color: var(--site-heading);
-  font-size: 1.18rem;
-  line-height: 1.2;
-}
-
-.archive-card p {
-  margin: 0;
-  color: var(--site-muted);
-}
-
 .resources-section {
   padding-bottom: 3rem;
 }

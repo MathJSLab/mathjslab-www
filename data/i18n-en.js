@@ -17,14 +17,14 @@ export default {
         overview: 'Overview',
         pipeline: 'Flow',
         features: 'Features',
+        markdown: 'Markdown engine',
         ecosystem: 'Ecosystem',
         publication: 'Publication',
-        archive: 'Archive',
         resources: 'Resources',
         contact: 'Contact',
         license: 'License',
-        launchShort: 'App',
-        launchCalcShort: 'Calc',
+        launchShort: 'Application',
+        launchCalcShort: 'Calculator',
     },
     theme: {
         light: 'Switch to light mode',
@@ -34,9 +34,9 @@ export default {
         kicker: 'TypeScript numerical computing for the browser',
         heading: 'MathJSLab brings a mathematical lab to the web.',
         leadHtml:
-            '<strong>MathJSLab</strong> simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore <strong>MathJSLab</strong> features. Use the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
+            '<strong>MathJSLab</strong> simulates a subset of the <a class="software-link" href="https://www.mathworks.com/products/matlab.html" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/matlab-icon.svg" alt="" aria-hidden="true">MATLAB</a>&reg;/<a class="software-link" href="https://octave.org/" target="_blank" rel="noopener noreferrer"><img class="software-icon" src="/images/octave-logo.svg" alt="" aria-hidden="true">Octave</a> language. Use one of the online applications to explore <strong>MathJSLab</strong> features. Use the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package <strong>mathjslab</strong></a> in your project to run expressions, functions and matrices, with <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>-rendered results and full compatibility in the web browser.',
         secondaryCta: 'View source on GitHub',
-        installLabel: 'Install package',
+        installLabel: 'Interpreter',
         terminalTitle: 'Interactive session',
         promptOne: 'A = [1 2; 3 4]',
         outputOneMathML:
@@ -72,7 +72,7 @@ export default {
         {
             title: 'Browser-ready app',
             textHtml:
-                'The web app is a package demonstration <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" rel="noopener noreferrer">Progressive Web App (PWA)</a> with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank" rel="noopener noreferrer">Web Components</a>, responsive layout, <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer">Markdown</a> help, schemes and diagrams with <a href="https://mermaid.js.org/" target="_blank" rel="noopener noreferrer">Mermaid</a> and charts with <a href="https://plotly.com/" target="_blank" rel="noopener noreferrer">Plotly</a>.',
+                'The web app is a mathjslab interpreter demonstration <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps" target="_blank" rel="noopener noreferrer">Progressive Web App (PWA)</a> with <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components" target="_blank" rel="noopener noreferrer">Web Components</a>, responsive layout, <a href="https://www.markdownguide.org/" target="_blank" rel="noopener noreferrer">Markdown</a> help, schemes and diagrams with <a href="https://mermaid.js.org/" target="_blank" rel="noopener noreferrer">Mermaid</a> and charts with <a href="https://plotly.com/" target="_blank" rel="noopener noreferrer">Plotly</a>.',
         },
         {
             title: 'Multilingual help',
@@ -84,49 +84,90 @@ export default {
             textHtml:
                 'The interpreter works with arbitrary precision arithmetic through <a href="https://mikemcl.github.io/decimal.js/" target="_blank" rel="noopener noreferrer">decimal.js</a> and can generate expressions and results rendered in <a href="https://developer.mozilla.org/en-US/docs/Web/MathML" target="_blank" rel="noopener noreferrer">MathML</a>.',
         },
+        {
+            title: 'Language and programming',
+            text: 'Expressions, matrices, complex numbers, control flow, anonymous and user-defined functions, closures and classes expand the programming possibilities.',
+        },
+        {
+            title: 'Asynchronous and resumable execution',
+            text: 'Sessions retain variables and functions between commands. Asynchronous execution supports suspending and resuming calculations; applications integrate Workers and interpreter plot outputs.',
+        },
     ],
     ecosystemTitle: 'Project ecosystem',
     ecosystemLeadHtml:
-        'The <strong>MathJSLab</strong> Organization on GitHub owns the project repositories: the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>, the web applications, the project page and the organization profile itself.',
+        'The <strong>mathjslab</strong> interpreter is the project’s core. The companion <strong>mathjslab-markdown</strong> package presents educational documents, and the web applications integrate these capabilities. The GitHub organization also maintains the project website and shared resources.',
+    markdown: {
+        title: 'Educational documents with mathjslab-markdown',
+        leadHtml:
+            'The companion package <strong>mathjslab-markdown</strong> brings the project’s Markdown engine into a reusable library. It displays documents in the browser and integrates the <strong>mathjslab</strong> interpreter when the host application enables executable examples.',
+        cards: [
+            {
+                title: 'Documents and navigation',
+                textHtml:
+                    'Markdown rendering, document navigation and the optional <code>&lt;markdown-document&gt;</code> Web Component help other applications present documentation and learning materials.',
+            },
+            { title: 'Educational extensions', textHtml: 'Mathematical formulas, Mermaid diagrams and educational visualizations use optional renderers loaded on demand.' },
+            {
+                title: 'Interpreter integration',
+                textHtml:
+                    'Executable examples use the <strong>mathjslab</strong> package, with executors and Workers supplied by the host application. The Markdown engine can also be used independently.',
+            },
+        ],
+        installLabel: 'Markdown engine',
+    },
     repositories: [
         {
             name: 'mathjslab',
-            role: 'Interpreter package',
+            role: 'Interpreter',
             text: 'TypeScript engine published to npm, with parser, evaluator and mathematical rendering components.',
             href: 'https://github.com/MathJSLab/mathjslab',
             icon: '/images/Octicons-mark-github.svg',
         },
         {
+            name: 'mathjslab-markdown',
+            role: 'Markdown engine',
+            text: 'Reusable Markdown engine, educational extensions and browser document component.',
+            href: 'https://github.com/MathJSLab/mathjslab-markdown',
+            icon: '/images/Octicons-mark-github.svg',
+        },
+        {
             name: 'mathjslab-app',
-            role: 'Demo application',
+            role: 'Application',
             text: 'Progressive web app that exposes the interpreter in a responsive browser interface.',
             href: 'https://github.com/MathJSLab/mathjslab-app',
             icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-calc',
-            role: 'Calculator application',
+            role: 'Calculator',
             textHtml: 'Scientific calculator prompt application hosted at calc.mathjslab.com and powered by the <strong>MathJSLab</strong> package.',
             href: 'https://github.com/MathJSLab/mathjslab-calc',
             icon: '/images/Octicons-mark-github.svg',
         },
         {
             name: 'mathjslab-github',
-            role: 'Organization support',
+            role: 'MathJSLab organization repository',
             textHtml: 'Shared profile, repository templates and project-wide support material for <strong>MathJSLab</strong>.',
             href: 'https://github.com/MathJSLab',
             icon: '/images/Octicons-mark-github.svg',
         },
+        {
+            name: 'mathjslab-www',
+            role: 'Project website',
+            text: 'Multilingual website presenting the interpreter, Markdown engine and ecosystem applications.',
+            href: 'https://github.com/MathJSLab/mathjslab-www',
+            icon: '/images/Octicons-mark-github.svg',
+        },
     ],
     publicationTitle: 'Publication and identifiers',
-    publicationLeadHtml: '<strong>MathJSLab</strong> is published as free software, distributed as a reusable package and with persistent identifiers assigned to it.',
+    publicationLeadHtml: 'The MathJSLab interpreter and its ecosystem are distributed as free software, with reusable packages and publication identifiers.',
     publicationTextHtml:
-        'The interpreter package is published in the npm registry as mathjslab. The source code is maintained under the <strong>MathJSLab</strong> organization on GitHub, and the package, the companion web application and the calculator have DOI and ISBN identifiers so they can be cited in academic and institutional contexts.',
+        'The <strong>mathjslab</strong> interpreter and the <strong>mathjslab-markdown</strong> engine are published separately on npm under the MIT license. The DOI and ISBN records shown below belong to their respective projects.',
     publications: [
         {
             name: 'mathjslab',
             roleHtml:
-                '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>',
+                '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package <strong>mathjslab</strong></a>',
             text: 'The TypeScript interpreter package is distributed through npm, mirrored through jsDelivr and licensed under MIT.',
             href: 'https://www.npmjs.com/package/mathjslab',
             icon: '/images/Npm-logo.svg',
@@ -209,6 +250,19 @@ export default {
             ],
         },
         {
+            name: 'mathjslab-markdown',
+            roleHtml:
+                '<a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab-markdown" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package <strong>mathjslab-markdown</strong></a>',
+            text: 'Reusable Markdown engine, educational extensions and browser document component.',
+            href: 'https://www.npmjs.com/package/mathjslab-markdown',
+            icon: '/images/Npm-logo.svg',
+            badges: [
+                { alt: 'npm: mathjslab-markdown', src: 'https://img.shields.io/npm/v/mathjslab-markdown', href: 'https://www.npmjs.com/package/mathjslab-markdown' },
+                { alt: 'MIT', src: 'https://img.shields.io/npm/l/mathjslab-markdown', href: 'https://github.com/MathJSLab/mathjslab-markdown/blob/main/LICENSE' },
+                { alt: 'GitHub: mathjslab-markdown', src: 'https://img.shields.io/github/created-at/MathJSLab/mathjslab-markdown', href: 'https://github.com/MathJSLab/mathjslab-markdown' },
+            ],
+        },
+        {
             name: 'mathjslab-app',
             role: 'web application',
             text: 'The browser application demonstrates the interpreter, is maintained on GitHub and has its own DOI and ISBN records.',
@@ -222,8 +276,8 @@ export default {
                 },
                 {
                     alt: 'Website',
-                    src: 'https://img.shields.io/website?url=https%3A%2F%2Fmathjslab.com%2F',
-                    href: 'https://mathjslab.com/',
+                    src: 'https://img.shields.io/website?url=https%3A%2F%2Fapp.mathjslab.com%2F',
+                    href: 'https://app.mathjslab.com/',
                 },
                 {
                     alt: 'CircleCI',
@@ -264,7 +318,7 @@ export default {
         },
         {
             name: 'mathjslab-calc',
-            role: 'calculator application',
+            role: 'web application',
             text: 'The calculator application offers a simplified prompt interface hosted at calc.mathjslab.com, with its own DOI and project publication badges.',
             href: 'https://github.com/MathJSLab/mathjslab-calc',
             icon: '/images/Octicons-mark-github.svg',
@@ -307,47 +361,20 @@ export default {
             ],
         },
     ],
-    archiveTitle: 'Archive',
-    archiveLeadHtml: 'Files and documents related to the <strong>MathJSLab</strong> project.',
-    archiveItems: [
-        {
-            group: '01',
-            title: 'A methodological proposal that integrates symbolic problem-solving in physics with the MathJSLab software',
-            date: 'July 10, 2026',
-            descriptionHtml: 'English version of the paper on symbolic problem-solving in Physics and Mathematics education with <strong>MathJSLab</strong>.',
-            language: 'English',
-            href: '/archive/01/main-en.pdf',
-            file: 'archive/01/main-en.pdf',
-        },
-        {
-            group: '01',
-            title: 'Uma proposta metodológica que articula a resolução literal de problemas de Física e o software MathJSLab',
-            date: '13 de maio de 2026',
-            descriptionHtml: 'Portuguese version of the paper on literal problem-solving in Physics and Mathematics education with <strong>MathJSLab</strong>.',
-            language: 'Portuguese',
-            href: '/archive/01/main-pt.pdf',
-            file: 'archive/01/main-pt.pdf',
-        },
-        {
-            group: '02',
-            title: 'MathJSLab: Prova de conceito de computação científica no navegador e software como artefato acadêmico',
-            date: '4 de junho de 2026',
-            descriptionHtml: 'Portuguese paper presenting <strong>MathJSLab</strong> as browser-based scientific computing and publishable academic software.',
-            language: 'Portuguese',
-            href: '/archive/02/main-pt.pdf',
-            file: 'archive/02/main-pt.pdf',
-        },
-    ],
     resourcesTitle: 'Resources',
     resourcesLeadHtml:
-        'Try the web applications directly. Install the <a class="software-link npm-wordmark-link" href="https://www.npmjs.com/package/mathjslab" target="_blank" rel="noopener noreferrer"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</a>, browse the organization profile on GitHub or consult the command help.',
+        'Try the application and calculator, install the <strong>mathjslab</strong> interpreter or the <strong>mathjslab-markdown</strong> engine, and explore the source code and command help.',
     resources: [
-        { label: 'App', href: 'https://app.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
-        { label: 'Calc', href: 'https://calc.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
         {
-            labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package</span>',
+            labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package mathjslab</span>',
             href: 'https://www.npmjs.com/package/mathjslab',
         },
+        {
+            labelHtml: '<span class="software-link npm-wordmark-link"><img class="software-icon npm-wordmark-icon" src="/images/Npm-logo.svg" alt="npm"> package mathjslab-markdown</span>',
+            href: 'https://www.npmjs.com/package/mathjslab-markdown',
+        },
+        { label: 'Application', href: 'https://app.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
+        { label: 'Calculator', href: 'https://calc.mathjslab.com/', icon: '/images/mathjslab-logo.svg' },
         { label: 'GitHub organization', href: 'https://github.com/MathJSLab', icon: '/images/Octicons-mark-github.svg' },
         { label: 'Command help', href: 'https://github.com/MathJSLab/mathjslab-app/blob/main/help/README.md', icon: '/images/Octicons-mark-github.svg' },
     ],
