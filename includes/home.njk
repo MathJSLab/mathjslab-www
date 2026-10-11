@@ -5,8 +5,8 @@
     <h1>{{ pageData.hero.heading }}</h1>
     <p class="hero-lead">{% if pageData.hero.leadHtml %}{{ pageData.hero.leadHtml | safe }}{% else %}{{ pageData.hero.lead }}{% endif %}</p>
     <div class="hero-actions" aria-label="{{ pageData.resourcesTitle }}">
-      <a class="button button-primary" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launchShort }}</a>
-      <a class="button button-primary" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer">{{ pageData.nav.launchCalcShort }}</a>
+      <a class="button button-primary" href="https://app.mathjslab.com/" target="_blank" rel="noopener noreferrer"><span class="application-label-full">{{ pageData.nav.launchShort }}</span><span class="application-label-compact">App</span></a>
+      <a class="button button-primary" href="https://calc.mathjslab.com/" target="_blank" rel="noopener noreferrer"><span class="application-label-full">{{ pageData.nav.launchCalcShort }}</span><span class="application-label-compact">Calc</span></a>
       <a class="button button-secondary" href="https://github.com/MathJSLab" target="_blank" rel="noopener noreferrer">
         <img class="button-icon" src="/images/Octicons-mark-github.svg" alt="">
         <span>{{ pageData.hero.secondaryCta }}</span>
@@ -59,7 +59,7 @@
         </div>
         <div class="pipeline-carousel-indicators" aria-hidden="true">
           {% for panel in pageData.pipeline.carouselPanels %}
-            <span{% if loop.first %} class="is-active"{% endif %}>→</span>
+            <span{% if loop.first %} class="is-active"{% endif %}>â†’</span>
           {% endfor %}
         </div>
       </div>
@@ -175,7 +175,12 @@
           {% if resource.icon %}
             <img src="{{ resource.icon }}" alt="">
           {% endif %}
-          <span>{{ resource.label }}</span>
+          {% if resource.href == 'https://app.mathjslab.com/' or resource.href == 'https://calc.mathjslab.com/' %}
+            <span class="application-label-full">{{ resource.label }}</span>
+            <span class="application-label-compact">{% if resource.href == 'https://app.mathjslab.com/' %}App{% else %}Calc{% endif %}</span>
+          {% else %}
+            <span>{{ resource.label }}</span>
+          {% endif %}
         {% endif %}
       </a>
     {% endfor %}

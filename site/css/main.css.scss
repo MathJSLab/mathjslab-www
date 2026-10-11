@@ -1054,3 +1054,17 @@ pre {
     grid-template-columns: 1fr;
   }
 }
+
+.application-label-compact {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .application-label-full {
+    display: none;
+  }
+
+  .application-label-compact {
+    display: inline;
+  }
+}
